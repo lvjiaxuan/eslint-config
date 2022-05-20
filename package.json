@@ -1,0 +1,32 @@
+{
+  "name": "@lvjiaxuan/eslint-config-monorepo",
+  "version": "0.0.0-1",
+  "private": false,
+  "description": "My ESLint config presets",
+  "keywords": ["eslint", "eslint-config"],
+  "main": "index.js",
+  "module": "",
+  "browser": "",
+  "types": "",
+  "scripts": {},
+  "packageManager": "pnpm@7.0.0",
+  "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
+  "homepage": "https://github.com/lvjiaxuan/@lvjiaxuan/eslint-config-monorepo#README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvjiaxuan/@lvjiaxuan/eslint-config-monorepo.git",
+    "directory": "."
+  },
+  "bugs": {
+    "url": "https://github.com/lvjiaxuan/@lvjiaxuan/eslint-config-monorepo"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "typescript": "^4.6.4"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@lvjiaxuan/eslint-config-basic",
+  "version": "0.0.0-1",
+  "keywords": [],
+  "main": "index.js",
+  "module": "index.mjs",
+  "types": "index.d.js",
+  "scripts": {},
+  "files": [
+    "*.js"
+  ],
+  "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.15.0"
+  }
+}
