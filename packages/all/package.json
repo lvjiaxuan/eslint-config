@@ -1,0 +1,24 @@
+{
+  "name": "@lvjiaxuan/eslint-config",
+  "version": "0.0.1",
+  "description": "My ESLint config",
+  "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "eslint-config"
+  ],
+  "homepage": "https://github.com/lvjiaxuan/@lvjiaxuan/eslint-config-monorepo#README.md",
+  "files": [
+    "*"
+  ],
+  "devDependencies": {
+    "eslint": "^8.17.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.17.0"
+  },
+  "dependencies": {
+    "@lvjiaxuan/eslint-config-vue": "workspace:^0.0.1"
+  }
+}
