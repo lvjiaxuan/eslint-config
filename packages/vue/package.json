@@ -1,0 +1,24 @@
+{
+  "name": "@lvjiaxuan/eslint-config-vue",
+  "version": "0.0.1",
+  "description": "",
+  "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
+  "license": "MIT",
+  "keywords": [
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "eslint": "^8.17.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.17.0"
+  },
+  "dependencies": {
+    "@lvjiaxuan/eslint-config-ts": "workspace:^0.0.1",
+    "eslint-plugin-vue": "^9.1.1"
+  }
+}
