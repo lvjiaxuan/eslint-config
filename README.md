@@ -11,8 +11,6 @@
 }
 ```
 
-```
-
 fix on save. vscode settings as below:
 ```json
 {
