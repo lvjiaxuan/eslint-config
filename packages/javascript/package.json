@@ -1,6 +1,7 @@
 {
   "name": "@lvjiaxuan/eslint-config-js",
   "version": "0.0.1",
+  "private": false,
   "description": "",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "license": "MIT",
@@ -14,12 +15,12 @@
   "peerDependencies": {
     "eslint": "^8.18.0"
   },
-  "devDependencies": {
-    "eslint": "^8.18.0"
-  },
   "dependencies": {
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-jsonc": "^2.3.0",
     "jsonc-eslint-parser": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0"
   }
 }

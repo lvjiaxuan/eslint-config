@@ -8,7 +8,6 @@
   "homepage": "https://github.com/lvjiaxuan/@lvjiaxuan/eslint-config-monorepo#README.md",
   "scripts": {
     "lint": "eslint .",
-    "prepare": "echo \"prepare\"",
     "release": ""
   },
   "devDependencies": {

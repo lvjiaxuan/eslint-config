@@ -16,10 +16,10 @@
   "peerDependencies": {
     "eslint": "^8.18.0"
   },
-  "devDependencies": {
-    "eslint": "^8.18.0"
-  },
   "dependencies": {
     "@lvjiaxuan/eslint-config-vue": "workspace:^0.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0"
   }
 }

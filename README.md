@@ -3,7 +3,22 @@
 *package.json*
 ```json
 {
-  "eslintConfig": "@lvjiaxuan/eslint-config"
+  "eslintConfig": {
+    "extends": [
+      "@lvjiaxuan"
+    ]
+  }
+}
+```
+
+```
+
+fix on save. vscode settings as below:
+```json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
 ```
 
