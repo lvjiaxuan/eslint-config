@@ -26,4 +26,5 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - uses: pnpm/action-setup@v2.0.1
-        run: pnpm -r publish --access public
+
+      - run: pnpm -r publish --access public
