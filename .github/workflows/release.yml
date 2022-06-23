@@ -25,6 +25,8 @@ jobs:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2
+        with:
+          verion: 7
 
       - run: pnpm -r publish --access public
