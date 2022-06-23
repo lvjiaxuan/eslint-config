@@ -1,14 +1,13 @@
 {
   "name": "@lvjiaxuan/eslint-config-monorepo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
-  "packageManager": "pnpm@7.1.9",
+  "packageManager": "pnpm@7.3.0",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "license": "MIT",
   "homepage": "https://github.com/lvjiaxuan/@lvjiaxuan/eslint-config-monorepo#README.md",
   "scripts": {
-    "lint": "eslint .",
-    "release": ""
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@lvjiaxuan/eslint-config": "workspace:^0.0.1",

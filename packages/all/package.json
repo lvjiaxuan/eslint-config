@@ -1,6 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "description": "Lvjiaxuan's ESLint config",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
