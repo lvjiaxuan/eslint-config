@@ -7,7 +7,8 @@
   "license": "MIT",
   "homepage": "https://github.com/lvjiaxuan/@lvjiaxuan/eslint-config-monorepo#README.md",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "p": "pnpm -r publish --access public --registry=https://registry.npmjs.org"
   },
   "devDependencies": {
     "@lvjiaxuan/eslint-config": "workspace:^0.0.1",
