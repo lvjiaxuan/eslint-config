@@ -1,6 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-config-monorepo",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@7.1.9",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
