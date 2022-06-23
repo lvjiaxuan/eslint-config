@@ -11,16 +11,16 @@
   "files": [
     "index.js"
   ],
-  "devDependencies": {
-    "eslint": "^8.17.0"
-  },
   "peerDependencies": {
-    "eslint": "^8.17.0",
+    "eslint": "^8.18.0",
     "typescript": "^4.7.3"
   },
   "dependencies": {
     "@lvjiaxuan/eslint-config-js": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^5.28.0",
-    "@typescript-eslint/parser": "^5.28.0"
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0"
   }
 }

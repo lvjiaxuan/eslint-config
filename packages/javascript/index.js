@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [ 'eslint:recommended' ],
+  extends: [ 'eslint:recommended', 'plugin:eslint-comments/recommended', './basic.js' ],
 
   rules: {
     // My base rules #https://eslint.org/docs/rules/
@@ -19,9 +19,9 @@ module.exports = {
       },
     ],
 
-    // my prettierrc rules
+    // My prettierrc rules
     'prettier/prettier': 'off',
-    'max-len': [ 'warn', { code: 120, tabWidth: 2 } ], // printWidth: 120 tabWidth: 2
+    'max-len': [ 'off', { code: 120, tabWidth: 2 } ], // printWidth: 120 tabWidth: 2
     'no-tabs': [ 'warn', { allowIndentationTabs: false } ], // useTabs: false
     semi: [ 'warn', 'never' ], // semi: false
     quotes: [ 'warn', 'single' ], // singleQuote: true

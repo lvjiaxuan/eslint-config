@@ -4,23 +4,22 @@
   "private": false,
   "description": "Lvjiaxuan's ESLint config",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
-  "main": "index.js",
+  "license": "MIT",
+  "homepage": "https://github.com/lvjiaxuan/@lvjiaxuan/eslint-config-monorepo#README.md",
   "keywords": [
     "eslint-config"
   ],
+  "main": "index.js",
   "files": [
     "index.js"
   ],
-  "homepage": "https://github.com/lvjiaxuan/@lvjiaxuan/eslint-config-monorepo#README.md",
-  "license": "MIT",
-  "devDependencies": {
-    "eslint": "^8.17.0"
-  },
   "peerDependencies": {
-    "eslint": "^8.17.0"
+    "eslint": "^8.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0"
   },
   "dependencies": {
-    "@lvjiaxuan/eslint-config-vue": "workspace:^0.0.1",
-    "jsonc-eslint-parser": "^2.1.0"
+    "@lvjiaxuan/eslint-config-vue": "workspace:^0.0.1"
   }
 }

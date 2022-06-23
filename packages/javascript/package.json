@@ -11,10 +11,15 @@
   "files": [
     "index.js"
   ],
-  "devDependencies": {
-    "eslint": "^8.17.0"
-  },
   "peerDependencies": {
-    "eslint": "^8.17.0"
+    "eslint": "^8.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0"
+  },
+  "dependencies": {
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-jsonc": "^2.3.0",
+    "jsonc-eslint-parser": "^2.1.0"
   }
 }
