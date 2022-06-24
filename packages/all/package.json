@@ -1,6 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "description": "Lvjiaxuan's ESLint config",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
@@ -17,7 +17,7 @@
     "eslint": "^8.18.0"
   },
   "dependencies": {
-    "@lvjiaxuan/eslint-config-vue": "workspace:^0.0.1"
+    "@lvjiaxuan/eslint-config-vue": "workspace:*"
   },
   "devDependencies": {
     "eslint": "^8.18.0"
