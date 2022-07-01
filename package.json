@@ -2,7 +2,6 @@
   "name": "@lvjiaxuan/eslint-config-monorepo",
   "version": "0.0.3",
   "private": true,
-  "packageManager": "pnpm@7.3.0",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "license": "MIT",
   "homepage": "https://github.com/lvjiaxuan/@lvjiaxuan/eslint-config-monorepo#README.md",
