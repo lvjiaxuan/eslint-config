@@ -29,4 +29,6 @@ jobs:
         with:
           version: 7
 
-      - run: pnpm -r publish --access public --no-git-checks
+      - run: |
+          pnpm i
+          pnpm -r publish --access public --no-git-checks
