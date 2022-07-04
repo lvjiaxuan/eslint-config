@@ -43,7 +43,7 @@ module.exports = {
     '!.vscode',
   ],
 
-  extends: [ 'plugin:jsonc/recommended-with-jsonc' ],
+  extends: [ 'plugin:jsonc/recommended-with-jsonc', 'plugin:markdown/recommended' ],
 
   overrides: [
     {
