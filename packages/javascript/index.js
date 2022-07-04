@@ -18,6 +18,9 @@ module.exports = {
         allowSeparatedGroups: false,
       },
     ],
+    'no-multi-spaces': 'warn',
+    'object-curly-spacing': [ 'warn', 'always' ],
+    'spaced-comment': [ 'warn', 'always' ],
 
     // My prettierrc rules
     'prettier/prettier': 'off',

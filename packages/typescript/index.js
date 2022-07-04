@@ -18,6 +18,7 @@ module.exports = {
       ],
 
       rules: {
+        // #https://typescript-eslint.io/rules/
         '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/no-empty-function': 'off',
         '@typescript-eslint/ban-ts-comment': 'off',
