@@ -6,21 +6,17 @@
   "license": "MIT",
   "homepage": "https://github.com/lvjiaxuan/@lvjiaxuan/eslint-config-monorepo#README.md",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "stub": "nr -r stub",
+    "build:plugin": "nr -C packages/eslint-plugin-lvjiaxuan build"
   },
   "devDependencies": {
-    "@lvjiaxuan/eslint-config": "workspace:*",
     "@lvjiaxuan/eslint-plugin": "workspace:*",
     "eslint": "^8.20.0",
     "typescript": "^4.7.4"
   },
   "eslintConfig": {
-    "extends": [
-      "@lvjiaxuan"
-    ],
-    "plugins": ["@lvjiaxuan"],
-    "rules": {
-      "@lvjiaxuan/no-spaces-in-empty-line": "warn"
-    }
+    "root": true,
+    "extends": ["plugin:@lvjiaxuan/recommended"]
   }
 }

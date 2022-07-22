@@ -4,12 +4,10 @@ importers:
 
   .:
     specifiers:
-      '@lvjiaxuan/eslint-config': workspace:*
       '@lvjiaxuan/eslint-plugin': workspace:*
       eslint: ^8.20.0
       typescript: ^4.7.4
     devDependencies:
-      '@lvjiaxuan/eslint-config': link:packages/all
       '@lvjiaxuan/eslint-plugin': link:packages/eslint-plugin-lvjiaxuan
       eslint: 8.20.0
       typescript: 4.7.4
@@ -25,9 +23,11 @@ importers:
 
   packages/eslint-plugin-lvjiaxuan:
     specifiers:
+      '@lvjiaxuan/eslint-config': workspace:*
       '@typescript-eslint/utils': ^5.30.7
       vitest: ^0.18.1
     dependencies:
+      '@lvjiaxuan/eslint-config': link:../all
       '@typescript-eslint/utils': 5.30.7_he2ccbldppg44uulnyq4rwocfa
     devDependencies:
       vitest: 0.18.1

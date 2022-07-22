@@ -1,14 +1,14 @@
 module.exports = {
   overrides: [
     {
-      files: [ '*.ts' ],
+      files: [ '*.ts', '*.d.ts' ],
 
       parser: '@typescript-eslint/parser',
 
       parserOptions: {
         // #https://typescript-eslint.io/docs/linting/type-linting
         tsconfigRootDir: process.cwd(),
-        project: [ './tsconfig.json', './tsconfig.node.json' ],
+        project: [ './tsconfig.json' ],
       },
 
       extends: [

@@ -5,9 +5,11 @@ export default { configs: { recommended }, rules: { 'no-spaces-in-empty-line': n
 
 
 const foo = 123
-  
-  
-  
-  
-  
+
+
 const bar = 321
+   
+   
+const tem = `asfasf
+             
+             keeing`
