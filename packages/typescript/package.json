@@ -1,6 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-config-ts",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": false,
   "description": "",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
@@ -13,15 +13,15 @@
     "index.js"
   ],
   "peerDependencies": {
-    "eslint": "^8.18.0",
-    "typescript": "^4.7.3"
+    "eslint": ">=8",
+    "typescript": ">=4"
   },
   "dependencies": {
     "@lvjiaxuan/eslint-config-js": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^5.29.0",
-    "@typescript-eslint/parser": "^5.29.0"
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7"
   },
   "devDependencies": {
-    "eslint": "^8.18.0"
+    "eslint": "^8.20.0"
   }
 }

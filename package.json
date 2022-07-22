@@ -1,22 +1,26 @@
 {
   "name": "@lvjiaxuan/eslint-config-monorepo",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": true,
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "license": "MIT",
   "homepage": "https://github.com/lvjiaxuan/@lvjiaxuan/eslint-config-monorepo#README.md",
   "scripts": {
-    "lint": "eslint .",
-    "p": "pnpm -r publish --access public --registry=https://registry.npmjs.org"
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@lvjiaxuan/eslint-config": "workspace:*",
-    "eslint": "^8.18.0",
+    "@lvjiaxuan/eslint-plugin": "workspace:*",
+    "eslint": "^8.20.0",
     "typescript": "^4.7.4"
   },
   "eslintConfig": {
     "extends": [
       "@lvjiaxuan"
-    ]
+    ],
+    "plugins": ["@lvjiaxuan"],
+    "rules": {
+      "@lvjiaxuan/no-spaces-in-empty-line": "warn"
+    }
   }
 }

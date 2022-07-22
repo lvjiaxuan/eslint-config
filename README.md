@@ -11,7 +11,7 @@
 }
 ```
 
-fix on save. vscode settings as below:
+Fix on save. VScode settings as below:
 ```json
 {
   "editor.codeActionsOnSave": {

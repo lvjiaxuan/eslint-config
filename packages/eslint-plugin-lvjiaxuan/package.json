@@ -1,0 +1,30 @@
+{
+  "name": "@lvjiaxuan/eslint-plugin",
+  "version": "0.0.5",
+  "description": "",
+  "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "vitest",
+    "stub": "nx unbuild --stub",
+    "build": "nx rimraf dist && nx unbuild",
+    "prepublishOnly": "nr build"
+  },
+  "peerDependencies": {
+    "eslint": ">=8"
+  },
+  "dependencies": {
+    "@lvjiaxuan/eslint-config": "workspace:*",
+    "@typescript-eslint/utils": "^5.30.7"
+  },
+  "devDependencies": {
+    "vitest": "^0.18.1"
+  }
+}
