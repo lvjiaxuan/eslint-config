@@ -22,7 +22,7 @@ module.exports = {
       },
     ],
     'no-multi-spaces': 'warn',
-    'max-len': [ 'warn', { code: 120, tabWidth: 2, ignoreComments: true } ], // prettier printWidth: 120 tabWidth: 2
+    'max-len': [ 'warn', { code: 120, tabWidth: 2, ignoreComments: true, ignoreStrings: true, ignoreTemplateLiterals: true } ], // prettier printWidth: 120 tabWidth: 2
     'quote-props': [ 'warn', 'as-needed' ], // prettier quoteProps: 'as-needed'
     'jsx-quotes': [ 'warn', 'prefer-single' ], // prettier jsxSingleQuote: false
     'comma-dangle': [ 'warn', 'always-multiline' ], // prettier like trailingComma: 'es5'
@@ -30,7 +30,7 @@ module.exports = {
     'eol-last': [ 'warn', 'always' ], // prettier endOfLine: 'lf'
     'no-extra-parens': 'warn',
 
-    // # Possible Problems which are not recommended
+    // Possible Problems which are not recommended
     'array-callback-return': 'error',
     'no-await-in-loop': 'warn',
     'no-constant-binary-expression': 'warn',
@@ -52,9 +52,8 @@ module.exports = {
     ],
     'require-atomic-updates': 'error',
 
-    // # Layout & Formatting
+    // Layout & Formatting
     'no-multiple-empty-lines': [ 'warn', { max: 2 } ],
-
 
     // object-*
     'object-curly-spacing': [ 'warn', 'always' ],

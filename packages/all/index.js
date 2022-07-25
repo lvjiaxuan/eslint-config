@@ -1,3 +1,1 @@
-module.exports = {
-  extends: [ '@lvjiaxuan/vue' ],
-}
+module.exports = { extends: [ '@lvjiaxuan/vue' ] }

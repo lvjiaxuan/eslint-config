@@ -7,7 +7,7 @@
   "homepage": "https://github.com/lvjiaxuan/@lvjiaxuan/eslint-config-monorepo#README.md",
   "scripts": {
     "lint": "eslint .",
-    "stub": "nr -r stub",
+    "prepare": "nr -r stub",
     "build:plugin": "nr -C packages/eslint-plugin-lvjiaxuan build"
   },
   "devDependencies": {
@@ -17,6 +17,8 @@
   },
   "eslintConfig": {
     "root": true,
-    "extends": ["plugin:@lvjiaxuan/recommended"]
+    "extends": [
+      "plugin:@lvjiaxuan/recommended"
+    ]
   }
 }

@@ -10,11 +10,11 @@
   ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
+  "files": ["dist"],
   "scripts": {
-    "lint": "eslint .",
     "test": "vitest",
-    "stub": "nx unbuild --stub",
-    "build": "nx rimraf dist && nx unbuild",
+    "stub": "unbuild --stub",
+    "build": "unbuild",
     "prepublishOnly": "nr build"
   },
   "peerDependencies": {
@@ -25,6 +25,7 @@
     "@typescript-eslint/utils": "^5.30.7"
   },
   "devDependencies": {
+    "unbuild": "^0.7.6",
     "vitest": "^0.18.1"
   }
 }

@@ -1,7 +1,5 @@
 # eslint-plugin-lvjiaxuan
 
-&#34;&#34;
-
 ## Installation
 
 You'll first need to install [ESLint](https://eslint.org/):
@@ -41,6 +39,6 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* Fill in provided rules here
+* [no-spaces-in-empty-line](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin-lvjiaxuan/src/rules/no-spaces-in-empty-line.ts)
 
 

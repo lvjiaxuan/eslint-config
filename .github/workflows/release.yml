@@ -31,4 +31,5 @@ jobs:
 
       - run: |
           pnpm i
+          pnpm -C packages/eslint-plugin-lvjiaxuan test
           pnpm -r publish --access public --no-git-checks

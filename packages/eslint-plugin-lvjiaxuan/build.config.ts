@@ -1,6 +1,6 @@
 export default {
   entries: [ 'src/index' ],
-  declaration: true,
+  // declaration: true,
   clean: true,
   rollup: { emitCJS: true },
 }
