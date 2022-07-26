@@ -1,5 +1,5 @@
 ![actions](https://github.com/lvjiaxuan/eslint-config/actions/workflows/release.yml/badge.svg)
-[![npm](https://img.shields.io/npm/v/@lvjiaxuan/prettier-config)](https://www.npmjs.com/package/@lvjiaxuan/eslint-config)
+[![npm](https://img.shields.io/npm/v/@lvjiaxuan/eslint-config)](https://www.npmjs.com/package/@lvjiaxuan/eslint-config)
 
 
 # Usage
