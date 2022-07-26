@@ -48,10 +48,10 @@ async function runGit(version: string) {
   console.log(chalk.cyan('\nGit committing and pushing...'))
   await execa('git', [ 'add', '-A' ])
   await execa('git', [ 'commit', '-m', `Release: v${ version }` ])
-  // await execa('git', [ 'push' ])
+  await execa('git', [ 'push' ])
   console.log(chalk.cyan('\nGit tagging and pushing...'))
   await execa('git', [ 'tag', `v${ version }` ])
-  // await execa('git', [ 'push', 'origin', `refs/tags/v${ version }` ])
+  await execa('git', [ 'push', 'origin', `refs/tags/v${ version }` ])
 }
 
 
@@ -68,6 +68,7 @@ main().catch(err => {
 
 
 // utils =================================================================
+
 
 function updatePackage(pkgRoot: string, version: string) {
   const pkgPath = path.resolve(pkgRoot, 'package.json')
