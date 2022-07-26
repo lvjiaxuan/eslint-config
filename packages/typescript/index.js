@@ -1,7 +1,9 @@
+const syncRules = require('./sync-rules')
+
 module.exports = {
   overrides: [
     {
-      files: [ '*.ts', '*.d.ts' ],
+      files: [ '*.ts', '*.d.ts', '*.tsx' ],
 
       parser: '@typescript-eslint/parser',
 
@@ -19,13 +21,13 @@ module.exports = {
 
       rules: {
         // #https://typescript-eslint.io/rules/
-        '@typescript-eslint/no-unused-vars': 'off',
-        '@typescript-eslint/no-empty-function': 'off',
+
+        // sync js
         '@typescript-eslint/ban-ts-comment': 'off',
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-misused-promises': [ 'warn', { checksVoidReturn: false } ],
-        '@typescript-eslint/require-await': 'off',
+        ...syncRules,
       },
     },
   ],
