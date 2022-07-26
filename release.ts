@@ -1,5 +1,5 @@
-// Locally: Test && Bump && Build && Changelog && Commit & Tag && Push
-// Remotely(Trigger GitHub Action): → GitHub Release & Publish(including build)
+// Locally: Test(optional) && Bump && Build(optional) && Changelog(optional) && Commit && Tag && Push
+// Remotely(Trigger GitHub Action): GitHub Release & Publish(including pre-test and pre-build)
 
 import path from 'path'
 import fs from 'fs'
