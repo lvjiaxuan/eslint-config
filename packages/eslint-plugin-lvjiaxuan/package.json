@@ -1,6 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-plugin",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "keywords": [
@@ -10,9 +10,11 @@
   ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "vitest",
+    "test": "vitest run",
     "stub": "unbuild --stub",
     "build": "unbuild",
     "prepublishOnly": "nr build"
@@ -25,6 +27,7 @@
     "@typescript-eslint/utils": "^5.30.7"
   },
   "devDependencies": {
+    "c8": "^7.12.0",
     "unbuild": "^0.7.6",
     "vitest": "^0.18.1"
   }

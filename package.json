@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "test": "nr -r test",
     "prepare": "nr -r stub",
-    "build": "nr -r build"
+    "build": "nr -r build",
+    "release": "nx tsx release.ts"
   },
   "devDependencies": {
     "@lvjiaxuan/eslint-plugin": "workspace:*",
