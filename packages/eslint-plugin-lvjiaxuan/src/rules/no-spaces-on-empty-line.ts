@@ -4,7 +4,7 @@ const createRule = ESLintUtils.RuleCreator(
   name => `https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin-lvjiaxuan/src/rules/${ name }.ts`,
 )
 
-export const RULE_NAME = 'no-spaces-in-empty-line'
+export const RULE_NAME = 'no-spaces-on-empty-line'
 
 export default createRule({
   name: RULE_NAME,
@@ -12,13 +12,14 @@ export default createRule({
   meta: {
     type: 'layout',
     docs: {
-      description: '空行就不需要空格了（个人洁癖）。',
+      description: '禁止空行上出现空格（个人洁癖）。',
       recommended: 'warn',
     },
     schema: [],
     fixable: 'whitespace',
     hasSuggestions: true,
-    messages: { noSpaces: '空行就不需要空格了（个人洁癖），这里有 {{spacesLength}} 个空格。' },
+    messages: { noSpaces: '禁止空行上出现空格（个人洁癖），这里有 {{spacesLength}} 个空格。' },
+    deprecated: true, // The `no-trailing-spaces` of official eslint rule has already done.
   },
 
   defaultOptions: [],

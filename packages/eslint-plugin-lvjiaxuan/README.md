@@ -39,6 +39,6 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* [no-spaces-in-empty-line](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin-lvjiaxuan/src/rules/no-spaces-in-empty-line.ts)
+* [no-spaces-on-empty-line](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin-lvjiaxuan/src/rules/no-spaces-on-empty-line.ts)
 
 

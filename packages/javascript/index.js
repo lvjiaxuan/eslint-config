@@ -48,7 +48,7 @@ module.exports = {
         classes: false,
         variables: false,
         allowNamedExports: true,
-      }, 
+      },
     ],
     'require-atomic-updates': 'error',
 
@@ -73,6 +73,9 @@ module.exports = {
     'keyword-spacing': 'warn',
     'key-spacing': 'warn',
     'block-spacing': 'warn',
+    'no-trailing-spaces': 'warn',
+    'space-infix-ops': 'warn',
+    'space-in-parens': [ 'warn', 'never' ],
 
     // clone prettier-plugin rule
     'prettier/prettier': 'off',

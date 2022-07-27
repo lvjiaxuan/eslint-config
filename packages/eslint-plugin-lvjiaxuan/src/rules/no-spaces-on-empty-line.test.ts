@@ -1,5 +1,5 @@
 import { ESLintUtils } from '@typescript-eslint/utils'
-import rule, { RULE_NAME } from './no-spaces-in-empty-line'
+import rule, { RULE_NAME } from './no-spaces-on-empty-line'
 import { it } from 'vitest'
 
 const ruleTester = new ESLintUtils.RuleTester({ parser: '@typescript-eslint/parser' })
