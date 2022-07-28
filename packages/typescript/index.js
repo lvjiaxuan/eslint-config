@@ -3,7 +3,7 @@ const syncRules = require('./sync-rules')
 module.exports = {
   overrides: [
     {
-      files: [ '*.ts', '*.d.ts', '*.tsx' ],
+      files: [ '*.ts', '*.d.ts', '*.tsx', '*.vue' ],
 
       parser: '@typescript-eslint/parser',
 
