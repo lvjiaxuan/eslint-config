@@ -36,6 +36,7 @@ importers:
       '@lvjiaxuan/eslint-config': workspace:*
       '@typescript-eslint/utils': ^5.30.7
       c8: ^7.12.0
+      eslint: '>=8'
       unbuild: ^0.7.6
       vitest: ^0.18.1
     dependencies:
@@ -43,6 +44,7 @@ importers:
       '@typescript-eslint/utils': 5.30.7_he2ccbldppg44uulnyq4rwocfa
     devDependencies:
       c8: 7.12.0
+      eslint: 8.20.0
       unbuild: 0.7.6
       vitest: 0.18.1_c8@7.12.0
 
@@ -67,12 +69,14 @@ importers:
       '@typescript-eslint/eslint-plugin': ^5.30.7
       '@typescript-eslint/parser': ^5.30.7
       eslint: ^8.20.0
+      typescript: '>=4'
     dependencies:
       '@lvjiaxuan/eslint-config-js': link:../javascript
       '@typescript-eslint/eslint-plugin': 5.30.7_6wltbjakwuqm7awqswigmiuhd4
       '@typescript-eslint/parser': 5.30.7_he2ccbldppg44uulnyq4rwocfa
     devDependencies:
       eslint: 8.20.0
+      typescript: 4.7.4
 
   packages/vue:
     specifiers:

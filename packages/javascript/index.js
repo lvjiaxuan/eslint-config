@@ -1,7 +1,12 @@
 module.exports = {
-  extends: [ 'eslint:recommended', 'plugin:eslint-comments/recommended', './basic.js' ],
+  extends: [
+    'eslint:recommended',
+    'plugin:eslint-comments/recommended',
+    './basic.js',
+  ],
 
-  rules: { // https://eslint.org/docs/rules/
+  rules: {
+    // https://eslint.org/docs/rules/
 
     // My custom rules
     indent: [ 'warn', 2 ],

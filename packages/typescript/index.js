@@ -7,26 +7,29 @@ module.exports = {
 
       parser: '@typescript-eslint/parser',
 
-      parserOptions: {
-        // #https://typescript-eslint.io/docs/linting/type-linting
-        tsconfigRootDir: process.cwd(),
-        project: [ './tsconfig.json' ],
-      },
-
       extends: [
-        // #https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts
+        // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
 
-      rules: {
-        // #https://typescript-eslint.io/rules/
+      parserOptions: {
+        // https://typescript-eslint.io/docs/linting/type-linting
+        tsconfigRootDir: process.cwd(),
+        project: [ './tsconfig.json' ],
 
-        // sync js
+        // https://typescript-eslint.io/docs/linting/troubleshooting/#i-use-a-framework-like-vue-that-requires-custom-file-extensions-and-i-get-errors-like-you-should-add-parseroptionsextrafileextensions-to-your-config
+        extraFileExtensions: [ '.vue' ],
+      },
+
+      rules: {
+        // https://typescript-eslint.io/rules/
         '@typescript-eslint/ban-ts-comment': 'off',
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-misused-promises': [ 'warn', { checksVoidReturn: false } ],
+
+        // sync js
         ...syncRules,
       },
     },
