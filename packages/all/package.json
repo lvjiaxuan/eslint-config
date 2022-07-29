@@ -19,7 +19,5 @@
   "dependencies": {
     "@lvjiaxuan/eslint-config-vue": "workspace:*"
   },
-  "devDependencies": {
-    "eslint": "^8.20.0"
-  }
+  "devDependencies": {}
 }
