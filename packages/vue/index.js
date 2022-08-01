@@ -24,6 +24,8 @@ module.exports = {
         },
       },
       rules: {
+        'vue/no-unused-vars': 'off',
+
         'vue/no-setup-props-destructure': 'off', // with reactivityTransform: true
 
         // 避免导致全局类型报错
