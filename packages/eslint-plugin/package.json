@@ -1,6 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-plugin",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "keywords": [
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@lvjiaxuan/eslint-config": "workspace:*",
-    "@typescript-eslint/utils": "^5.31.0"
+    "@typescript-eslint/utils": "^5.32.0"
   },
   "devDependencies": {
     "unbuild": "^0.7.6",

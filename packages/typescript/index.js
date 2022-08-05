@@ -28,9 +28,24 @@ module.exports = {
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-misused-promises': [ 'warn', { checksVoidReturn: false } ],
+        '@typescript-eslint/no-unsafe-return': 'warn',
 
         // sync js
         ...syncRules,
+
+        '@typescript-eslint/no-use-before-define': [
+          'warn', {
+            // extend
+            functions: false,
+            classes: false,
+            variables: false,
+            allowNamedExports: true,
+            // additional
+            enums: true,
+            typedefs: false,
+            ignoreTypeReferences: true,
+          },
+        ],
       },
     },
   ],

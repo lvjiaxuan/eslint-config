@@ -35,7 +35,7 @@ module.exports = {
     'eol-last': [ 'warn', 'always' ], // prettier endOfLine: 'lf'
     'no-extra-parens': 'warn',
 
-    // Possible Problems which are not recommended
+    // Possible Problems which are not included in recommended rules
     'array-callback-return': 'error',
     'no-await-in-loop': 'warn',
     'no-constant-binary-expression': 'warn',
