@@ -28,7 +28,8 @@ importers:
       eslint: '>=8'
     dependencies:
       '@lvjiaxuan/eslint-config-vue': link:../vue
-      eslint: 8.21.0
+    devDependencies:
+      eslint: 8.22.0
 
   packages/eslint-plugin:
     specifiers:

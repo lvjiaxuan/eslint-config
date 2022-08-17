@@ -9,10 +9,15 @@
   "keywords": [
     "eslint-config"
   ],
+  "scripts": {
+    "build": "nx esbuild add.js --bundle --platform=node --format=cjs --outdir=dist",
+    "prepublishOnly": "nr build"
+  },
   "main": "index.js",
-  "files": [
-    "index.js"
-  ],
+  "bin": {
+    "add": "./bin/add.mjs"
+  },
+  "files": ["*"],
   "peerDependencies": {
     "eslint": ">=8"
   },
