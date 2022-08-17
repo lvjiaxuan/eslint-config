@@ -4,15 +4,8 @@
 
 # Usage
 
-*package.json*
-```json
-{
-  "eslintConfig": {
-    "extends": [
-      "@lvjiaxuan"
-    ]
-  }
-}
+```bash
+npx @lvjiaxuan/eslint-config
 ```
 
 Fix on save. VScode settings as below:
