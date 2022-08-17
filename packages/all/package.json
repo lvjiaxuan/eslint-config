@@ -1,6 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-config",
-  "version": "0.0.17-1",
+  "version": "0.0.17-3",
   "private": false,
   "description": "Lvjiaxuan's ESLint config",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
@@ -14,9 +14,7 @@
     "prepublishOnly": "nr build"
   },
   "main": "index.js",
-  "bin": {
-    "add": "./bin/add.mjs"
-  },
+  "bin": "./bin/add.mjs",
   "files": ["*"],
   "peerDependencies": {
     "eslint": ">=8"
