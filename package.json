@@ -27,8 +27,5 @@
     "extends": [
       "plugin:@lvjiaxuan/recommended"
     ]
-  },
-  "peerDependencies": {
-    "eslint": ">=8"
   }
 }
