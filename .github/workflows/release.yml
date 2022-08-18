@@ -25,11 +25,11 @@ jobs:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
 
-      - run: pnpm config set auto-install-peers=true
-
       - uses: pnpm/action-setup@v2
         with:
           version: 7
+
+      - run: pnpm config set auto-install-peers=true
 
       - name: Setup
         run: pnpm i -g @antfu/ni
