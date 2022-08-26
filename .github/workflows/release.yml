@@ -48,9 +48,4 @@ jobs:
 
       - run: npm install -g cnpm --registry=https://registry.npmmirror.com
 
-      - run: |
-          cnpm sync @lvjiaxuan/eslint-config
-          cnpm sync @lvjiaxuan/eslint-config-js
-          cnpm sync @lvjiaxuan/eslint-config-ts
-          cnpm sync @lvjiaxuan/eslint-config-vue
-          cnpm sync @lvjiaxuan/eslint-plugin
+      - run: cnpm sync @lvjiaxuan/eslint-config @lvjiaxuan/eslint-config-js @lvjiaxuan/eslint-config-ts @lvjiaxuan/eslint-config-vue @lvjiaxuan/eslint-plugin --sync-publish

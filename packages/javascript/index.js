@@ -43,7 +43,6 @@ module.exports = {
     'no-duplicate-imports': 'warn',
     'no-promise-executor-return': 'warn',
     'no-self-compare': 'error',
-    'no-template-curly-in-string': 'warn',
     'no-unmodified-loop-condition': 'error',
     'no-unreachable-loop': 'warn',
     'no-unused-private-class-members': 'off',
