@@ -29,6 +29,7 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-misused-promises': [ 'warn', { checksVoidReturn: false } ],
         '@typescript-eslint/no-unsafe-return': 'warn',
+        '@typescript-eslint/unbound-method': 'off',
 
         // sync js
         ...syncRules,

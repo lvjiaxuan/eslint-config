@@ -41,7 +41,7 @@ module.exports = {
     'no-constant-binary-expression': 'warn',
     'no-constructor-return': 'warn',
     'no-duplicate-imports': 'warn',
-    'no-promise-executor-return': 'warn',
+    'no-promise-executor-return': 'off',
     'no-self-compare': 'error',
     'no-unmodified-loop-condition': 'error',
     'no-unreachable-loop': 'warn',
