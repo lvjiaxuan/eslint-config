@@ -35,7 +35,7 @@ jobs:
         run: pnpm i -g @antfu/ni
 
       - run: |
-          ni
+          nci
           pnpm -r publish --access public --no-git-checks
 
   cnpm_sync:
