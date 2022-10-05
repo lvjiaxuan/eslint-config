@@ -111,5 +111,9 @@ module.exports = {
         ],
       },
     },
+    {
+      files: [ '**/*.md/*.ts' ],
+      parserOptions: { project: null },
+    },
   ],
 }
