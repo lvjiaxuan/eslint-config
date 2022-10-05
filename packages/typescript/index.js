@@ -1,6 +1,8 @@
 const syncRules = require('./sync-rules')
 
 module.exports = {
+  extends: [ '@lvjiaxuan/js' ],
+
   overrides: [
     {
       files: [ '*.ts', '*.d.ts', '*.tsx', '*.vue' ],
@@ -50,6 +52,4 @@ module.exports = {
       },
     },
   ],
-
-  extends: [ '@lvjiaxuan/js' ],
 }
