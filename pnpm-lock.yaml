@@ -54,11 +54,13 @@ importers:
       eslint-plugin-eslint-comments: ^3.2.0
       eslint-plugin-jsonc: ^2.4.0
       eslint-plugin-markdown: ^2.2.1
+      eslint-plugin-promise: ^6.0.1
       jsonc-eslint-parser: ^2.1.0
     dependencies:
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.24.0
       eslint-plugin-jsonc: 2.4.0_eslint@8.24.0
       eslint-plugin-markdown: 2.2.1_eslint@8.24.0
+      eslint-plugin-promise: 6.0.1_eslint@8.24.0
       jsonc-eslint-parser: 2.1.0
     devDependencies:
       eslint: 8.24.0
@@ -1158,6 +1160,15 @@ packages:
       mdast-util-from-markdown: 0.8.5
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /eslint-plugin-promise/6.0.1_eslint@8.24.0:
+    resolution: {integrity: sha512-uM4Tgo5u3UWQiroOyDEsYcVMOo7re3zmno0IZmB5auxoaQNIceAbXEkSt8RNrKtaYehARHG06pYK6K1JhtP0Zw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^7.0.0 || ^8.0.0
+    dependencies:
+      eslint: 8.24.0
     dev: false
 
   /eslint-plugin-vue/9.6.0_eslint@8.24.0:
