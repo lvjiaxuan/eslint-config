@@ -1,17 +1,20 @@
 ![actions](https://github.com/lvjiaxuan/eslint-config/actions/workflows/release.yml/badge.svg)
 [![npm](https://img.shields.io/npm/v/@lvjiaxuan/eslint-config)](https://www.npmjs.com/package/@lvjiaxuan/eslint-config)
 
+# Features
+
+- [prefer-constraint-array-type](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin-lvjiaxuan/src/rules/prefer-constraint-array-type.ts) warning defaults.
 
 # Usage
 
-Install:
+Installation:
 ```bash
 ni @lvjiaxuan/eslint-config -D
 npm i lvjiaxuan/eslint-config -D
 pnpm add lvjiaxuan/eslint-config -D
 ```
 
-*package.json*
+*package.json* Setting:
 ```json
 {
   "eslintConfig": {

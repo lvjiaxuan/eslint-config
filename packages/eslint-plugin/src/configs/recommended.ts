@@ -1,5 +1,5 @@
 export default {
   extends: [ '@lvjiaxuan' ],
   plugins: [ '@lvjiaxuan' ],
-  rules: { },
+  rules: { '@lvjiaxuan/prefer-constraint-array-type': 'warn' },
 }

@@ -14,7 +14,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "vitest run",
+    "test": "vitest watch",
     "stub": "unbuild --stub",
     "build": "unbuild",
     "prepublishOnly": "nr build"
