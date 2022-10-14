@@ -29,7 +29,7 @@ export default createRule({
     const templateLiteralLines = new Set()
 
     return {
-      // 字符串不校验
+      // 模板字符串不校验
       TemplateLiteral(node) {
         node.quasis.forEach(templateElement => {
           // eslint-disable-next-line max-len
