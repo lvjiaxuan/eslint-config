@@ -1,4 +1,4 @@
-# eslint-plugin-lvjiaxuan
+# @lvjiaxuan/eslint-plugin
 
 ## Usage
 
