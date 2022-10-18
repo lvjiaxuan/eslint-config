@@ -36,7 +36,7 @@ export default createRule({
             // data:
             fix(fixer) {
               return fixer.insertTextAfterRange(
-                [ node.name.range[0] + 1, node.name.range[0] + 1 ],
+                [ node.name.range[1], node.name.range[1] ],
                 ' extends unknown[]',
               )
             },
