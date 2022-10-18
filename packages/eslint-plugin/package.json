@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@lvjiaxuan/eslint-config": "workspace:*",
-    "@typescript-eslint/utils": "^5.40.0"
+    "@typescript-eslint/utils": "^5.40.1"
   },
   "devDependencies": {
     "eslint": "^8.25.0",
