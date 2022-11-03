@@ -20,6 +20,7 @@ export default createRule({
     hasSuggestions: true,
     messages: { noSpaces: '禁止空行上出现空格（个人洁癖），这里有 {{spacesLength}} 个空格。' },
     deprecated: true, // The `no-trailing-spaces` of official eslint rule has already done.
+    replacedBy: [ 'no-trailing-spaces' ],
   },
 
   defaultOptions: [],
