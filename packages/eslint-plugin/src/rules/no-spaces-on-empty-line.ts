@@ -27,7 +27,7 @@ export default createRule({
 
   create(context) {
     const sourceCode = context.getSourceCode()
-    const templateLiteralLines = new Set()
+    const templateLiteralLines = new Set<number>()
 
     return {
       // 模板字符串不校验
