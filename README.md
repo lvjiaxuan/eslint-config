@@ -3,6 +3,10 @@
 
 # Features
 
+- Sync `js` rules to `ts` rules. [Refer](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/typescript/sync-rules.js).
+
+## Supported Rules
+
 - [prefer-constraint-array-type](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin-lvjiaxuan/src/rules/prefer-constraint-array-type.ts) warning defaults.
 
 # Usage
