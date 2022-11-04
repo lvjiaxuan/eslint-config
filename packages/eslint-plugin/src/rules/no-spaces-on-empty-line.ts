@@ -39,7 +39,7 @@ export default createRule({
           }
         })
       },
-      // :exit 的意思是 node 遍历结束后再执行函数，而不是遍历开始时
+      // :exit 的意思是 node 遍历结束后再执行函数，而不是遍历开始时，即 `TemplateLiteral` 执行完后
       'Program:exit'(node: TSESTree.Program) {
         sourceCode.lines.forEach((lineString, index) => {
           if (!templateLiteralLines.has(index + 1) && /^[^\S]{0}\s+[^\S]{0}$/.test(lineString)) {

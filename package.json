@@ -14,10 +14,10 @@
   },
   "devDependencies": {
     "@lvjiaxuan/eslint-plugin": "workspace:*",
-    "@types/semver": "^7.3.12",
+    "@types/semver": "^7.3.13",
     "chalk": "^5.1.2",
     "enquirer": "^2.3.6",
-    "eslint": "^8.25.0",
+    "eslint": "^8.27.0",
     "execa": "^6.1.0",
     "semver": "^7.3.8",
     "typescript": "^4.8.4"
