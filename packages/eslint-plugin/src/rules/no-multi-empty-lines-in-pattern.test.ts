@@ -4,18 +4,19 @@ import { describe, it } from 'vitest'
 
 const ruleTester = new ESLintUtils.RuleTester({ parser: '@typescript-eslint/parser' })
 
+// Maybe it could represent the other 3, which are ObjectPattern\ArrayExpression\ArrayPattern
 describe('ObjectExpression', () => {
 
   it('base', () => {
     ruleTester.run(RULE_NAME, rule, {
       valid: [
-        // 'const obj = { // valid' +
-        // '\n  a: 1, // valid' +
-        // '\n  b: { // valid' +
-        // '\n    bb: 22 // valid' +
-        // '\n    // valid' +
-        // '\n  } // valid' +
-        // '\n} // valid',
+        'const obj = { // valid' +
+        '\n  a: 1, // valid' +
+        '\n  b: { // valid' +
+        '\n    bb: 22 // valid' +
+        '\n    // valid' +
+        '\n  } // valid' +
+        '\n} // valid',
       ],
       invalid: [
         {
@@ -38,7 +39,7 @@ describe('ObjectExpression', () => {
               line: 5,
               endLine: 6,
               messageId: 'noEmptyLine',
-              data: { linesCount: 2, maxLines: 0 },
+              data: { linesCount: 2, maxLines: 0, patternType: '{ ... }' },
             },
           ],
         },

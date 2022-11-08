@@ -53,7 +53,7 @@ async function runGit(version: string) {
 
 
 async function main() {
-  // await runTest()
+  await runTest()
   const version = await bumpVersion()
   await runGit(version)
 }
