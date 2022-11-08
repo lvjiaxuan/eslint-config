@@ -1,6 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-plugin",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "keywords": [
@@ -14,7 +14,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "vitest watch no-multi-empty-lines-in-pattern.test.ts",
+    "test": "vitest run",
     "stub": "unbuild --stub",
     "build": "unbuild",
     "prepublishOnly": "nr build"
