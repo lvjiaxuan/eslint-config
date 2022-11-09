@@ -3,12 +3,14 @@
 
 # Features
 
-- Sync `js` rules to `ts` rules. [Refer](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/typescript/sync-rules.js).
+- Sync `js` rules to `ts` rules. [Refer](./packages/typescript/sync-rules.js).
 
-## Supported Rules
+## [My custom rules](./packages/eslint-plugin/README.md)
 
-- [prefer-constraint-array-type](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin-lvjiaxuan/src/rules/prefer-constraint-array-type.ts) warning defaults.
-- [no-multi-empty-lines-in-pattern](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin-lvjiaxuan/src/rules/no-multi-empty-lines-in-pattern.ts) warning defaults.
+- [@lvjiaxuan/no-spaces-on-empty-line](./packages/eslint-plugin/src/rules/no-spaces-on-empty-line.ts) not used.
+- [@lvjiaxuan/prefer-constraint-array-type](./packages/eslint-plugin/src/rules/prefer-constraint-array-type.ts) warning defaults.
+- [@lvjiaxuan/no-multi-empty-lines-in-pattern](./packages/eslint-plugin/src/rules/no-multi-empty-lines-in-pattern.ts) warning defaults.
+- [@lvjiaxuan/omit-arrow-curly](./packages/eslint-plugin/src/rules/omit-arrow-curly.ts) warning defaults.
 
 # Usage
 
@@ -30,7 +32,7 @@ pnpm add lvjiaxuan/eslint-config -D
 }
 ```
 
-> Shortcut: `nx @lvjiaxuan/eslint-config`
+> Shortcut(uses [@antfu/ni](https://github.com/antfu/ni)): `nx @lvjiaxuan/eslint-config`
 
 Fix on save. VScode settings as below:
 ```json
