@@ -10,13 +10,13 @@ export default createRule({
   name: RULE_NAME,
 
   meta: {
-    type: 'problem',
+    type: 'suggestion',
     docs: {
       description: '建议缺省范形数组（元组）被类型约束。',
       recommended: 'warn',
     },
     schema: [],
-    fixable: 'whitespace',
+    fixable: 'code',
     hasSuggestions: true,
     messages: { preferConstraint: '建议缺省范形数组（元组）被类型约束。' },
   },
