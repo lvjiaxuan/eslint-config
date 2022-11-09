@@ -35,6 +35,7 @@ module.exports = {
     'arrow-parens': [ 'warn', 'as-needed' ], // prettier arrowParens: 'avoid'
     'eol-last': [ 'warn', 'always' ], // prettier endOfLine: 'lf'
     'no-extra-parens': 'warn',
+    'arrow-body-style': [ 'warn', 'as-needed', { requireReturnForObjectLiteral: false } ],
 
     // Possible Problems which are not included in recommended rules
     'array-callback-return': 'error',
