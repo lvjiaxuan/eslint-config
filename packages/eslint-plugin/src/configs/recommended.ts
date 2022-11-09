@@ -4,5 +4,6 @@ export default {
   rules: {
     '@lvjiaxuan/prefer-constraint-array-type': 'warn',
     '@lvjiaxuan/no-multi-empty-lines-in-pattern': 'warn',
+    '@lvjiaxuan/omit-arrow-curly': 'warn',
   },
 }
