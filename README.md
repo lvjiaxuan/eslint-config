@@ -8,6 +8,7 @@
 ## Supported Rules
 
 - [prefer-constraint-array-type](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin-lvjiaxuan/src/rules/prefer-constraint-array-type.ts) warning defaults.
+- [no-multi-empty-lines-in-pattern](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin-lvjiaxuan/src/rules/no-multi-empty-lines-in-pattern.ts) warning defaults.
 
 # Usage
 
