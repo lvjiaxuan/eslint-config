@@ -4,7 +4,7 @@ const createRule = ESLintUtils.RuleCreator(
   name => `https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin-lvjiaxuan/src/rules/${ name }.ts`,
 )
 
-export const RULE_NAME = 'prefer-constraint-array-type'
+export const RULE_NAME = 'prefer-constraint-tuple-type'
 
 export default createRule({
   name: RULE_NAME,

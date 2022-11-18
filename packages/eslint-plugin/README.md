@@ -31,7 +31,7 @@ const bar = 2
 
 > After I found it as well as [no-trailing-spaces](https://eslint.org/docs/latest/rules/no-trailing-spaces). So I set it deprecated, f--king sad.
 
-### [@lvjiaxuan/prefer-constraint-array-type](./src/rules/prefer-constraint-array-type.ts)
+### [@lvjiaxuan/prefer-constraint-tuple-type](./src/rules/prefer-constraint-tuple-type.ts)
 
 <!-- eslint-skip -->
 ```ts

@@ -1,5 +1,5 @@
 import { ESLintUtils } from '@typescript-eslint/utils'
-import rule, { RULE_NAME } from './prefer-constraint-array-type'
+import rule, { RULE_NAME } from './prefer-constraint-tuple-type'
 import { it } from 'vitest'
 
 const ruleTester = new ESLintUtils.RuleTester({ parser: '@typescript-eslint/parser' })
