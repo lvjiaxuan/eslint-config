@@ -5,46 +5,60 @@ import { it } from 'vitest'
 const ruleTester = new ESLintUtils.RuleTester({ parser: '@typescript-eslint/parser' })
 
 
-it('runs', () => {
-
-  ruleTester.run(RULE_NAME, rule, {
-    valid: [
-      `const fun = () => Object.keys({ a: 1, b: 2 })
+it('runs', () => ruleTester.run(RULE_NAME, rule, {
+  valid: [
+    `const fun = () => Object.keys({ a: 1, b: 2 })
   .filter(Boolean)
   .map(i => i + '--')
   .forEach(console.log)`,
-      `const fun = () => {
+    `const fun = () => {
   // ...
   Object.keys({ a: 1, b: 2 })
     .filter(Boolean)
     .map(i => i + '--')
     .forEach(console.log)
 }`,
-    ],
-    invalid: [
-      {
-        code: `const fun = () => {
+  ],
+  invalid: [
+    {
+      code: `const fun = () => {
   Object.keys({ a: 1, b: 2 })
     .filter(Boolean)
     .map(i => i + '--')
     .forEach(console.log)
 }`,
-        output: `const fun = () =>
-  Object.keys({ a: 1, b: 2 })
+      output: `const fun = () => Object.keys({ a: 1, b: 2 })
     .filter(Boolean)
     .map(i => i + '--')
-    .forEach(console.log)
-`,
-        errors: [
-          {
-            messageId: 'omitCurly',
-            line: 1,
-            endLine: 1,
-            column: 13,
-            endColumn: 20,
-          },
-        ],
-      },
-    ],
-  })
-})
+    .forEach(console.log)`,
+      errors: [
+        {
+          messageId: 'omitCurly',
+          line: 1,
+          endLine: 1,
+          column: 13,
+          endColumn: 20,
+        },
+      ],
+    },
+    {
+      code: `const obj = {
+  fun: () => {
+    Object.keys({ a: 1, b: 2 })
+      .filter(Boolean)
+      .map(i => i + '--')
+      .forEach(console.log)
+  },
+  foo: 1
+}`,
+      output: `const obj = {
+  fun: () => Object.keys({ a: 1, b: 2 })
+      .filter(Boolean)
+      .map(i => i + '--')
+      .forEach(console.log),
+  foo: 1
+}`,
+      errors: [ { messageId: 'omitCurly' } ],
+    },
+  ],
+}))

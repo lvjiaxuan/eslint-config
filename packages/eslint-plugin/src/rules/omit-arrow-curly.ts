@@ -41,9 +41,7 @@ export default createRule({
 
           const firstToken = sourceCode.getFirstToken(blockStatementNode)!
           const lastToken = sourceCode.getLastToken(blockStatementNode)!
-          const hasComments = sourceCode.getCommentsAfter(firstToken).length
-            || sourceCode.getCommentsBefore(lastToken).length
-
+          const hasComments = sourceCode.getCommentsAfter(firstToken).length || sourceCode.getCommentsBefore(lastToken).length
 
           blockStatementNode.body.length == 1
           && !hasComments
@@ -58,10 +56,12 @@ export default createRule({
             },
             messageId: 'omitCurly',
             fix(fixer) {
-
+              const afterFirstToken = sourceCode.getTokenAfter(firstToken)!
+              const beforeLasterToken = sourceCode.getTokenBefore(lastToken)!
+              console.log(beforeLasterToken)
               return [
-                fixer.removeRange([ blockStatementNode.range[0] - 1, blockStatementNode.range[0] + 1 ]),
-                fixer.removeRange([ blockStatementNode.range[1] - 1, blockStatementNode.range[1] ]),
+                fixer.removeRange([ blockStatementNode.range[0] - 1, blockStatementNode.range[0] + 1 + afterFirstToken.loc.start.column ]),
+                fixer.removeRange([ beforeLasterToken.range[1], blockStatementNode.range[1] ]),
                 // ..
               ]
             },
