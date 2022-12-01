@@ -4,6 +4,8 @@ import fs from 'fs'
 
 const cwd = process.cwd()
 
+// Install
+execaSync('ni', [ '@lvjiaxuan/eslint-config', 'eslint', '-D' ], { stdio: 'inherit', cwd })
 
 // Setup
 const pkgPath = path.resolve(cwd, 'package.json')
@@ -15,6 +17,3 @@ pkgInfo.eslintConfig = {
 }
 
 fs.writeFileSync(pkgPath, JSON.stringify(pkgInfo, null, 2) + '\n')
-
-// Install
-execaSync('ni', [ '@lvjiaxuan/eslint-config', 'eslint', '-D' ], { stdio: 'inherit', cwd })
