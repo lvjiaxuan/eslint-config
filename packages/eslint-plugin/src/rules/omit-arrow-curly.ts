@@ -32,20 +32,27 @@ export default createRule({
   create(context, options) {
     const sourceCode = context.getSourceCode()
 
-
     return {
       ArrowFunctionExpression(node) {
         if (options[0] == 'always' && node.body.type === 'BlockStatement') {
 
           const blockStatementNode = node.body
 
+          if (blockStatementNode.body.length != 1) {
+            return
+          }
+
+          if (![ 'ExpressionStatement', 'ReturnStatement' ].includes(blockStatementNode.body[0].type)) {
+            return
+          }
+
           const firstToken = sourceCode.getFirstToken(blockStatementNode)!
           const lastToken = sourceCode.getLastToken(blockStatementNode)!
-          const hasComments = sourceCode.getCommentsAfter(firstToken).length || sourceCode.getCommentsBefore(lastToken).length
+          if (sourceCode.getCommentsAfter(firstToken).length || sourceCode.getCommentsBefore(lastToken).length) {
+            return
+          }
 
-          blockStatementNode.body.length == 1
-          && !hasComments
-          && context.report({
+          context.report({
             node,
             loc: {
               start: node.loc.start,
@@ -57,20 +64,16 @@ export default createRule({
             messageId: 'omitCurly',
             fix(fixer) {
               const afterFirstToken = sourceCode.getTokenAfter(firstToken)!
-              const beforeLasterToken = sourceCode.getTokenBefore(lastToken)!
-              console.log(beforeLasterToken)
+              const beforeLastToken = sourceCode.getTokenBefore(lastToken)!
+
               return [
-                fixer.removeRange([ blockStatementNode.range[0] - 1, blockStatementNode.range[0] + 1 + afterFirstToken.loc.start.column ]),
-                fixer.removeRange([ beforeLasterToken.range[1], blockStatementNode.range[1] ]),
+                fixer.removeRange([ blockStatementNode.range[0] - 1, blockStatementNode.range[0] + 1 + afterFirstToken.loc.start.column + (blockStatementNode.body[0].type === 'ReturnStatement' ? 7 : 0) ]),
+                fixer.removeRange([ beforeLastToken.range[1], blockStatementNode.range[1] ]),
                 // ..
               ]
             },
           })
         }
-
-        // if(options[0] == 'never') {
-
-        // }
       },
     }
   },

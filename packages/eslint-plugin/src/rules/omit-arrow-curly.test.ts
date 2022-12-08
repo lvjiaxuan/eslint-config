@@ -18,6 +18,17 @@ it('runs', () => ruleTester.run(RULE_NAME, rule, {
     .map(i => i + '--')
     .forEach(console.log)
 }`,
+    `const fun = () => {
+  if (true) {
+    console.log(123)
+  }
+}`,
+    `const fun = () => {
+  switch (true) {
+    case 1 > 2: console.log(123)
+    default: console.log(321)
+  }
+}`,
   ],
   invalid: [
     {
@@ -58,6 +69,13 @@ it('runs', () => ruleTester.run(RULE_NAME, rule, {
       .forEach(console.log),
   foo: 1
 }`,
+      errors: [ { messageId: 'omitCurly' } ],
+    },
+    {
+      code: `const fun = () => {
+  return 1
+}`,
+      output: 'const fun = () => 1',
       errors: [ { messageId: 'omitCurly' } ],
     },
   ],
