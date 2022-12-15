@@ -15,5 +15,11 @@ pkgInfo.eslintConfig = {
   // root: true,
   extends: '@lvjiaxuan',
 }
+pkgInfo.scripts = pkgInfo.scripts ?? {}
+!pkgInfo.scripts.lint && (
+  pkgInfo.scripts.lint = 'eslint .'
+)
 
 fs.writeFileSync(pkgPath, JSON.stringify(pkgInfo, null, 2) + '\n')
+
+process.exit(0)
