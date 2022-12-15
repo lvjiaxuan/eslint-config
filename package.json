@@ -15,7 +15,7 @@
   "devDependencies": {
     "@lvjiaxuan/eslint-plugin": "workspace:*",
     "@types/semver": "^7.3.13",
-    "chalk": "^5.1.2",
+    "chalk": "^5.2.0",
     "enquirer": "^2.3.6",
     "eslint": "^8.29.0",
     "execa": "^6.1.0",

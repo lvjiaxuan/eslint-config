@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@lvjiaxuan/eslint-config": "workspace:*",
-    "@typescript-eslint/utils": "^5.45.1",
+    "@typescript-eslint/utils": "^5.46.1",
     "lodash.merge": "^4.6.2"
   },
   "devDependencies": {
