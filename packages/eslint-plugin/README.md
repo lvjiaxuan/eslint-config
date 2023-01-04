@@ -29,7 +29,7 @@ const foo = 1
 const bar = 2
 ```
 
-> After I found it as well as [no-trailing-spaces](https://eslint.org/docs/latest/rules/no-trailing-spaces). So I set it deprecated, f--king sad.
+> After, I found it as well as [no-trailing-spaces](https://eslint.org/docs/latest/rules/no-trailing-spaces). So I set it deprecated, f--king sad.
 
 ### [@lvjiaxuan/prefer-constraint-tuple-type](./src/rules/prefer-constraint-tuple-type.ts)
 
@@ -107,7 +107,7 @@ const [
 ] = arr
 ```
 
-### [@lvjiaxuan/omit-arrow-curly](./src/rules/omit-arrow-curly.ts)
+### [@lvjiaxuan/omit-arrow-curly](./src/rules/omit-arrow-curly.ts)(beta)
 
 [See.](./src/rules/omit-arrow-curly.test.ts)
 ## Refer
