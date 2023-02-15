@@ -19,9 +19,10 @@
     "eslint": ">=8"
   },
   "dependencies": {
-    "@lvjiaxuan/eslint-config-vue": "workspace:*"
+    "@lvjiaxuan/eslint-config-vue": "workspace:*",
+    "@lvjiaxuan/eslint-plugin": "workspace:*"
   },
   "devDependencies": {
-    "eslint": "^8.29.0"
+    "eslint": "^8.34.0"
   }
 }
