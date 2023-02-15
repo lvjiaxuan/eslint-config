@@ -25,11 +25,11 @@ npm i @lvjiaxuan/eslint-plugin
 <!-- eslint-skip -->
 ```js
 const foo = 1
-   // A few spaces which would be detected and removed by this rule.
+···// A few spaces which would be detected and removed by this rule.
 const bar = 2
 ```
 
-> After, I found it as well as [no-trailing-spaces](https://eslint.org/docs/latest/rules/no-trailing-spaces). So I set it deprecated, f--king sad.
+> After soon, I found it as well as [no-trailing-spaces](https://eslint.org/docs/latest/rules/no-trailing-spaces). So I set it deprecated, f--king sad.
 
 ### [@lvjiaxuan/prefer-constraint-tuple-type](./src/rules/prefer-constraint-tuple-type.ts)
 
@@ -38,7 +38,7 @@ const bar = 2
 type Foo<BarArr = []> = [ ...BarArr ] // A rest element type must be an array type.(2574)
 ```
 
-Maybe `BarArr` is better to extend a constraint type.
+Maybe `BarArr` is better to extend a constraint type even unknown.
 <!-- eslint-skip -->
 ```ts
 type Foo<BarArr extends unknown[] = []> = [ ...BarArr ] // ok.
@@ -48,9 +48,9 @@ type Foo<BarArr extends unknown[] = []> = [ ...BarArr ] // ok.
 
 options:
 ```js
-const way1 = { '@lvjiaxuan/no-multi-empty-lines-in-pattern': [ 'warn', { afterMaxLines: 0, beforeMaxLines: Infinity } ] } // default
+const options1 = { '@lvjiaxuan/no-multi-empty-lines-in-pattern': [ 'warn', { afterMaxLines: 0, beforeMaxLines: Infinity } ] } // default
 
-const way2 = {
+const options2 = {
   '@lvjiaxuan/no-multi-empty-lines-in-pattern': [
     'warn',
     {
@@ -62,7 +62,7 @@ const way2 = {
   ],
 }
 
-const way3 = {
+const options3 = {
   '@lvjiaxuan/no-multi-empty-lines-in-pattern': [
     'warn',
     { afterMaxLines: 0, beforeMaxLines: Infinity },
@@ -107,9 +107,9 @@ const [
 ] = arr
 ```
 
-### [@lvjiaxuan/omit-arrow-curly](./src/rules/omit-arrow-curly.ts)(beta)
+### [@lvjiaxuan/omit-arrow-curly](./src/rules/omit-arrow-curly.ts)
 
-[See.](./src/rules/omit-arrow-curly.test.ts)
+[Check Test-Cases.](./src/rules/omit-arrow-curly.test.ts)
 ## Refer
 
 - https://typescript-eslint.io/play/#showAST=es
