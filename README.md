@@ -20,8 +20,8 @@ ni @lvjiaxuan/eslint-config -D # By @antfu/ni
 npm i lvjiaxuan/eslint-config -D
 pnpm add lvjiaxuan/eslint-config -D
 
-nx @lvjiaxuan/eslint-config # Shortcut
-nx @lvjiaxuan/eslint-plugin # Include custom rules
+nix @lvjiaxuan/eslint-config # Shortcut
+nix @lvjiaxuan/eslint-plugin # Include custom rules
 ```
 
 Fix on save. VScode settings as below:
