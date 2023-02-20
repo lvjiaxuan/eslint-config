@@ -1,9 +1,20 @@
 # Changelog
 
-Tag ranges `v0.0.2...v0.5.0`. [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...v0.5.1`. [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v0.5.1 <sub>(2023-02-20)</sub>
+[compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.0...main)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- set dist to files. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(bdfd2)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/bdfd23d)
+
+### &nbsp;&nbsp;&nbsp;📌 Other Changes
+
+- doc: nx to nix. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(3c01e)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/3c01e17)
 
 ## v0.5.0 <sub>(2023-02-20)</sub>
-[compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.4.2...main)
+[compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.4.2...v0.5.0)
 
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
@@ -19,6 +30,7 @@ Tag ranges `v0.0.2...v0.5.0`. [All GitHub Releases](https://github.com/lvjiaxuan
 - chore: update deps. &nbsp;-&nbsp; by **lvjx7** [<samp>(6ad58)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/6ad58f4)
 - doc: update. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(d3d89)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/d3d89bc)
 - chore: update dep. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(18d5f)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/18d5f80)
+- Release v0.5.0 &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(359da)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/359da96)
 - **eslint-config**: chore(eslint-config): bundle tool changed. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(93178)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/93178d6)
 
 ## v0.4.2 <sub>(2022-12-08)</sub>
