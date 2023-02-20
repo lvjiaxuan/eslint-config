@@ -4,7 +4,7 @@
 
 Installation:
 ```shell
-npm i @lvjiaxuan/eslint-plugin
+npm i @lvjiaxuan/eslint-plugin -D
 ```
 
 *package.json* Setting:

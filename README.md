@@ -7,7 +7,7 @@
 
 ## [My custom rules](./packages/eslint-plugin/README.md)
 
-- [@lvjiaxuan/no-spaces-on-empty-line](./packages/eslint-plugin/src/rules/no-spaces-on-empty-line.ts) is deprecated.
+- [~~@lvjiaxuan/no-spaces-on-empty-line~~](./packages/eslint-plugin/src/rules/no-spaces-on-empty-line.ts) is deprecated.
 - [@lvjiaxuan/prefer-constraint-tuple-type](./packages/eslint-plugin/src/rules/prefer-constraint-tuple-type.ts) is warning by default.
 - [@lvjiaxuan/no-multi-empty-lines-in-pattern](./packages/eslint-plugin/src/rules/no-multi-empty-lines-in-pattern.ts) is warning by default.
 - [@lvjiaxuan/omit-arrow-curly](./packages/eslint-plugin/src/rules/omit-arrow-curly.ts) is warning by default.
@@ -16,23 +16,13 @@
 
 Installation:
 ```bash
-ni @lvjiaxuan/eslint-config -D
+ni @lvjiaxuan/eslint-config -D # By @antfu/ni
 npm i lvjiaxuan/eslint-config -D
 pnpm add lvjiaxuan/eslint-config -D
-```
 
-*package.json* Setting:
-```json
-{
-  "eslintConfig": {
-    "extends": [
-      "@lvjiaxuan"
-    ]
-  }
-}
+nx @lvjiaxuan/eslint-config # Shortcut
+nx @lvjiaxuan/eslint-plugin # Include custom rules
 ```
-
-> Shortcut(uses [@antfu/ni](https://github.com/antfu/ni)): `nx @lvjiaxuan/eslint-config`
 
 Fix on save. VScode settings as below:
 ```json
@@ -46,5 +36,5 @@ Fix on save. VScode settings as below:
 # Refer
 
 - https://github.com/antfu/eslint-config
-- https://eslint.org/
-- https://typescript-eslint.io/
+- https://eslint.org
+- https://typescript-eslint.io
