@@ -10,17 +10,19 @@
     "eslint-config"
   ],
   "scripts": {
-    "build": "nx esbuild add.js --bundle --platform=node --format=cjs --outdir=dist",
+    "build": "nx tsup add.ts --target=node16",
     "prepublishOnly": "nr build"
   },
+  "files": [
+    "!./add.js"
+  ],
   "main": "index.js",
   "bin": "./bin/add.mjs",
   "peerDependencies": {
     "eslint": ">=8"
   },
   "dependencies": {
-    "@lvjiaxuan/eslint-config-vue": "workspace:*",
-    "@lvjiaxuan/eslint-plugin": "workspace:*"
+    "@lvjiaxuan/eslint-config-vue": "workspace:*"
   },
   "devDependencies": {
     "eslint": "^8.34.0"
