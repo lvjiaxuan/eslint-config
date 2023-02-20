@@ -1,6 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-config",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "private": false,
   "description": "Lvjiaxuan's ESLint config",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
@@ -10,7 +10,7 @@
     "eslint-config"
   ],
   "scripts": {
-    "build": "nx tsup add.ts --target=node16",
+    "build": "nix tsup add.ts --target=node16",
     "prepublishOnly": "nr build"
   },
   "files": [

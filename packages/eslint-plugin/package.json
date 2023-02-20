@@ -1,6 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-plugin",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "keywords": [
@@ -17,11 +17,12 @@
   "scripts": {
     "dev": "vitest",
     "test": "vitest run",
-    "build": "nx tsup src/index.ts add.ts --target=node16 --format=esm,cjs --splitting",
+    "build": "nix tsup src/index.ts add.ts --target=node16 --format=esm,cjs --splitting",
     "prepublishOnly": "nr build"
   },
   "peerDependencies": {
-    "eslint": ">=8"
+    "eslint": ">=8",
+    "typescript": ">=4"
   },
   "dependencies": {
     "@lvjiaxuan/eslint-config": "workspace:*",
