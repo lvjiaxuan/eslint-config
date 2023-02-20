@@ -12,6 +12,7 @@
   "module": "./dist/src/index.mjs",
   "bin": "./bin/add.mjs",
   "files": [
+    "dist",
     "!./add.js"
   ],
   "scripts": {
