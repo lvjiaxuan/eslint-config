@@ -1,9 +1,16 @@
 # Changelog
 
-Tag ranges `v0.0.2...v0.5.1`. [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...v0.5.2`. [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v0.5.2 <sub>(2023-02-21)</sub>
+[compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.1...main)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- config error. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(e3f0f)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e3f0f32)
 
 ## v0.5.1 <sub>(2023-02-20)</sub>
-[compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.0...main)
+[compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.0...v0.5.1)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
@@ -12,6 +19,7 @@ Tag ranges `v0.0.2...v0.5.1`. [All GitHub Releases](https://github.com/lvjiaxuan
 ### &nbsp;&nbsp;&nbsp;📌 Other Changes
 
 - doc: nx to nix. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(3c01e)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/3c01e17)
+- Release v0.5.1 &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(9c283)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/9c28346)
 
 ## v0.5.0 <sub>(2023-02-20)</sub>
 [compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.4.2...v0.5.0)
