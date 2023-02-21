@@ -4,8 +4,7 @@ import { it } from 'vitest'
 
 const ruleTester = new ESLintUtils.RuleTester({ parser: '@typescript-eslint/parser' })
 
-it('runs', () => {
-
+it('runs', () =>
   ruleTester.run(RULE_NAME, rule, {
     valid: [
       'const foo = 123\n\ntype ArrayType<T extends unknown[] = []> = [...T]',
@@ -29,5 +28,4 @@ it('runs', () => {
         errors: [ { messageId: 'preferConstraint' } ],
       },
     ],
-  })
-})
+  }))

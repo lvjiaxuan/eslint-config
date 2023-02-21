@@ -4,8 +4,7 @@ import { it } from 'vitest'
 
 const ruleTester = new ESLintUtils.RuleTester({ parser: '@typescript-eslint/parser' })
 
-it('runs', () => {
-
+it('runs', () =>
   ruleTester.run(RULE_NAME, rule, {
     valid: [
       // base
@@ -22,5 +21,4 @@ it('runs', () => {
       },
       // template strings
     ],
-  })
-})
+  }))

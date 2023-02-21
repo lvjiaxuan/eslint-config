@@ -8,8 +8,9 @@
     "eslintplugin",
     "eslint-plugin"
   ],
-  "main": "./dist/src/index.cjs",
+  "main": "./dist/src/index.js",
   "module": "./dist/src/index.mjs",
+  "types": "./dist/src/index.d.ts",
   "bin": "./bin/add.mjs",
   "files": [
     "dist",
@@ -18,12 +19,11 @@
   "scripts": {
     "dev": "vitest",
     "test": "vitest run",
-    "build": "nix tsup src/index.ts add.ts --target=node16 --format=esm,cjs --splitting",
+    "build": "tsup",
     "prepublishOnly": "nr build"
   },
   "peerDependencies": {
-    "eslint": ">=8",
-    "typescript": ">=4"
+    "eslint": ">=8"
   },
   "dependencies": {
     "@lvjiaxuan/eslint-config": "workspace:*",
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@types/lodash.merge": "^4.6.7",
+    "@types/node": "^18.14.0",
     "eslint": "^8.34.0",
     "vitest": "^0.18.1"
   }

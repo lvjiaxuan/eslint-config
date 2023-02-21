@@ -7,19 +7,19 @@ const createRule = ESLintUtils.RuleCreator(
 
 export const RULE_NAME = 'no-multi-empty-lines-in-pattern'
 
-interface BaseOptions {
+export interface BaseOptions {
   afterMaxLines: number
   beforeMaxLines: number
 }
 
-interface PatternOptions {
+export interface PatternOptions {
   ObjectExpression?: BaseOptions
   ObjectPattern?: BaseOptions
   ArrayExpression?: BaseOptions
   ArrayPattern?: BaseOptions
 }
 
-export default createRule({
+export default createRule<[BaseOptions] | [PatternOptions] | [ BaseOptions, PatternOptions ], 'noEmptyLine'>({
   name: RULE_NAME,
 
   meta: {
@@ -116,13 +116,13 @@ export default createRule({
     } else {
       // [ BaseOptions, PatternOptions ]
 
-      const { afterMaxLines = 0, beforeMaxLines = Infinity } = options[0] as BaseOptions
+      const { afterMaxLines = 0, beforeMaxLines = Infinity } = options[0]
 
       const mergeBaseOptions = lodashMerge(defaultBaseOptions, { afterMaxLines, beforeMaxLines })
 
       Object.keys(options[1])
         .forEach(nodeType => patternOptions[nodeType as keyof PatternOptions] =
-          (options[1] as PatternOptions)[nodeType as keyof PatternOptions]
+          options[1][nodeType as keyof PatternOptions]
             ? lodashMerge(
               JSON.parse(JSON.stringify(mergeBaseOptions)) as BaseOptions,
               patternOptions[nodeType as keyof PatternOptions],

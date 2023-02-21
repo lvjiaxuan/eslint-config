@@ -8,23 +8,17 @@
   "scripts": {
     "lint": "eslint .",
     "test": "nr -r test",
-    "prepare": "nr -r stub",
-    "build": "nr -r build"
+    "prepare": "nr -r build"
   },
   "devDependencies": {
     "@lvjiaxuan/eslint-plugin": "workspace:*",
-    "@types/semver": "^7.3.13",
-    "chalk": "^5.2.0",
-    "enquirer": "^2.3.6",
     "eslint": "^8.34.0",
     "execa": "^7.0.0",
-    "semver": "^7.3.8",
+    "tsup": "^6.6.3",
     "typescript": "^4.9.5"
   },
   "eslintConfig": {
     "root": true,
-    "extends": [
-      "plugin:@lvjiaxuan/recommended"
-    ]
+    "extends": "plugin:@lvjiaxuan/recommended"
   }
 }

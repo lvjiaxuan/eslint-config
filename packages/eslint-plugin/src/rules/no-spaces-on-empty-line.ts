@@ -6,7 +6,7 @@ const createRule = ESLintUtils.RuleCreator(
 
 export const RULE_NAME = 'no-spaces-on-empty-line'
 
-export default createRule({
+export default createRule<[], 'noSpaces'>({
   name: RULE_NAME,
 
   meta: {

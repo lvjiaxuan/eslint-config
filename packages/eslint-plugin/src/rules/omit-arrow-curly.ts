@@ -6,7 +6,7 @@ const createRule = ESLintUtils.RuleCreator(
 
 export const RULE_NAME = 'omit-arrow-curly'
 
-export default createRule({
+export default createRule<['always' | 'never'], 'omitCurly'>({
   name: RULE_NAME,
 
   meta: {

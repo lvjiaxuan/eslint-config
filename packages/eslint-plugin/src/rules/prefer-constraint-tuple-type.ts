@@ -6,7 +6,7 @@ const createRule = ESLintUtils.RuleCreator(
 
 export const RULE_NAME = 'prefer-constraint-tuple-type'
 
-export default createRule({
+export default createRule<[], 'preferConstraint'>({
   name: RULE_NAME,
 
   meta: {

@@ -7,7 +7,7 @@ try {
   const cwd = process.cwd()
 
   // Install
-  execaSync('ni', [ '@lvjiaxuan/eslint-plugin', 'eslint', '-D' ], { stdio: 'inherit', cwd })
+  execaSync('ni', [ '@lvjiaxuan/eslint-plugin', 'eslint', '-D', '--workspace-root=true' ], { stdio: 'inherit', cwd })
 
   // Setup
   const pkgPath = path.resolve(cwd, 'package.json')
