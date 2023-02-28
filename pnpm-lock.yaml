@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@lvjiaxuan/eslint-plugin': workspace:*
+      '@types/eslint': ^8.21.1
       eslint: ^8.35.0
       execa: ^7.0.0
       tsup: ^6.6.3
@@ -12,6 +13,7 @@ importers:
       unbuild: ^1.1.2
     devDependencies:
       '@lvjiaxuan/eslint-plugin': link:packages/eslint-plugin
+      '@types/eslint': 8.21.1
       eslint: 8.35.0
       execa: 7.0.0
       tsup: 6.6.3_typescript@4.9.5
@@ -48,17 +50,21 @@ importers:
 
   packages/javascript:
     specifiers:
+      '@eslint/js': ^8.35.0
       eslint: ^8.35.0
       eslint-plugin-eslint-comments: ^3.2.0
       eslint-plugin-jsonc: ^2.6.0
       eslint-plugin-markdown: ^2.2.1
       eslint-plugin-promise: ^6.1.1
+      globals: ^13.20.0
       jsonc-eslint-parser: ^2.1.0
     dependencies:
+      '@eslint/js': 8.35.0
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.35.0
       eslint-plugin-jsonc: 2.6.0_eslint@8.35.0
       eslint-plugin-markdown: 2.2.1_eslint@8.35.0
       eslint-plugin-promise: 6.1.1_eslint@8.35.0
+      globals: 13.20.0
       jsonc-eslint-parser: 2.1.0
     devDependencies:
       eslint: 8.35.0
@@ -702,13 +708,19 @@ packages:
     resolution: {integrity: sha512-hC7OMnszpxhZPduX+m+nrx+uFoLkWOMiR4oa/AZF3MuSETYTZmFfJAHqZEM8MVlvfG7BEUcgvtwoCTxBp6hm3g==}
     dev: true
 
+  /@types/eslint/8.21.1:
+    resolution: {integrity: sha512-rc9K8ZpVjNcLs8Fp0dkozd5Pt2Apk1glO4Vgz8ix1u6yFByxfqo5Yavpy65o+93TAe24jr7v+eSBtFLvOQtCRQ==}
+    dependencies:
+      '@types/estree': 1.0.0
+      '@types/json-schema': 7.0.11
+    dev: true
+
   /@types/estree/1.0.0:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
 
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
-    dev: false
 
   /@types/lodash.merge/4.6.7:
     resolution: {integrity: sha512-OwxUJ9E50gw3LnAefSHJPHaBLGEKmQBQ7CZe/xflHkyy/wH2zVyEIAKReHvVrrn7zKdF58p16We9kMfh7v0RRQ==}

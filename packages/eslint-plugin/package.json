@@ -8,12 +8,22 @@
     "eslintplugin",
     "eslint-plugin"
   ],
-  "main": "./dist/index.cjs",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.mjs",
+      "default": "./dist/src/index.js"
+    },
+    "./flat": "./src/flat-index.mjs"
+  },
+  "main": "./dist/src/index.js",
+  "module": "./dist/src/index.mjs",
+  "types": "./dist/src/index.d.ts",
   "bin": "./bin/add.mjs",
   "files": [
     "dist",
-    "!src",
-    "!./add.ts"
+    "./src/flat-index.mjs",
+    "!./add.js"
   ],
   "scripts": {
     "stub": "unbuild --stub",

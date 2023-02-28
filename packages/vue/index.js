@@ -1,3 +1,5 @@
+const common = require('./common.json')
+
 module.exports = {
   extends: [ '@lvjiaxuan/ts' ],
 
@@ -23,15 +25,7 @@ module.exports = {
           // "<template>": "espree",
         },
       },
-      rules: {
-        'vue/no-unused-vars': 'off',
-
-        'vue/no-setup-props-destructure': 'off', // with reactivityTransform: true
-
-        // 避免导致全局类型报错
-        // refer to https://typescript-eslint.io/docs/linting/troubleshooting/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
-        'no-undef': 'off',
-      },
+      rules: common.rules,
     },
   ],
 }

@@ -8,11 +8,11 @@
   "keywords": [
     "eslint-config"
   ],
+  "exports": {
+    ".": "./index.js",
+    "./flat": "./flat-index.mjs"
+  },
   "main": "index.js",
-  "files": [
-    "index.js",
-    "sync-rules.js"
-  ],
   "peerDependencies": {
     "eslint": ">=8",
     "typescript": ">=4"

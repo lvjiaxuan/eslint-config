@@ -8,10 +8,15 @@
   "keywords": [
     "eslint-config"
   ],
+  "exports": {
+    ".": "./index.js",
+    "./flat": "./flat-index.mjs"
+  },
   "main": "index.js",
   "bin": "./bin/add.mjs",
   "files": [
     "dist",
+    "./flat-index.mjs",
     "!./add.js"
   ],
   "scripts": {
