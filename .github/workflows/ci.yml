@@ -1,4 +1,4 @@
-name: Publish
+name: Release and Publish
 
 on:
   push:
@@ -6,6 +6,20 @@ on:
       - v*
 
 jobs:
+
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - run: npx lvr --release
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
   publish:
     runs-on: ubuntu-latest
     steps:
@@ -35,7 +49,7 @@ jobs:
     needs: publish
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
 
