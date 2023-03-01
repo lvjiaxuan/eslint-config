@@ -8,18 +8,17 @@
     "eslintplugin",
     "eslint-plugin"
   ],
-  "main": "./dist/src/index.js",
-  "module": "./dist/src/index.mjs",
-  "types": "./dist/src/index.d.ts",
+  "main": "./dist/index.cjs",
   "bin": "./bin/add.mjs",
   "files": [
     "dist",
-    "!./add.js"
+    "!src",
+    "!./add.ts"
   ],
   "scripts": {
-    "dev": "vitest",
+    "stub": "unbuild --stub",
     "test": "vitest run",
-    "build": "tsup",
+    "build": "unbuild",
     "prepublishOnly": "nr build"
   },
   "peerDependencies": {
