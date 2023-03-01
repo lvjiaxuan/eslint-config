@@ -8,11 +8,11 @@
   "scripts": {
     "lint": "eslint .",
     "test": "nr -r test",
-    "prepare": "nr -r build"
+    "prepare": "nr -r stub"
   },
   "devDependencies": {
     "@lvjiaxuan/eslint-plugin": "workspace:*",
-    "eslint": "^8.34.0",
+    "eslint": "^8.35.0",
     "execa": "^7.0.0",
     "tsup": "^6.6.3",
     "typescript": "^4.9.5"
