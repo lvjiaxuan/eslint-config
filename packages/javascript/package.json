@@ -8,9 +8,13 @@
   "keywords": [
     "eslint-config"
   ],
+  "scripts": {
+    "dev": "nr build:flat --watch",
+    "build:flat": "tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake"
+  },
   "exports": {
     ".": "./index.js",
-    "./flat": "./flat-index.mjs"
+    "./flat": "./dist/flat.mjs"
   },
   "main": "index.js",
   "peerDependencies": {

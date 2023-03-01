@@ -21,9 +21,7 @@
   "types": "./dist/src/index.d.ts",
   "bin": "./bin/add.mjs",
   "files": [
-    "dist",
-    "./src/flat-index.mjs",
-    "!./add.js"
+    "dist"
   ],
   "scripts": {
     "stub": "unbuild --stub",

@@ -11,7 +11,7 @@
     "prepare": "nr -r stub"
   },
   "devDependencies": {
-    "@lvjiaxuan/eslint-plugin": "workspace:*",
+    "@lvjiaxuan/eslint-config-js": "workspace:*",
     "@types/eslint": "^8.21.1",
     "eslint": "^8.35.0",
     "execa": "^7.0.0",
@@ -19,7 +19,7 @@
     "typescript": "^4.9.5",
     "unbuild": "^1.1.2"
   },
-  "eslintConfig": {
-    "extends": "plugin:@lvjiaxuan/recommended"
+  "dependencies": {
+    "@eslint/eslintrc": "^2.0.0"
   }
 }
