@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@lvjiaxuan/eslint-config-ts": "workspace:*",
+    "@vue/eslint-config-typescript": "^11.0.2",
     "eslint-plugin-vue": "^9.9.0"
   },
   "devDependencies": {
