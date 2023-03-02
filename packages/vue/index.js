@@ -4,7 +4,7 @@ module.exports = {
   overrides: [
     {
       files: [ '*.vue' ],
-      extends: [ 'plugin:vue/vue3-recommended', '@vue/eslint-config-typescript' ],
+      extends: [ 'plugin:vue/vue3-recommended', '@vue/eslint-config-typescript/recommended' ],
       parserOptions: {
         parser: {
           // https://github.com/vuejs/vue-eslint-parser
