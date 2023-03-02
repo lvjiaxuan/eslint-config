@@ -1,6 +1,13 @@
 # Changelog
 
-Tag ranges `v0.0.2...v0.5.3`. [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...v0.6.0`. [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v0.6.0 <sub>(2023-03-02)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.3...main)
+
+### &nbsp;&nbsp;&nbsp;✨ Enhancements
+
+- **vue**: add a config &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(53be3)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/53be33f)
 
 ## v0.5.3 <sub>(2023-03-01)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.2...v0.5.3)
