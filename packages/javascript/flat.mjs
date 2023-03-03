@@ -1,7 +1,7 @@
-import comments from 'eslint-plugin-eslint-comments'
-import promise from 'eslint-plugin-promise'
-import jsonc from 'eslint-plugin-jsonc'
-import markdown from 'eslint-plugin-markdown'
+import commentsPlugin from 'eslint-plugin-eslint-comments'
+import promisePlugin from 'eslint-plugin-promise'
+import jsoncPlugin from 'eslint-plugin-jsonc'
+import markdownPlugin from 'eslint-plugin-markdown'
 import eslint from 'eslint'
 import globals from 'globals'
 import js from '@eslint/js'
@@ -10,13 +10,13 @@ import basic from './basic'
 
 
 /**
- * @description a simple compat
- * @param {eslint.ESLint.ConfigData} config 
- * @returns {flatConfig}
+ * @description A temporary compat
+ * @param {eslint.ESLint.plugin} plugin 
+ * @returns {eslint.Linter.FlatConfig}
  */
-const compatPluginConfig = (plugin, name = 'recommended') => {
-  // It seems that `@eslint/eslintrc` could only be used in `eslint.config.js` rather than packing it before using.
-  // So I need to do a simple compatibility by myself.
+export const compatPluginConfig = (plugin, name = 'recommended') => {
+  // It seems that `@eslint/eslintrc` could only be used in `eslint.config.js` of root rather than packing it for import.
+  // So I need to do a temporary compatibility by myself.
 
   /** @type {eslint.Linter.FlatConfig} */
   const flatConfig = {}
@@ -30,18 +30,73 @@ const compatPluginConfig = (plugin, name = 'recommended') => {
 }
 
 /**
+ * @returns {eslint.Linter.FlatConfig}
+ */
+export const compatJsoncPluginConfig = () =>({
+  // jsoncPlugin.configs['recommended-with-jsonc']
+  files: ["**/*.json", "**/*.json5", "**/*.jsonc"],
+  plugins: { jsonc: jsoncPlugin },
+  languageOptions: {
+    parser: jsoncPlugin.parseForESLint
+  },
+  rules: {
+    strict: "off",
+    "no-unused-expressions": "off",
+    "no-unused-vars": "off",
+    ...jsoncPlugin.configs['recommended-with-jsonc'].rules,
+  }
+})
+
+/**
+ * @returns {Array.<eslint.Linter.FlatConfig>}
+ */
+export const compatMarkdownPluginConfig = () => {
+  // markdownPlugin.configs.recommended
+
+  const recommended = markdownPlugin.configs.recommended
+
+  const base = {
+    plugins: {
+      [recommended.plugins[0]]: markdownPlugin
+    }
+  }
+
+  return recommended.overrides.reduce((preValue, item) => {
+
+      /** @type {eslint.Linter.FlatConfig} */
+    const flatConfig = base
+
+    flatConfig.files = item.files
+    item.processor && (flatConfig.processor = item.processor)
+    if(item.parserOptions) {
+      flatConfig.languageOptions = {}
+      flatConfig.languageOptions.parserOptions = item.parserOptions
+    }
+    item.rules && (flatConfig.rules = item.rules)
+
+    preValue.push(flatConfig)
+    return preValue
+  }, [])
+}
+
+/**
  * @type {Array.<eslint.Linter.FlatConfig>}
  * @link https://eslint.org/docs/latest/use/configure/configuration-files-new
  */
 export default  [
   js.configs.recommended,
+
   // comments.configs.recommended,
-  compatPluginConfig(comments),
+  compatPluginConfig(commentsPlugin),
+
   // promise.configs.recommended,
-  compatPluginConfig(promise),
-  jsonc.configs['recommended-with-jsonc'],
-  compatPluginConfig(jsonc, 'recommended-with-jsonc'),
-  markdown.recommended,
+  compatPluginConfig(promisePlugin),
+
+  // jsonc.configs['recommended-with-jsonc']
+  compatJsoncPluginConfig(),
+
+  // markdownPlugin.configs.recommended,
+  compatMarkdownPluginConfig()
 
   // // **/*.js, **/*.cjs, and **/*.mjs by default
   // {
