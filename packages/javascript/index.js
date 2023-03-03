@@ -16,7 +16,7 @@ module.exports = {
     'no-empty': [ 'error', { allowEmptyCatch: true } ],
     'no-empty-function': 'warn',
     'no-tabs': [ 'warn', { allowIndentationTabs: false } ], // prettier useTabs: false; allowIndentationTabs 这里指非代码行的缩进
-    'no-unused-vars': 'off', // tree shaking would helps
+    'no-unused-vars': 'off', // tree shaking would help
     'sort-imports': [
       'warn',
       {
