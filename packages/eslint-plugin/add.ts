@@ -1,6 +1,10 @@
 import { execaSync } from 'execa'
 import path from 'node:path'
 import fs from 'node:fs'
+import minimist from 'minimist'
+
+const args = minimist(process.argv.slice(2))
+const flat = !!args.flat
 
 try {
 

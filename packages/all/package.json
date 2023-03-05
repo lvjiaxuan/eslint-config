@@ -10,7 +10,7 @@
   ],
   "exports": {
     ".": "./index.js",
-    "./flat": "./flat-index.mjs"
+    "./flat": "./flat.mjs"
   },
   "main": "index.js",
   "bin": "./bin/add.mjs",
