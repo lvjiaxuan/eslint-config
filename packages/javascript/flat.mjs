@@ -52,7 +52,7 @@ export const compatJsoncPluginConfig = () =>({
  * @returns {Array.<eslint.Linter.FlatConfig>}
  */
 export const compatMarkdownPluginConfig = () => {
-  markdownPlugin.configs.recommended
+  // markdownPlugin.configs.recommended
   // https://eslint.org/docs/latest/use/configure/configuration-files-new#using-processors
 
   const recommended = markdownPlugin.configs.recommended

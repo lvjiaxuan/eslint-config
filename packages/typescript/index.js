@@ -18,7 +18,8 @@ module.exports = {
       parserOptions: {
         // https://typescript-eslint.io/docs/linting/type-linting
         tsconfigRootDir: process.cwd(),
-        project: [ './tsconfig.json' ],
+        // https://typescript-eslint.io/linting/typed-linting/monorepos
+        project: [ './tsconfig.json', './tsconfig.eslint.json', './packages/*/tsconfig.json' ],
 
         // https://typescript-eslint.io/docs/linting/troubleshooting/#i-use-a-framework-like-vue-that-requires-custom-file-extensions-and-i-get-errors-like-you-should-add-parseroptionsextrafileextensions-to-your-config
         extraFileExtensions: [ '.vue' ],
