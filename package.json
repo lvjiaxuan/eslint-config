@@ -5,6 +5,7 @@
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "license": "MIT",
   "homepage": "https://github.com/lvjiaxuan/@lvjiaxuan/eslint-config-monorepo#README.md",
+  "type": "module",
   "scripts": {
     "lint": "eslint .",
     "test": "nr -r test",

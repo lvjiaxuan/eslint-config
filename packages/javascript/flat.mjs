@@ -24,7 +24,7 @@ export const compatPluginConfig = (plugin, name = 'recommended') => {
   // string[] to name-value
   flatConfig.plugins = { [plugin.configs[name].plugins[0]]: plugin }
   // maintain
-  flatConfig.rules = config.rules ?? {}
+  flatConfig.rules = plugin.configs[name].rules ?? {}
 
   return flatConfig
 }
@@ -32,12 +32,13 @@ export const compatPluginConfig = (plugin, name = 'recommended') => {
 /**
  * @returns {eslint.Linter.FlatConfig}
  */
+// console.log(jsoncPlugin.parseForESLint)
+// jsoncPlugin.configs['recommended-with-jsonc']
 export const compatJsoncPluginConfig = () =>({
-  // jsoncPlugin.configs['recommended-with-jsonc']
   files: ["**/*.json", "**/*.json5", "**/*.jsonc"],
   plugins: { jsonc: jsoncPlugin },
   languageOptions: {
-    parser: jsoncPlugin.parseForESLint
+    parser: jsoncPlugin
   },
   rules: {
     strict: "off",
@@ -51,32 +52,30 @@ export const compatJsoncPluginConfig = () =>({
  * @returns {Array.<eslint.Linter.FlatConfig>}
  */
 export const compatMarkdownPluginConfig = () => {
-  // markdownPlugin.configs.recommended
+  markdownPlugin.configs.recommended
+  // https://eslint.org/docs/latest/use/configure/configuration-files-new#using-processors
 
   const recommended = markdownPlugin.configs.recommended
 
-  const base = {
+  /** @type {eslint.Linter.FlatConfig} */
+  const flatA = {
+    files: ['**/*.md'],
     plugins: {
       [recommended.plugins[0]]: markdownPlugin
-    }
+    },
+    processor: recommended.overrides[0].processor
   }
 
-  return recommended.overrides.reduce((preValue, item) => {
+  /** @type {eslint.Linter.FlatConfig} */
+  const flatB = {
+    files: recommended.overrides[1].files,
+    languageOptions: {
+      parserOptions: recommended.overrides[1].parserOptions
+    },
+    rules: recommended.overrides[1].rules
+  }
 
-      /** @type {eslint.Linter.FlatConfig} */
-    const flatConfig = base
-
-    flatConfig.files = item.files
-    item.processor && (flatConfig.processor = item.processor)
-    if(item.parserOptions) {
-      flatConfig.languageOptions = {}
-      flatConfig.languageOptions.parserOptions = item.parserOptions
-    }
-    item.rules && (flatConfig.rules = item.rules)
-
-    preValue.push(flatConfig)
-    return preValue
-  }, [])
+  return [ flatA, flatB ]
 }
 
 /**
@@ -96,103 +95,103 @@ export default  [
   compatJsoncPluginConfig(),
 
   // markdownPlugin.configs.recommended,
-  compatMarkdownPluginConfig()
+  ...compatMarkdownPluginConfig(),
 
-  // // **/*.js, **/*.cjs, and **/*.mjs by default
-  // {
-  //   ignores: basic.ignorePatterns,
+  // **/*.js, **/*.cjs, and **/*.mjs by default
+  {
+    ignores: basic.ignorePatterns,
 
-  //   linterOptions: {
-  //     reportUnusedDisableDirectives: true,
-  //     noInlineConfig: false,
-  //   },
+    linterOptions: {
+      reportUnusedDisableDirectives: true,
+      noInlineConfig: false,
+    },
 
-  //   languageOptions: {
-  //     // ecmaVersion latest by default
-  //     // sourceType .ext depended by default
-  //     // parser https://github.com/eslint/espree by default
-  //     globals: {
-  //       ...globals.browser,
-  //       ...globals.node,
-  //     },
-  //     parserOptions: {
-  //       ecmaFeatures: {
-  //         jsx: true,
-  //         globalReturn: false,
-  //         impliedStrict: true,
-  //       },
-  //     },
-  //   },
+    languageOptions: {
+      // ecmaVersion latest by default
+      // sourceType depended by .ext by default
+      // parser https://github.com/eslint/espree by default
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+          globalReturn: false,
+          impliedStrict: true,
+        },
+      },
+    },
 
-  //   rules: index.rules,
-  // },
+    rules: index.rules,
+  },
 
-  // // package.json
-  // {
-  //   files: [ 'package.json' ],
-  //   languageOptions: {
-  //     parser: jsonc.parseForESLint
-  //   },
-  //   rules: {
-  //     'jsonc/sort-keys': [
-  //       'error',
-  //       {
-  //         pathPattern: '^$',
-  //         order: [
-  //           'publisher',
-  //           'name',
-  //           'displayName',
-  //           'type',
-  //           'version',
-  //           'private',
-  //           'packageManager',
-  //           'description',
-  //           'author',
-  //           'license',
-  //           'funding',
-  //           'homepage',
-  //           'repository',
-  //           'bugs',
-  //           'keywords',
-  //           'categories',
-  //           'sideEffects',
-  //           'exports',
-  //           'main',
-  //           'module',
-  //           'unpkg',
-  //           'jsdelivr',
-  //           'types',
-  //           'typesVersions',
-  //           'bin',
-  //           'icon',
-  //           'files',
-  //           'engines',
-  //           'activationEvents',
-  //           'contributes',
-  //           'scripts',
-  //           'peerDependencies',
-  //           'peerDependenciesMeta',
-  //           'dependencies',
-  //           'optionalDependencies',
-  //           'devDependencies',
-  //           'pnpm',
-  //           'overrides',
-  //           'resolutions',
-  //           'husky',
-  //           'simple-git-hooks',
-  //           'lint-staged',
-  //           'eslintConfig',
-  //         ],
-  //       },
-  //       {
-  //         pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
-  //         order: { type: 'asc' },
-  //       },
-  //       {
-  //         pathPattern: '^exports.*$',
-  //         order: [ 'types', 'require', 'import' ],
-  //       },
-  //     ],
-  //   },
-  // },
+  // package.json
+  {
+    files: [ 'package.json' ],
+    // languageOptions: {
+    //   parser: jsonc.parseForESLint
+    // },
+    rules: {
+      'jsonc/sort-keys': [
+        'error',
+        {
+          pathPattern: '^$',
+          order: [
+            'publisher',
+            'name',
+            'displayName',
+            'type',
+            'version',
+            'private',
+            'packageManager',
+            'description',
+            'author',
+            'license',
+            'funding',
+            'homepage',
+            'repository',
+            'bugs',
+            'keywords',
+            'categories',
+            'sideEffects',
+            'exports',
+            'main',
+            'module',
+            'unpkg',
+            'jsdelivr',
+            'types',
+            'typesVersions',
+            'bin',
+            'icon',
+            'files',
+            'engines',
+            'activationEvents',
+            'contributes',
+            'scripts',
+            'peerDependencies',
+            'peerDependenciesMeta',
+            'dependencies',
+            'optionalDependencies',
+            'devDependencies',
+            'pnpm',
+            'overrides',
+            'resolutions',
+            'husky',
+            'simple-git-hooks',
+            'lint-staged',
+            'eslintConfig',
+          ],
+        },
+        {
+          pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
+          order: { type: 'asc' },
+        },
+        {
+          pathPattern: '^exports.*$',
+          order: [ 'types', 'require', 'import' ],
+        },
+      ],
+    },
+  },
 ]
