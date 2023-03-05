@@ -1,3 +1,3 @@
-import lvjiaxuan from '@lvjiaxuan/eslint-config-js/flat'
+import lvjiaxuan from '@lvjiaxuan/eslint-config/flat'
 
 export default lvjiaxuan

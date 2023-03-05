@@ -12,7 +12,7 @@
     "prepare": "nr -r stub"
   },
   "devDependencies": {
-    "@lvjiaxuan/eslint-config-js": "workspace:*",
+    "@lvjiaxuan/eslint-config": "workspace:*",
     "@types/eslint": "^8.21.1",
     "@types/minimist": "^1.2.2",
     "eslint": "^8.35.0",
