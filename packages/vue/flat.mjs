@@ -5,7 +5,7 @@ import tsParser from '@typescript-eslint/parser'
 import vueParser from 'vue-eslint-parser'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
 import vueTSConfig from '@vue/eslint-config-typescript'
-import vueTSRecommendedConfig from '@vue/eslint-config-typescript/recommended'
+import vueTSRecommendedConfig from '@vue/eslint-config-typescript/recommended.js'
 import index from './index'
 
 

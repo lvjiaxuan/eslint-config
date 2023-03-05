@@ -16,7 +16,7 @@
   "bin": "./bin/add.mjs",
   "files": [
     "dist",
-    "./flat-index.mjs",
+    "./flat.mjs",
     "!./add.js"
   ],
   "scripts": {

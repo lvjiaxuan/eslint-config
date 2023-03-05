@@ -1,4 +1,6 @@
-const syncRules = require('./sync-rules')
+// const syncRules = require('./sync-rules')
+
+const json = require('./sync.json')
 
 module.exports = {
   extends: [ '@lvjiaxuan/js' ],
@@ -35,7 +37,7 @@ module.exports = {
         '@typescript-eslint/unbound-method': 'off',
 
         // sync js
-        ...syncRules,
+        ...json,
 
         '@typescript-eslint/no-use-before-define': [
           'warn', {

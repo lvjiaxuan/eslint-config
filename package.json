@@ -9,6 +9,8 @@
   "scripts": {
     "lint": "eslint .",
     "test": "nr -r test",
+    "dev": "nr -r dev",
+    "build:flat": "nr -r build:flat",
     "prepare": "nr -r stub"
   },
   "devDependencies": {

@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "dev": "nr build:flat --watch",
+    "sync_rules": "node sync_rules",
     "build:flat": "tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake"
   },
   "exports": {

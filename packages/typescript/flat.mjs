@@ -18,7 +18,7 @@ export default [
     },
     languageOptions: {
       parser: tsParser,
-      parserOptions: index.overrides[1].parserOptions
+      parserOptions: index.overrides[0].parserOptions
     },
     rules: {
       ...typescript.configs['eslint-recommended'].rules,
