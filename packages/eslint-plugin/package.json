@@ -7,7 +7,11 @@
     "eslint",
     "eslint-plugin"
   ],
-  "main": "./dist/src/index.cjs",
+  "exports": {
+    ".": "./dist/index.cjs",
+    "./flat": "./dist/flat.mjs"
+  },
+  "main": "./dist/index.cjs",
   "bin": "./bin/add.mjs",
   "files": [
     "dist"

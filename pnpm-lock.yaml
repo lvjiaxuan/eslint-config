@@ -6,19 +6,14 @@ importers:
     specifiers:
       '@lvjiaxuan/eslint-config': workspace:*
       '@types/eslint': ^8.21.1
-      '@types/minimist': ^1.2.2
       eslint: ^8.35.0
       execa: ^7.0.0
-      minimist: ^1.2.8
       tsup: ^6.6.3
       typescript: ^4.9.5
       unbuild: ^1.1.2
-    dependencies:
-      minimist: 1.2.8
     devDependencies:
       '@lvjiaxuan/eslint-config': link:packages/all
       '@types/eslint': 8.21.1
-      '@types/minimist': 1.2.2
       eslint: 8.35.0
       execa: 7.0.0
       tsup: 6.6.3_typescript@4.9.5
@@ -752,10 +747,6 @@ packages:
     dependencies:
       '@types/unist': 2.0.6
     dev: false
-
-  /@types/minimist/1.2.2:
-    resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
-    dev: true
 
   /@types/node/18.14.2:
     resolution: {integrity: sha512-1uEQxww3DaghA0RxqHx0O0ppVlo43pJhepY51OxuQIKHpjbnYLA7vcdwioNPzIqmC2u3I/dmylcqjlh0e7AyUA==}
@@ -2196,10 +2187,6 @@ packages:
     dependencies:
       brace-expansion: 2.0.1
     dev: true
-
-  /minimist/1.2.8:
-    resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
-    dev: false
 
   /mkdist/1.1.1_typescript@4.9.5:
     resolution: {integrity: sha512-9cEzCsBD0qpybR/lJMB0vRIDZiHP7hJHTN2mQtFU2qt0vr7lFnghxersOJbKLshaDsl4GlnY2OBzmRRUTfuaDg==}

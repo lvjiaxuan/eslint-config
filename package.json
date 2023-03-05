@@ -16,7 +16,6 @@
   "devDependencies": {
     "@lvjiaxuan/eslint-config": "workspace:*",
     "@types/eslint": "^8.21.1",
-    "@types/minimist": "^1.2.2",
     "eslint": "^8.35.0",
     "execa": "^7.0.0",
     "tsup": "^6.6.3",
@@ -24,6 +23,5 @@
     "unbuild": "^1.1.2"
   },
   "dependencies": {
-    "minimist": "^1.2.8"
   }
 }
