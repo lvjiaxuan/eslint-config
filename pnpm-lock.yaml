@@ -88,14 +88,20 @@ importers:
   packages/vue:
     specifiers:
       '@lvjiaxuan/eslint-config-ts': workspace:*
+      '@rushstack/eslint-patch': ^1.2.0
+      '@typescript-eslint/eslint-plugin': ^5.54.0
       '@vue/eslint-config-typescript': ^11.0.2
       eslint: ^8.35.0
       eslint-plugin-vue: ^9.9.0
+      vue-eslint-parser: ^9.1.0
     dependencies:
       '@lvjiaxuan/eslint-config-ts': link:../typescript
+      '@typescript-eslint/eslint-plugin': 5.54.0_6mj2wypvdnknez7kws2nfdgupi
       '@vue/eslint-config-typescript': 11.0.2_mwzft5yawf6e3vmm364a6avhx4
       eslint-plugin-vue: 9.9.0_eslint@8.35.0
+      vue-eslint-parser: 9.1.0_eslint@8.35.0
     devDependencies:
+      '@rushstack/eslint-patch': 1.2.0
       eslint: 8.35.0
 
 packages:
@@ -699,6 +705,10 @@ packages:
       rollup: 3.17.2
     dev: true
 
+  /@rushstack/eslint-patch/1.2.0:
+    resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
+    dev: true
+
   /@types/chai-subset/1.3.3:
     resolution: {integrity: sha512-frBecisrNGz+F4T6bcc+NLeolfiojh5FxW2klu669+8BARtyQv2C/GkNW6FUodVe4BroGMP/wER/YDGc7rEllw==}
     dependencies:
@@ -901,7 +911,7 @@ packages:
       eslint: 8.35.0
       eslint-plugin-vue: 9.9.0_eslint@8.35.0
       typescript: 4.9.5
-      vue-eslint-parser: 9.0.3_eslint@8.35.0
+      vue-eslint-parser: 9.1.0_eslint@8.35.0
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1513,7 +1523,7 @@ packages:
       nth-check: 2.1.1
       postcss-selector-parser: 6.0.10
       semver: 7.3.8
-      vue-eslint-parser: 9.0.3_eslint@8.35.0
+      vue-eslint-parser: 9.1.0_eslint@8.35.0
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -2894,8 +2904,8 @@ packages:
       - terser
     dev: true
 
-  /vue-eslint-parser/9.0.3_eslint@8.35.0:
-    resolution: {integrity: sha512-yL+ZDb+9T0ELG4VIFo/2anAOz8SvBdlqEnQnvJ3M7Scq56DvtjY0VY88bByRZB0D4J0u8olBcfrXTVONXsh4og==}
+  /vue-eslint-parser/9.1.0_eslint@8.35.0:
+    resolution: {integrity: sha512-NGn/iQy8/Wb7RrRa4aRkokyCZfOUWk19OP5HP6JEozQFX5AoS/t+Z0ZN7FY4LlmWc4FNI922V7cvX28zctN8dQ==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'

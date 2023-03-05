@@ -5,7 +5,7 @@ module.exports = {
 
   overrides: [
     {
-      files: [ '*.ts', '*.d.ts', '*.tsx', '*.vue' ],
+      files: [ '*.ts', '*.d.ts', '*.tsx'],
 
       parser: '@typescript-eslint/parser',
 
@@ -22,7 +22,7 @@ module.exports = {
         project: [ './tsconfig.json', './tsconfig.eslint.json', './packages/*/tsconfig.json' ],
 
         // https://typescript-eslint.io/docs/linting/troubleshooting/#i-use-a-framework-like-vue-that-requires-custom-file-extensions-and-i-get-errors-like-you-should-add-parseroptionsextrafileextensions-to-your-config
-        extraFileExtensions: [ '.vue' ],
+        // extraFileExtensions: [ '.vue' ], migrate to vue package
       },
 
       rules: {

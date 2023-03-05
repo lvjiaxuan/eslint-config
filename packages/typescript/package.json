@@ -14,7 +14,7 @@
   },
   "exports": {
     ".": "./index.js",
-    "./flat": "./flat-index.mjs"
+    "./flat": "./flat.mjs"
   },
   "main": "index.js",
   "peerDependencies": {
