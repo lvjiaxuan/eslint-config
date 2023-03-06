@@ -1,4 +1,4 @@
-![actions](https://github.com/lvjiaxuan/eslint-config/actions/workflows/release.yml/badge.svg)
+![actions](https://github.com/lvjiaxuan/eslint-config/actions/workflows/ci.yml/badge.svg)
 [![npm](https://img.shields.io/npm/v/@lvjiaxuan/eslint-config)](https://www.npmjs.com/package/@lvjiaxuan/eslint-config)
 
 # Features
