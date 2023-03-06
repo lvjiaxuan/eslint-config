@@ -13,7 +13,7 @@
   },
   "main": "./dist/index.cjs",
   "bin": "./bin/add.mjs",
-  "files": [ "!./add.ts", "!src" ],
+  "files": ["!./add.ts", "!src"],
   "scripts": {
     "dev": "unbuild --stub",
     "test": "vitest run",

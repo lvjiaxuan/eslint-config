@@ -14,7 +14,7 @@
   },
   "main": "index.js",
   "bin": "./bin/add.mjs",
-  "files": [ "!./add.ts" ],
+  "files": ["!./add.ts"],
   "scripts": {
     "build": "tsup add.ts --target=node16",
     "prepublishOnly": "nr build"

@@ -13,7 +13,7 @@ import basic from './basic'
 
 /**
  * @description A temporary compat
- * @param {eslint.ESLint.plugin} plugin 
+ * @param {eslint.ESLint.plugin} plugin
  * @returns {eslint.Linter.FlatConfig}
  */
 export const compatPluginConfig = (plugin, name = 'recommended') => {
@@ -32,19 +32,17 @@ export const compatPluginConfig = (plugin, name = 'recommended') => {
 /**
  * @returns {eslint.Linter.FlatConfig}
  */
-export const compatJsoncPluginConfig = () =>({
+export const compatJsoncPluginConfig = () => ({
   // jsoncPlugin.configs['recommended-with-jsonc']
   // https://github.dev/ota-meshi/eslint-plugin-jsonc/blob/master/lib/index.ts#L45
 
-  files: ["**/*.json", "**/*.json5", "**/*.jsonc"],
+  files: [ '**/*.json', '**/*.json5', '**/*.jsonc' ],
   plugins: { jsonc: jsoncPlugin },
-  languageOptions: {
-    parser: jsoncPlugin
-  },
+  languageOptions: { parser: jsoncPlugin },
   rules: {
     ...jsoncPlugin.configs.base.rules,
     ...jsoncPlugin.configs['recommended-with-jsonc'].rules,
-  }
+  },
 })
 
 /**
@@ -53,17 +51,13 @@ export const compatJsoncPluginConfig = () =>({
 export const compatYmlPluginConfig = () => ({
   // ymlPlugin.configs.standard
   // https://github.dev/ota-meshi/eslint-plugin-yml/blob/master/src/configs/standard.ts#L1
-  files: ["**/*.yaml", "**/*.yml"],
-  plugins: {
-    yml: ymlPlugin
-  },
-  languageOptions: {
-    parser: ymlParser
-  },
+  files: [ '**/*.yaml', '**/*.yml' ],
+  plugins: { yml: ymlPlugin },
+  languageOptions: { parser: ymlParser },
   rules: {
     ...ymlPlugin.configs.base.rules,
     ...ymlPlugin.configs.standard.rules,
-  }
+  },
 })
 
 /**
@@ -78,21 +72,19 @@ export const compatMarkdownPluginConfigs = () => {
 
   /** @type {eslint.Linter.FlatConfig} */
   const flatA = {
-    files: ['**/*.md'],
+    files: [ '**/*.md' ],
     plugins: {
       // markdown plugin name
-      [recommended.plugins[0]]: markdownPlugin
+      [recommended.plugins[0]]: markdownPlugin,
     },
-    processor: recommended.overrides[0].processor
+    processor: recommended.overrides[0].processor,
   }
 
   /** @type {eslint.Linter.FlatConfig} */
   const flatB = {
     files: recommended.overrides[1].files,
-    languageOptions: {
-      parserOptions: recommended.overrides[1].parserOptions
-    },
-    rules: recommended.overrides[1].rules
+    languageOptions: { parserOptions: recommended.overrides[1].parserOptions },
+    rules: recommended.overrides[1].rules,
   }
 
   return [ flatA, flatB ]
@@ -102,7 +94,7 @@ export const compatMarkdownPluginConfigs = () => {
  * @type {Array.<eslint.Linter.FlatConfig>}
  * @link https://eslint.org/docs/latest/use/configure/configuration-files-new
  */
-export default  [
+export default [
   // eslint:recommended
   js.configs.recommended,
 

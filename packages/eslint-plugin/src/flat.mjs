@@ -10,13 +10,11 @@ export default {
     recommended: [
       ...lvjiaxuan,
       {
-        files: ['**/*.js', '**/*.cjs', '**/*.mjs', '**/*.ts','**/*.d.ts','**/*.tsx', '**/*.mts', '**/*.cts'],
-        plugins: {
-          '@lvjiaxuan': { rules: pluginRules }
-        },
-        rules: index.configs.recommended.rules
-      }
-    ]
+        files: [ '**/*.js', '**/*.cjs', '**/*.mjs', '**/*.ts', '**/*.d.ts', '**/*.tsx', '**/*.mts', '**/*.cts' ],
+        plugins: { '@lvjiaxuan': { rules: pluginRules } },
+        rules: index.configs.recommended.rules,
+      },
+    ],
   },
-  rules: pluginRules
+  rules: pluginRules,
 }
