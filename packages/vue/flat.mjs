@@ -4,24 +4,32 @@ import vue from 'eslint-plugin-vue'
 import tsParser from '@typescript-eslint/parser'
 import vueParser from 'vue-eslint-parser'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
-import vueTSConfig from '@vue/eslint-config-typescript'
-import vueTSRecommendedConfig from '@vue/eslint-config-typescript/recommended.js'
+import vueTS from '@vue/eslint-config-typescript'
+import vueTSRecommended from '@vue/eslint-config-typescript/recommended.js'
+import globals from 'globals'
 import index from './index'
 
+const files = [ '**/*.vue']
 
-/**
+/** 
  * @type {Array.<eslint.Linter.FlatConfig>}
  */
 export default [
   ...typescript,
 
-  {
-    files: [ '**/*.vue'],
+  { // plugin:vue/vue3-recommended
+    // https://github.dev/vuejs/eslint-plugin-vue/blob/master/lib/configs/vue3-recommended.js#L1
+    files,
     plugins: {
       vue
     },
     languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       parser: vueParser,
+      globals: {
+        ...globals.browser
+      }
     },
     rules: {
       ...vue.configs.base.rules,
@@ -32,23 +40,21 @@ export default [
     }
   },
 
-  { // for ts
-    files: [ '**/*.vue'],
+  { // @vue/eslint-config-typescript/recommended
+    // https://github.dev/vuejs/eslint-config-typescript/blob/main/recommended.js#L1
+    files,
     plugins: {
       '@typescript-eslint': tsPlugin
     },
     languageOptions: {
-      parserOptions: vueTSConfig.parserOptions
-    }
-  },
-
-  {
-    files: ['**/*.ts', '**/*.tsx', '**/*.vue'],
+      parser: tsParser,
+      parserOptions: vueTS.parserOptions
+    },
     rules: {
-      ...vueTSConfig.overrides[0].rules,
-      ...vueTSRecommendedConfig.rules
-    }
+      ...vueTSRecommended.rules,
+    },
   },
 
-  ...vueTSRecommendedConfig.overrides
+  ...vueTS.overrides,
+  ...vueTSRecommended.overrides
 ]

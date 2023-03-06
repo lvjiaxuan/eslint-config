@@ -9,10 +9,12 @@
     "eslint-config"
   ],
   "scripts": {
-    "dev": "nr build:flat --watch",
-    "sync_rules": "node sync_rules",
-    "build:flat": "tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake"
+    "dev": "nr build --watch",
+    "j2t": "node js2ts",
+    "prepare": "nr j2t",
+    "build": "nr j2t && tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake"
   },
+  "files": ["!./js2ts.js"],
   "exports": {
     ".": "./index.js",
     "./flat": "./dist/flat.mjs"

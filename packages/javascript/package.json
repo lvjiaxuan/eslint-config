@@ -9,8 +9,8 @@
     "eslint-config"
   ],
   "scripts": {
-    "dev": "nr build:flat --watch",
-    "build:flat": "tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake"
+    "dev": "nr build --watch",
+    "build": "tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake"
   },
   "exports": {
     ".": "./index.js",
@@ -26,7 +26,9 @@
     "eslint-plugin-jsonc": "^2.6.0",
     "eslint-plugin-markdown": "^2.2.1",
     "eslint-plugin-promise": "^6.1.1",
-    "globals": "^13.20.0"
+    "eslint-plugin-yml": "^1.5.0",
+    "globals": "^13.20.0",
+    "yaml-eslint-parser": "^1.1.0"
   },
   "devDependencies": {
     "eslint": "^8.35.0"

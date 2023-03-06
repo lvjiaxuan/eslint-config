@@ -9,8 +9,8 @@
     "eslint-config"
   ],
   "scripts": {
-    "dev": "nr build:flat --watch",
-    "build:flat": "tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake"
+    "dev": "nr build --watch",
+    "build": "tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake"
   },
   "exports": {
     ".": "./index.js",
@@ -18,19 +18,19 @@
   },
   "main": "index.js",
   "peerDependencies": {
-    "@typescript-eslint/parser": "^5.54.0",
     "eslint": ">=8"
   },
   "dependencies": {
     "@lvjiaxuan/eslint-config-ts": "workspace:*",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
     "@vue/eslint-config-typescript": "^11.0.2",
     "eslint-plugin-vue": "^9.9.0",
+    "globals": "^13.20.0",
     "vue-eslint-parser": "^9.1.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
-    "@typescript-eslint/parser": "^5.54.0",
     "eslint": "^8.35.0"
   }
 }

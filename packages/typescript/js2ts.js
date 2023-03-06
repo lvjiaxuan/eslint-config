@@ -10,6 +10,4 @@ for (const ruleName in JSRules) {
   }
 }
 
-fs.writeFileSync('./sync.js', `modules.exports=${ JSON.stringify(rules) }`, { encoding: 'utf-8' })
-
-module.exports = rules
+fs.writeFileSync('./tsRules.json', `${ JSON.stringify(rules) }`, { encoding: 'utf-8' })

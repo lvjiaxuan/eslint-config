@@ -1,18 +1,15 @@
-// const syncRules = require('./sync-rules')
-
-const json = require('./sync.json')
+const tsRules = require('./tsRules.json')
 
 module.exports = {
-  extends: [ '@lvjiaxuan/js' ],
+  extends: '@lvjiaxuan/js',
 
   overrides: [
     {
-      files: [ '*.ts', '*.d.ts', '*.tsx'],
+      files: [ '*.ts', '*.tsx', '*.mts', '*.cts'],
 
-      parser: '@typescript-eslint/parser',
+      excludedFiles: ['**/*.md/*.*'],
 
       extends: [
-        // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
@@ -20,11 +17,8 @@ module.exports = {
       parserOptions: {
         // https://typescript-eslint.io/docs/linting/type-linting
         tsconfigRootDir: process.cwd(),
-        // https://typescript-eslint.io/linting/typed-linting/monorepos
+        // https://typescript-eslint.io/linting/typed-linting/monorepos#wide-globs-in-parseroptionsproject
         project: [ './tsconfig.json', './tsconfig.eslint.json', './packages/*/tsconfig.json' ],
-
-        // https://typescript-eslint.io/docs/linting/troubleshooting/#i-use-a-framework-like-vue-that-requires-custom-file-extensions-and-i-get-errors-like-you-should-add-parseroptionsextrafileextensions-to-your-config
-        // extraFileExtensions: [ '.vue' ], migrate to vue package
       },
 
       rules: {
@@ -35,10 +29,6 @@ module.exports = {
         '@typescript-eslint/no-misused-promises': [ 'warn', { checksVoidReturn: false } ],
         '@typescript-eslint/no-unsafe-return': 'warn',
         '@typescript-eslint/unbound-method': 'off',
-
-        // sync js
-        ...json,
-
         '@typescript-eslint/no-use-before-define': [
           'warn', {
             // extend
@@ -52,6 +42,9 @@ module.exports = {
             ignoreTypeReferences: true,
           },
         ],
+
+        // js to ts
+        ...tsRules,
       },
     },
   ],
