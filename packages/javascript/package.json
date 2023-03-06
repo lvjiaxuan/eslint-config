@@ -8,20 +8,28 @@
   "keywords": [
     "eslint-config"
   ],
+  "exports": {
+    ".": "./index.js",
+    "./flat": "./dist/flat.mjs"
+  },
   "main": "index.js",
-  "files": [
-    "index.js",
-    "basic.js"
-  ],
+  "scripts": {
+    "dev": "nr build --watch",
+    "build": "tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake",
+    "prepublishOnly": "nr build"
+  },
   "peerDependencies": {
     "eslint": ">=8"
   },
   "dependencies": {
+    "@eslint/js": "^8.35.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-jsonc": "^2.6.0",
     "eslint-plugin-markdown": "^2.2.1",
     "eslint-plugin-promise": "^6.1.1",
-    "jsonc-eslint-parser": "^2.1.0"
+    "eslint-plugin-yml": "^1.5.0",
+    "globals": "^13.20.0",
+    "yaml-eslint-parser": "^1.1.0"
   },
   "devDependencies": {
     "eslint": "^8.35.0"

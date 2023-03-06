@@ -8,12 +8,13 @@
   "keywords": [
     "eslint-config"
   ],
+  "exports": {
+    ".": "./index.js",
+    "./flat": "./flat.mjs"
+  },
   "main": "index.js",
   "bin": "./bin/add.mjs",
-  "files": [
-    "dist",
-    "!./add.js"
-  ],
+  "files": ["!./add.ts"],
   "scripts": {
     "build": "tsup add.ts --target=node16",
     "prepublishOnly": "nr build"
