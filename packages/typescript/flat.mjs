@@ -18,7 +18,7 @@ export default [
   // plugin:@typescript-eslint/recommended-requiring-type-checking
   // https://github.dev/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.ts#L1
   {
-    files: config.files,
+    files: [ '**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts' ],
     ignores: config.excludedFiles,
     plugins: { '@typescript-eslint': typescript },
     languageOptions: {
@@ -31,7 +31,7 @@ export default [
       ...typescript.configs['eslint-recommended'].rules,
       ...typescript.configs['recommended'].rules,
       ...typescript.configs['recommended-requiring-type-checking'].rules,
-      ...index.rules,
+      ...index.overrides[0].rules,
     },
   },
 ]

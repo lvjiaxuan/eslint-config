@@ -41,10 +41,17 @@ export default [
     files,
     plugins: { '@typescript-eslint': tsPlugin },
     languageOptions: {
-      parser: tsParser,
-      parserOptions: vueTS.parserOptions,
+      // parser: vueParser on above,
+      parserOptions: {
+        ...vueTS.parserOptions,
+        ts: tsParser,
+        tsx: tsParser,
+      },
     },
-    rules: { ...vueTSRecommended.rules },
+    rules: {
+      ...tsPlugin.configs['eslint-recommended'].rules,
+      ...vueTSRecommended.rules,
+    },
   },
 
   ...vueTS.overrides,
