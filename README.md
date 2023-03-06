@@ -3,7 +3,9 @@
 
 # Features
 
-- Sync `js` rules to `ts` rules. [Refer](./packages/typescript/sync-rules.js).
+- Support **Flat Config**.
+- `vue` package includes `ts` package which includes `js` package. It means that if you code vue with ts, you should install vue package only instead of ts package in company.
+- The base rules for ts are automatically disabled.
 
 ## [My custom rules](./packages/eslint-plugin/README.md)
 
@@ -32,6 +34,13 @@ Fix on save. VScode settings as below:
   }
 }
 ```
+
+# Flat Config
+
+1. shortcut: `nix @lvjiaxuan/eslint-plugin --flat` .
+2. Setting `settings.json` to let ESLint extension supports flat config: `"eslint.experimental.useFlatConfig": true` .
+
+> All packages have its flat config export like `pkg/flat` .
 
 # Refer
 

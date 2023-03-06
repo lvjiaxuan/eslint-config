@@ -3,7 +3,7 @@
 Tag ranges `v0.0.2...v0.7.0`. [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
 
 ## v0.7.0 <sub>(2023-03-02)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.6.0...main)
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.6.0...v0.7.0)
 
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
@@ -14,28 +14,28 @@ Tag ranges `v0.0.2...v0.7.0`. [All GitHub Releases](https://github.com/lvjiaxuan
 
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
-- **vue**: add a config &nbsp;-&nbsp; by @lvjiaxuan [<samp>(53be3)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/53be33f)
+- **vue**: add a config &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(53be3)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/53be33f)
 
 ## v0.5.3 <sub>(2023-03-01)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.2...v0.5.3)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- export compat problem from tsup &nbsp;-&nbsp; by @lvjiaxuan [<samp>(f615d)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/f615da3)
+- export compat problem from tsup &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(f615d)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/f615da3)
 
 ## v0.5.2 <sub>(2023-02-21)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.1...v0.5.2)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- config error. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(e3f0f)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e3f0f32)
+- config error. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(e3f0f)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e3f0f32)
 
 ## v0.5.1 <sub>(2023-02-20)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.0...v0.5.1)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- set dist to files. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(bdfd2)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/bdfd23d)
+- set dist to files. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(bdfd2)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/bdfd23d)
 
 ## v0.5.0 <sub>(2023-02-20)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.4.2...v0.5.0)

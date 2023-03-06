@@ -1,3 +1,4 @@
+const fs = require('node:fs')
 const { rules: JSRules } = require('@lvjiaxuan/eslint-config-js')
 const { rules: TSRules } = require('@typescript-eslint/eslint-plugin')
 
@@ -9,4 +10,4 @@ for (const ruleName in JSRules) {
   }
 }
 
-module.exports = rules
+fs.writeFileSync('./tsRules.json', `${ JSON.stringify(rules) }`, { encoding: 'utf-8' })

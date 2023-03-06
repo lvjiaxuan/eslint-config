@@ -1,10 +1,5 @@
 module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:eslint-comments/recommended',
-    'plugin:promise/recommended',
-    './basic.js',
-  ],
+  extends: './basic.js',
 
   rules: {
     // https://eslint.org/docs/rules/
@@ -16,7 +11,7 @@ module.exports = {
     'no-empty': [ 'error', { allowEmptyCatch: true } ],
     'no-empty-function': 'warn',
     'no-tabs': [ 'warn', { allowIndentationTabs: false } ], // prettier useTabs: false; allowIndentationTabs 这里指非代码行的缩进
-    'no-unused-vars': 'off', // tree shaking would helps
+    'no-unused-vars': 'off', // tree shaking would help
     'sort-imports': [
       'warn',
       {
@@ -86,4 +81,92 @@ module.exports = {
     // clone prettier-plugin rule
     'prettier/prettier': 'off',
   },
+
+  overrides: [
+    {
+      files: [ '**/*.yaml', '**/*.yml' ],
+      // parser: 'yaml-eslint-parser',
+      rules: { 'spaced-comment': 'off' },
+    },
+    {
+      files: [ '**/*.json', '**/*.json5' ],
+      // parser: 'jsonc-eslint-parser',
+      rules: {
+        'jsonc/array-bracket-spacing': [ 'error', 'never' ],
+        'jsonc/comma-dangle': [ 'error', 'never' ],
+        'jsonc/comma-style': [ 'error', 'last' ],
+        'jsonc/indent': [ 'error', 2 ],
+        'jsonc/key-spacing': [ 'error', { beforeColon: false, afterColon: true } ],
+        'jsonc/no-octal-escape': 'error',
+        'jsonc/object-curly-newline': [ 'error', { multiline: true, consistent: true } ],
+        'jsonc/object-curly-spacing': [ 'error', 'always' ],
+        'jsonc/object-property-newline': [ 'error', { allowMultiplePropertiesPerLine: true } ],
+      },
+    },
+    {
+      files: [ 'package.json' ],
+      // parser: 'jsonc-eslint-parser',
+      rules: {
+        'jsonc/sort-keys': [
+          'error',
+          {
+            pathPattern: '^$',
+            order: [
+              'publisher',
+              'name',
+              'displayName',
+              'type',
+              'version',
+              'private',
+              'packageManager',
+              'description',
+              'author',
+              'license',
+              'funding',
+              'homepage',
+              'repository',
+              'bugs',
+              'keywords',
+              'categories',
+              'sideEffects',
+              'exports',
+              'main',
+              'module',
+              'unpkg',
+              'jsdelivr',
+              'types',
+              'typesVersions',
+              'bin',
+              'icon',
+              'files',
+              'engines',
+              'activationEvents',
+              'contributes',
+              'scripts',
+              'peerDependencies',
+              'peerDependenciesMeta',
+              'dependencies',
+              'optionalDependencies',
+              'devDependencies',
+              'pnpm',
+              'overrides',
+              'resolutions',
+              'husky',
+              'simple-git-hooks',
+              'lint-staged',
+              'eslintConfig',
+            ],
+          },
+          {
+            pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
+            order: { type: 'asc' },
+          },
+          {
+            pathPattern: '^exports.*$',
+            order: [ 'types', 'require', 'import' ],
+          },
+        ],
+      },
+    },
+  ],
 }

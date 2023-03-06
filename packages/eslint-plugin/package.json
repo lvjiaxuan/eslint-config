@@ -5,18 +5,17 @@
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "keywords": [
     "eslint",
-    "eslintplugin",
     "eslint-plugin"
   ],
+  "exports": {
+    ".": "./dist/index.cjs",
+    "./flat": "./dist/flat.mjs"
+  },
   "main": "./dist/index.cjs",
   "bin": "./bin/add.mjs",
-  "files": [
-    "dist",
-    "!src",
-    "!./add.ts"
-  ],
+  "files": ["!./add.ts", "!src"],
   "scripts": {
-    "stub": "unbuild --stub",
+    "dev": "unbuild --stub",
     "test": "vitest run",
     "build": "unbuild",
     "prepublishOnly": "nr build"
