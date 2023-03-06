@@ -5,11 +5,14 @@
   "scripts": {
     "lint": "eslint .",
     "test": "nr -r test",
-    "dev": "nr -r dev",
-    "build": "nr -r build"
+    "build": "nr -r build",
+    "prepare": "nr build"
   },
   "devDependencies": {
-    "@lvjiaxuan/eslint-config": "workspace:*",
+    "@lvjiaxuan/eslint-plugin": "workspace:*",
+    "@lvjiaxuan/eslint-config-js": "workspace:*",
+    "@lvjiaxuan/eslint-config-ts": "workspace:*",
+    "@lvjiaxuan/eslint-config-vue": "workspace:*",
     "@types/eslint": "^8.21.1",
     "eslint": "^8.35.0",
     "execa": "^7.0.0",

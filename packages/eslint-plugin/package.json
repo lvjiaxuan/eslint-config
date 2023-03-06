@@ -15,7 +15,7 @@
   "bin": "./bin/add.mjs",
   "files": [ "!./add.ts", "!src" ],
   "scripts": {
-    "stub": "unbuild --stub",
+    "dev": "unbuild --stub",
     "test": "vitest run",
     "build": "unbuild",
     "prepublishOnly": "nr build"

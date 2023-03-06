@@ -50,6 +50,25 @@ export const compatJsoncPluginConfig = () =>({
 /**
  * @returns {Array.<eslint.Linter.FlatConfig>}
  */
+export const compatYmlPluginConfig = () => ({
+  // ymlPlugin.configs.standard
+  // https://github.dev/ota-meshi/eslint-plugin-yml/blob/master/src/configs/standard.ts#L1
+  files: ["**/*.yaml", "**/*.yml"],
+  plugins: {
+    yml: ymlPlugin
+  },
+  languageOptions: {
+    parser: ymlParser
+  },
+  rules: {
+    ...ymlPlugin.configs.base.rules,
+    ...ymlPlugin.configs.standard.rules,
+  }
+})
+
+/**
+ * @returns {Array.<eslint.Linter.FlatConfig>}
+ */
 export const compatMarkdownPluginConfigs = () => {
   // markdownPlugin.configs.recommended
   // https://eslint.org/docs/latest/use/configure/configuration-files-new#using-processors
@@ -77,25 +96,6 @@ export const compatMarkdownPluginConfigs = () => {
   }
 
   return [ flatA, flatB ]
-}
-
-/**
- * @returns {Array.<eslint.Linter.FlatConfig>}
- */
-export const compatYmlPluginConfig = () => {
-  // ymlPlugin.configs.standard
-  // https://github.dev/ota-meshi/eslint-plugin-yml/blob/master/src/configs/standard.ts#L1
-  
-  return {
-    files: ["**/*.yaml", "**/*.yml"],
-    languageOptions: {
-      parser: ymlParser
-    },
-    rules: {
-      ...ymlPlugin.configs.base,
-      ...ymlPlugin.configs.standard,
-    }
-  }
 }
 
 /**

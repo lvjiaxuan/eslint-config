@@ -11,7 +11,9 @@ export default {
       ...lvjiaxuan,
       {
         files: ['**/*.js', '**/*.cjs', '**/*.mjs', '**/*.ts','**/*.d.ts','**/*.tsx', '**/*.mts', '**/*.cts'],
-        plugins: [{ rules: pluginRules }],
+        plugins: {
+          '@lvjiaxuan': { rules: pluginRules }
+        },
         rules: index.configs.recommended.rules
       }
     ]
