@@ -18,7 +18,8 @@
     "dev": "nr build --watch",
     "j2t": "node js2ts",
     "prepare": "nr j2t",
-    "build": "nr j2t && tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake"
+    "build": "nr j2t && tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake",
+    "prepublishOnly": "nr build"
   },
   "peerDependencies": {
     "eslint": ">=8",

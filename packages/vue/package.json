@@ -15,7 +15,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nr build --watch",
-    "build": "tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake"
+    "build": "tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake",
+    "prepublishOnly": "nr build"
   },
   "peerDependencies": {
     "eslint": ">=8"
