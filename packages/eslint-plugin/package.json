@@ -1,6 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-plugin",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "keywords": [
@@ -13,7 +13,10 @@
   },
   "main": "./dist/index.cjs",
   "bin": "./bin/add.mjs",
-  "files": ["!./add.ts", "!src"],
+  "files": [
+    "!./add.ts",
+    "!src"
+  ],
   "scripts": {
     "dev": "unbuild --stub",
     "test": "vitest run",

@@ -1,6 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-config-ts",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "private": false,
   "description": "",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
@@ -13,7 +13,9 @@
     "./flat": "./dist/flat.mjs"
   },
   "main": "index.js",
-  "files": ["!./js2ts.js"],
+  "files": [
+    "!./js2ts.js"
+  ],
   "scripts": {
     "dev": "nr build --watch",
     "j2t": "node js2ts",

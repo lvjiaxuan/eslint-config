@@ -1,7 +1,7 @@
 {
   "name": "@lvjiaxuan/eslint-config-monorepo",
   "type": "module",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "scripts": {
     "lint": "nix cross-env ESLINT_USE_FLAT_CONFIG=false eslint -c=.eslintrc.json .",
     "lint:flat": "nix cross-env ESLINT_USE_FLAT_CONFIG=true eslint .",
@@ -9,8 +9,7 @@
     "build": "nr -r build",
     "prepare": "nr build"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@lvjiaxuan/eslint-plugin": "workspace:*",
     "@types/eslint": "^8.21.1",

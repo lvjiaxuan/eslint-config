@@ -1,6 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-config",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "private": false,
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "license": "MIT",
@@ -14,7 +14,9 @@
   },
   "main": "index.js",
   "bin": "./bin/add.mjs",
-  "files": ["!./add.ts"],
+  "files": [
+    "!./add.ts"
+  ],
   "scripts": {
     "build": "tsup add.ts --target=node16",
     "prepublishOnly": "nr build"

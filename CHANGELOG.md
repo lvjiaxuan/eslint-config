@@ -1,53 +1,60 @@
 # Changelog
 
-Tag ranges `v0.0.2...v0.7.0`. [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...v0.8.0`. [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v0.8.0 <sub>(2023-03-06)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.7.0...v0.8.0)
+
+### &nbsp;&nbsp;&nbsp;✨ Enhancements
+
+- Flat Config &nbsp;-&nbsp; by @lvjiaxuan in [#5](https://github.com/lvjiaxuan/eslint-config/issues/5) [<samp>(c2e74)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/c2e7459)
 
 ## v0.7.0 <sub>(2023-03-02)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.6.0...v0.7.0)
 
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
-- **vue**: recommended config &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(22b1c)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/22b1c7e)
+- **vue**: recommended config &nbsp;-&nbsp; by **@lvjiaxuan** [<samp>(22b1c)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/22b1c7e)
 
 ## v0.6.0 <sub>(2023-03-02)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.3...v0.6.0)
 
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
-- **vue**: add a config &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(53be3)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/53be33f)
+- **vue**: add a config &nbsp;-&nbsp; by **@lvjiaxuan** [<samp>(53be3)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/53be33f)
 
 ## v0.5.3 <sub>(2023-03-01)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.2...v0.5.3)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- export compat problem from tsup &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(f615d)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/f615da3)
+- export compat problem from tsup &nbsp;-&nbsp; by **@lvjiaxuan** [<samp>(f615d)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/f615da3)
 
 ## v0.5.2 <sub>(2023-02-21)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.1...v0.5.2)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- config error. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(e3f0f)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e3f0f32)
+- config error. &nbsp;-&nbsp; by **@lvjiaxuan** [<samp>(e3f0f)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e3f0f32)
 
 ## v0.5.1 <sub>(2023-02-20)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.0...v0.5.1)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- set dist to files. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(bdfd2)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/bdfd23d)
+- set dist to files. &nbsp;-&nbsp; by **@lvjiaxuan** [<samp>(bdfd2)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/bdfd23d)
 
 ## v0.5.0 <sub>(2023-02-20)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.4.2...v0.5.0)
 
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
-- add scripts. &nbsp;-&nbsp; by **lvjx7** [<samp>(87f3f)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/87f3fc6)
-- **eslint-plugin**: add install script. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(05402)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/0540225)
+- add scripts. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(87f3f)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/87f3fc6)
+- **eslint-plugin**: add install script. &nbsp;-&nbsp; by **@lvjiaxuan** [<samp>(05402)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/0540225)
 
 ### &nbsp;&nbsp;&nbsp;📝 Documentation
 
-- my rule. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(ea4c2)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/ea4c265)
+- my rule. &nbsp;-&nbsp; by **@lvjiaxuan** [<samp>(ea4c2)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/ea4c265)
 
 ## v0.4.2 <sub>(2022-12-08)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.4.1...v0.4.2)
@@ -58,7 +65,7 @@ Tag ranges `v0.0.2...v0.7.0`. [All GitHub Releases](https://github.com/lvjiaxuan
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- statement issue &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(92c8a)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/92c8a5c)
+- statement issue &nbsp;-&nbsp; by @lvjiaxuan [<samp>(92c8a)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/92c8a5c)
 
 ## v0.4.1 <sub>(2022-11-18)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.4.0...v0.4.1)
@@ -124,7 +131,7 @@ Tag ranges `v0.0.2...v0.7.0`. [All GitHub Releases](https://github.com/lvjiaxuan
 
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
-- from typescript-eslint#114 &nbsp;-&nbsp; by **lvjiaxuan** in [#114](https://github.com/lvjiaxuan/eslint-config/issues/114) [<samp>(b455d)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/b455da3)
+- from typescript-eslint#114 &nbsp;-&nbsp; by **@lvjiaxuan** in [#114](https://github.com/lvjiaxuan/eslint-config/issues/114) [<samp>(b455d)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/b455da3)
 
 ## v0.0.24 <sub>(2022-09-19)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.0.23...v0.0.24)
@@ -245,7 +252,7 @@ Tag ranges `v0.0.2...v0.7.0`. [All GitHub Releases](https://github.com/lvjiaxuan
 
 ### &nbsp;&nbsp;&nbsp;📝 Documentation
 
-- update &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(de5c3)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/de5c3cf)
+- update &nbsp;-&nbsp; by **@lvjiaxuan** [<samp>(de5c3)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/de5c3cf)
 - update &nbsp;-&nbsp; by **lvjx7** [<samp>(5aeaf)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/5aeaf42)
 
 ## v0.0.3 <sub>(2022-06-24)</sub>
