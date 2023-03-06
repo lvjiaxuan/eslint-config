@@ -15,6 +15,7 @@
   "main": "index.js",
   "bin": "./bin/add.mjs",
   "files": [
+    "dist",
     "!./add.ts"
   ],
   "scripts": {
