@@ -1,6 +1,13 @@
 # Changelog
 
-Tag ranges `v0.0.2...v0.8.0`. [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...v0.8.1`. [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v0.8.1 <sub>(2023-03-06)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.0...main)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- publish dist &nbsp;-&nbsp; by @lvjiaxuan [<samp>(160b4)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/160b486)
 
 ## v0.8.0 <sub>(2023-03-06)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.7.0...v0.8.0)
@@ -49,7 +56,7 @@ Tag ranges `v0.0.2...v0.8.0`. [All GitHub Releases](https://github.com/lvjiaxuan
 
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
-- add scripts. &nbsp;-&nbsp; by **lvjx7** [<samp>(87f3f)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/87f3fc6)
+- add scripts. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(87f3f)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/87f3fc6)
 - **eslint-plugin**: add install script. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(05402)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/0540225)
 
 ### &nbsp;&nbsp;&nbsp;📝 Documentation
@@ -65,7 +72,7 @@ Tag ranges `v0.0.2...v0.8.0`. [All GitHub Releases](https://github.com/lvjiaxuan
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- statement issue &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(92c8a)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/92c8a5c)
+- statement issue &nbsp;-&nbsp; by @lvjiaxuan [<samp>(92c8a)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/92c8a5c)
 
 ## v0.4.1 <sub>(2022-11-18)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.4.0...v0.4.1)
