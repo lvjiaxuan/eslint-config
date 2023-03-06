@@ -90,13 +90,17 @@ export const compatMarkdownPluginConfigs = () => {
   return [ flatA, flatB ]
 }
 
+
 /**
  * @type {Array.<eslint.Linter.FlatConfig>}
  * @link https://eslint.org/docs/latest/use/configure/configuration-files-new
  */
 export default [
   // eslint:recommended
-  js.configs.recommended,
+  {
+    ignores: basic.ignorePatterns,
+    ...js.configs.recommended,
+  },
 
   // plugin:promise/recommended
   compatPluginConfig(promisePlugin),
@@ -105,10 +109,16 @@ export default [
   compatPluginConfig(commentsPlugin),
 
   // plugin:jsonc/recommended-with-jsonc
-  compatJsoncPluginConfig(),
+  {
+    ignores: basic.ignorePatterns,
+    ...compatJsoncPluginConfig(),
+  },
 
   // plugin:yml/standard
-  compatYmlPluginConfig(),
+  {
+    ignores: basic.ignorePatterns,
+    ...compatYmlPluginConfig(),
+  },
 
   // plugin:markdown/recommended
   ...compatMarkdownPluginConfigs(),

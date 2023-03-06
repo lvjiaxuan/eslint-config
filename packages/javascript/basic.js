@@ -19,11 +19,11 @@ module.exports = {
     },
   },
 
-  globals: {
-    // document: 'readonly',
-    // navigator: 'readonly',
-    // window: 'readonly',
-  },
+  // globals: {
+  //   document: 'readonly',
+  //   navigator: 'readonly',
+  //   window: 'readonly',
+  // },
 
   ignorePatterns: [
     '*.min.*',

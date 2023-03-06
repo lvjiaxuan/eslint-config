@@ -8,18 +8,18 @@
   "keywords": [
     "eslint-config"
   ],
+  "exports": {
+    ".": "./index.js",
+    "./flat": "./dist/flat.mjs"
+  },
+  "main": "index.js",
+  "files": ["!./js2ts.js"],
   "scripts": {
     "dev": "nr build --watch",
     "j2t": "node js2ts",
     "prepare": "nr j2t",
     "build": "nr j2t && tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake"
   },
-  "files": ["!./js2ts.js"],
-  "exports": {
-    ".": "./index.js",
-    "./flat": "./dist/flat.mjs"
-  },
-  "main": "index.js",
   "peerDependencies": {
     "eslint": ">=8",
     "typescript": ">=4"

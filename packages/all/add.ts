@@ -11,8 +11,8 @@ try {
   // Install
   execaSync('ni', [ '@lvjiaxuan/eslint-config', 'eslint', '-D', '--workspace-root=true' ], { stdio: 'inherit', cwd })
 
-  if(flat) {
-    fs.writeFileSync(path.resolve(cwd, 'eslint.config.js'), `import lvjiaxuan from '@lvjiaxuan/eslint-config/flat'\n\nexport default lvjiaxuan`, { encoding: 'utf-8' })
+  if (flat) {
+    fs.writeFileSync(path.resolve(cwd, 'eslint.config.js'), 'import lvjiaxuan from \'@lvjiaxuan/eslint-config/flat\'\n\nexport default lvjiaxuan', { encoding: 'utf-8' })
   } else {
     // Setup
     const pkgPath = path.resolve(cwd, 'package.json')
@@ -23,7 +23,7 @@ try {
       }
     }
     pkgInfo.eslintConfig = pkgInfo.eslintConfig ?? {}
-  
+
     if (typeof pkgInfo.eslintConfig.extends === 'string') {
       pkgInfo.eslintConfig.extends = [ pkgInfo.eslintConfig.extends, '@lvjiaxuan' ]
     } else if (Array.isArray(pkgInfo.eslintConfig.extends)) {
@@ -31,12 +31,12 @@ try {
     } else {
       pkgInfo.eslintConfig = { extends: '@lvjiaxuan' }
     }
-  
+
     pkgInfo.scripts = pkgInfo.scripts ?? {}
     !pkgInfo.scripts.lint && (
       pkgInfo.scripts.lint = 'eslint .'
     )
-  
+
     fs.writeFileSync(pkgPath, JSON.stringify(pkgInfo, null, 2) + '\n')
   }
 
