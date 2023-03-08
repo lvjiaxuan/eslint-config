@@ -30,7 +30,7 @@
     "typescript": ">=4"
   },
   "dependencies": {
-    "@lvjiaxuan/eslint-config-js": "workspace:*",
+    "@lvjiaxuan/eslint-config-js": "workspace:^",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0"
   },

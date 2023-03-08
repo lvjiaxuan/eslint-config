@@ -11,7 +11,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@lvjiaxuan/eslint-plugin": "workspace:*",
+    "@lvjiaxuan/eslint-plugin": "workspace:^",
     "@types/eslint": "^8.21.1",
     "eslint": "^8.35.0",
     "execa": "^7.0.0",
