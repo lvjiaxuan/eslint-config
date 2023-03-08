@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@lvjiaxuan/eslint-plugin': workspace:*
+      '@lvjiaxuan/eslint-plugin': workspace:^
       '@types/eslint': ^8.21.1
       eslint: ^8.35.0
       execa: ^7.0.0
@@ -22,7 +22,7 @@ importers:
 
   packages/all:
     specifiers:
-      '@lvjiaxuan/eslint-config-vue': workspace:*
+      '@lvjiaxuan/eslint-config-vue': workspace:^
       eslint: ^8.35.0
     dependencies:
       '@lvjiaxuan/eslint-config-vue': link:../vue
@@ -31,7 +31,7 @@ importers:
 
   packages/eslint-plugin:
     specifiers:
-      '@lvjiaxuan/eslint-config': workspace:*
+      '@lvjiaxuan/eslint-config': workspace:^
       '@types/lodash.merge': ^4.6.7
       '@types/node': ^18.14.2
       '@typescript-eslint/utils': ^5.54.0
@@ -73,7 +73,7 @@ importers:
 
   packages/typescript:
     specifiers:
-      '@lvjiaxuan/eslint-config-js': workspace:*
+      '@lvjiaxuan/eslint-config-js': workspace:^
       '@typescript-eslint/eslint-plugin': ^5.54.0
       '@typescript-eslint/parser': ^5.54.0
       eslint: ^8.35.0
@@ -88,7 +88,7 @@ importers:
 
   packages/vue:
     specifiers:
-      '@lvjiaxuan/eslint-config-ts': workspace:*
+      '@lvjiaxuan/eslint-config-ts': workspace:^
       '@rushstack/eslint-patch': ^1.2.0
       '@typescript-eslint/eslint-plugin': ^5.54.0
       '@typescript-eslint/parser': ^5.54.0

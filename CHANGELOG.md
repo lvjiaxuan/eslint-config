@@ -1,9 +1,16 @@
 # Changelog
 
-Tag ranges `v0.0.2...v0.8.2` (40). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...v0.8.3` (41). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v0.8.3 <sub>(2023-03-08)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.2...main)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- change workspace corresponding version &nbsp;-&nbsp; by @lvjiaxuan [<samp>(26e20)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/26e200d)
 
 ## v0.8.2 <sub>(2023-03-08)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.1...main)
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.1...v0.8.2)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
