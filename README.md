@@ -35,12 +35,12 @@ Fix on save. VScode settings as below:
 }
 ```
 
-# Flat Config
+# [Flat Config](https://eslint.org/docs/latest/use/configure/configuration-files-new)
 
 1. shortcut: `nix @lvjiaxuan/eslint-plugin --flat` .
 2. Setting `settings.json` to let ESLint extension supports flat config: `"eslint.experimental.useFlatConfig": true` .
 
-> All packages have its flat config export like `pkg/flat` .
+> All packages own its flat config export like `pkg/flat` .
 
 # Refer
 
