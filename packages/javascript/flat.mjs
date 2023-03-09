@@ -4,7 +4,6 @@ import jsoncPlugin from 'eslint-plugin-jsonc'
 import markdownPlugin from 'eslint-plugin-markdown'
 import ymlPlugin from 'eslint-plugin-yml'
 import ymlParser from 'yaml-eslint-parser'
-import eslint from 'eslint'
 import globals from 'globals'
 import js from '@eslint/js'
 import index from './index'
@@ -13,14 +12,14 @@ import basic from './basic'
 
 /**
  * @description A temporary compat
- * @param {eslint.ESLint.plugin} plugin
- * @returns {eslint.Linter.FlatConfig}
+ * @param {import('eslint').ESLint.plugin} plugin
+ * @returns {import('eslint').Linter.FlatConfig}
  */
 export const compatPluginConfig = (plugin, name = 'recommended') => {
   // It seems that `@eslint/eslintrc` could only be used in `eslint.config.js` of root rather than packing it for import.
   // So I need to do a temporary compatibility by myself.
 
-  /** @type {eslint.Linter.FlatConfig} */
+  /** @type {import('eslint').Linter.FlatConfig} */
   const flatConfig = {}
 
   flatConfig.plugins = { [plugin.configs[name].plugins[0]]: plugin }
@@ -30,13 +29,13 @@ export const compatPluginConfig = (plugin, name = 'recommended') => {
 }
 
 /**
- * @returns {eslint.Linter.FlatConfig}
+ * @returns {import('eslint').Linter.FlatConfig}
  */
 export const compatJsoncPluginConfig = () => ({
   // jsoncPlugin.configs['recommended-with-jsonc']
   // https://github.dev/ota-meshi/eslint-plugin-jsonc/blob/master/lib/index.ts#L45
 
-  files: jsoncPlugin.configs.base.overrides[0].files, // [ '**/*.json', '**/*.json5', '**/*.jsonc' ],
+  files: [ '**/*.json', '**/*.json5', '**/*.jsonc' ],
   plugins: { jsonc: jsoncPlugin },
   languageOptions: { parser: jsoncPlugin },
   rules: {
@@ -46,12 +45,12 @@ export const compatJsoncPluginConfig = () => ({
 })
 
 /**
- * @returns {Array.<eslint.Linter.FlatConfig>}
+ * @returns {Array.<import('eslint').Linter.FlatConfig>}
  */
 export const compatYmlPluginConfig = () => ({
   // ymlPlugin.configs.standard
   // https://github.dev/ota-meshi/eslint-plugin-yml/blob/master/src/configs/standard.ts#L1
-  files: ymlPlugin.configs.base.overrides[0].files, // [ '**/*.yaml', '**/*.yml' ],
+  files: [ '**/*.yaml', '**/*.yml' ],
   plugins: { yml: ymlPlugin },
   languageOptions: { parser: ymlParser },
   rules: {
@@ -61,7 +60,7 @@ export const compatYmlPluginConfig = () => ({
 })
 
 /**
- * @returns {Array.<eslint.Linter.FlatConfig>}
+ * @returns {Array.<import('eslint').Linter.FlatConfig>}
  */
 export const compatMarkdownPluginConfigs = () => {
   // markdownPlugin.configs.recommended
@@ -70,9 +69,9 @@ export const compatMarkdownPluginConfigs = () => {
 
   const recommended = markdownPlugin.configs.recommended
 
-  /** @type {eslint.Linter.FlatConfig} */
+  /** @type {import('eslint').Linter.FlatConfig} */
   const flatA = {
-    files: recommended.overrides[0].files, // [ '**/*.md' ],
+    files: [ '**/*.md' ],
     plugins: {
       // markdown plugin name
       [recommended.plugins[0]]: markdownPlugin,
@@ -80,7 +79,7 @@ export const compatMarkdownPluginConfigs = () => {
     processor: recommended.overrides[0].processor,
   }
 
-  /** @type {eslint.Linter.FlatConfig} */
+  /** @type {import('eslint').Linter.FlatConfig} */
   const flatB = {
     files: recommended.overrides[1].files,
     languageOptions: { parserOptions: recommended.overrides[1].parserOptions },
@@ -92,7 +91,7 @@ export const compatMarkdownPluginConfigs = () => {
 
 
 /**
- * @type {Array.<eslint.Linter.FlatConfig>}
+ * @type {Array.<import('eslint').Linter.FlatConfig>}
  * @link https://eslint.org/docs/latest/use/configure/configuration-files-new
  */
 export default [

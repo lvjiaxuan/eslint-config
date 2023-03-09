@@ -1,4 +1,3 @@
-import eslint from 'eslint'
 import typescript from '@lvjiaxuan/eslint-config-ts/flat'
 import vue from 'eslint-plugin-vue'
 import tsParser from '@typescript-eslint/parser'
@@ -12,7 +11,7 @@ import index from './index'
 const files = [ '**/*.vue' ]
 
 /**
- * @type {Array.<eslint.Linter.FlatConfig>}
+ * @type {Array.<import('eslint').Linter.FlatConfig>}
  */
 export default [
   ...typescript,

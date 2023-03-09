@@ -1,4 +1,3 @@
-import eslint from 'eslint'
 import javascript from '@lvjiaxuan/eslint-config-js/flat'
 import tsParser from '@typescript-eslint/parser'
 import typescript from '@typescript-eslint/eslint-plugin'
@@ -7,7 +6,7 @@ import index from './index'
 const config = index.overrides[0]
 
 /**
- * @type {Array.<eslint.Linter.FlatConfig>}
+ * @type {Array.<import('eslint').Linter.FlatConfig>}
  */
 export default [
   ...javascript,

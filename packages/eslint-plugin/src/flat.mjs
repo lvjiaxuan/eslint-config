@@ -1,10 +1,9 @@
-import eslint from 'eslint'
 import lvjiaxuan from '@lvjiaxuan/eslint-config/flat'
 import index from './index'
 
 const pluginRules = index.rules
 
-/** @type {eslint.ESLint.Plugin} */
+/** @type {import('eslint').ESLint.Plugin} */
 export default {
   configs: {
     recommended: [

@@ -1,3 +1,7 @@
 import lvjiaxuan from '@lvjiaxuan/eslint-plugin/flat'
 
-export default lvjiaxuan.configs.recommended
+/** @type {import('eslint').Linter.FlatConfig} */
+export default [
+  { ignores: [ 'packages/typescript/tsRules.json' ] },
+  ...lvjiaxuan.configs.recommended,
+]

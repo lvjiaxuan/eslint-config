@@ -3,7 +3,7 @@ module.exports = {
 
   overrides: [
     {
-      files: [ '*.vue' ],
+      files: [ '**/*.vue' ],
       extends: [ 'plugin:vue/vue3-recommended', '@vue/eslint-config-typescript/recommended' ],
       rules: {
         'vue/no-unused-vars': 'off',
