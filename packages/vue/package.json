@@ -13,6 +13,9 @@
     "./flat": "./dist/flat.mjs"
   },
   "main": "index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "nr build --watch",
     "build": "tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake",
