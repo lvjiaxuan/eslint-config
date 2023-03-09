@@ -9,7 +9,7 @@ try {
   const cwd = process.cwd()
 
   // Install
-  execaSync('ni', [ '@lvjiaxuan/eslint-config', 'eslint', '-D', '--workspace-root=true' ], { stdio: 'inherit', cwd })
+  execaSync('nix', [ '@lvjiaxuan/eslint-config', 'eslint', '-D', '--workspace-root=true' ], { stdio: 'inherit', cwd })
 
   if (flat) {
     fs.writeFileSync(path.resolve(cwd, 'eslint.config.js'), 'import lvjiaxuan from \'@lvjiaxuan/eslint-config/flat\'\n\nexport default lvjiaxuan', { encoding: 'utf-8' })
