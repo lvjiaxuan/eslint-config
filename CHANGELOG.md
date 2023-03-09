@@ -1,9 +1,16 @@
 # Changelog
 
-Tag ranges `v0.0.2...v0.8.4` (42). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...v0.8.5` (43). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v0.8.5 <sub>(2023-03-09)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.4...main)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- mis publish files. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(4db95)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/4db9523)
 
 ## v0.8.4 <sub>(2023-03-09)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.3...main)
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.3...v0.8.4)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
