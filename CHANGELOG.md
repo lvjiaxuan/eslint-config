@@ -1,9 +1,16 @@
 # Changelog
 
-Tag ranges `v0.0.2...v0.8.5` (43). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...v0.8.6` (44). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v0.8.6 <sub>(2023-03-09)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.5...main)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- correct `files` glob. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(a5de5)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/a5de528)
 
 ## v0.8.5 <sub>(2023-03-09)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.4...main)
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.4...v0.8.5)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
