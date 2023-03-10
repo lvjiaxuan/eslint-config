@@ -6,7 +6,7 @@ import ymlPlugin from 'eslint-plugin-yml'
 import ymlParser from 'yaml-eslint-parser'
 import globals from 'globals'
 import js from '@eslint/js'
-import index from './index'
+import index from './index.cjs'
 import basic from './basic'
 
 
@@ -15,7 +15,7 @@ import basic from './basic'
  * @param {import('eslint').ESLint.plugin} plugin
  * @returns {import('eslint').Linter.FlatConfig}
  */
-export const compatPluginConfig = (plugin, name = 'recommended') => {
+const compatPluginConfig = (plugin, name = 'recommended') => {
   // It seems that `@eslint/eslintrc` could only be used in `eslint.config.js` of root rather than packing it for import.
   // So I need to do a temporary compatibility by myself.
 
@@ -31,7 +31,7 @@ export const compatPluginConfig = (plugin, name = 'recommended') => {
 /**
  * @returns {import('eslint').Linter.FlatConfig}
  */
-export const compatJsoncPluginConfig = () => ({
+const compatJsoncPluginConfig = () => ({
   // jsoncPlugin.configs['recommended-with-jsonc']
   // https://github.dev/ota-meshi/eslint-plugin-jsonc/blob/master/lib/index.ts#L45
 
@@ -47,7 +47,7 @@ export const compatJsoncPluginConfig = () => ({
 /**
  * @returns {Array.<import('eslint').Linter.FlatConfig>}
  */
-export const compatYmlPluginConfig = () => ({
+const compatYmlPluginConfig = () => ({
   // ymlPlugin.configs.standard
   // https://github.dev/ota-meshi/eslint-plugin-yml/blob/master/src/configs/standard.ts#L1
   files: [ '**/*.yaml', '**/*.yml' ],
@@ -62,7 +62,7 @@ export const compatYmlPluginConfig = () => ({
 /**
  * @returns {Array.<import('eslint').Linter.FlatConfig>}
  */
-export const compatMarkdownPluginConfigs = () => {
+const compatMarkdownPluginConfigs = () => {
   // markdownPlugin.configs.recommended
   // https://eslint.org/docs/latest/use/configure/configuration-files-new#using-processors
   // https://github.dev/eslint/eslint-plugin-markdown/blob/main/lib/index.js#L42

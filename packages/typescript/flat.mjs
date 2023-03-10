@@ -1,7 +1,7 @@
 import javascript from '@lvjiaxuan/eslint-config-js/flat'
 import tsParser from '@typescript-eslint/parser'
 import typescript from '@typescript-eslint/eslint-plugin'
-import index from './index'
+import index from './index.cjs'
 
 const config = index.overrides[0]
 

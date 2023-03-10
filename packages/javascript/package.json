@@ -9,13 +9,16 @@
     "eslint-config"
   ],
   "exports": {
-    ".": "./index.js",
-    "./flat": "./dist/flat.mjs"
+    ".": "./index.cjs",
+    "./flat": {
+      "require": "./dist/flat.cjs",
+      "import": "./dist/flat.mjs"
+    }
   },
-  "main": "index.js",
+  "main": "./index.cjs",
   "scripts": {
     "dev": "nr build --watch",
-    "build": "tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake",
+    "build": "tsup flat.mjs --format=esm,cjs --clean --splitting --target=node16 --treeshake",
     "prepublishOnly": "nr build"
   },
   "peerDependencies": {

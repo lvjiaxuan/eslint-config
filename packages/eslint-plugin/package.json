@@ -9,7 +9,10 @@
   ],
   "exports": {
     ".": "./dist/index.cjs",
-    "./flat": "./dist/flat.mjs"
+    "./flat": {
+      "require": "./dist/flat.cjs",
+      "import": "./dist/flat.mjs"
+    }
   },
   "main": "./dist/index.cjs",
   "bin": "./bin/add.mjs",

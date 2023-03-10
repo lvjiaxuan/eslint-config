@@ -9,18 +9,22 @@
     "eslint-config"
   ],
   "exports": {
-    ".": "./index.js",
-    "./flat": "./flat.mjs"
+    ".": "./index.cjs",
+    "./flat": {
+      "require": "./flat.cjs",
+      "import": "./flat.mjs"
+    }
   },
-  "main": "index.js",
+  "main": "index.cjs",
   "bin": "./bin/add.mjs",
   "files": [
     "dist",
+    "./flat.cjs",
     "./flat.mjs",
     "!./add.ts"
   ],
   "scripts": {
-    "build": "tsup add.ts --target=node16",
+    "build": "tsup add.ts --format=esm --target=node16",
     "prepublishOnly": "nr build"
   },
   "peerDependencies": {

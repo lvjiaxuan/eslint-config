@@ -9,20 +9,18 @@
     "eslint-config"
   ],
   "exports": {
-    ".": "./index.js",
-    "./flat": "./dist/flat.mjs"
+    ".": "./index.cjs",
+    "./flat": {
+      "require": "./dist/flat.cjs",
+      "import": "./dist/flat.mjs"
+    }
   },
-  "main": "index.js",
-  "files": [
-    "dist",
-    "./tsRules.json",
-    "!./js2ts.js"
-  ],
+  "main": "./index.cjs",
   "scripts": {
     "dev": "nr build --watch",
     "j2t": "node js2ts",
     "prepare": "nr j2t",
-    "build": "nr j2t && tsup flat.mjs --format=esm --clean --splitting --target=node16 --treeshake",
+    "build": "nr j2t && tsup flat.mjs --format=esm,cjs --clean --splitting --target=node16 --treeshake",
     "prepublishOnly": "nr build"
   },
   "peerDependencies": {
