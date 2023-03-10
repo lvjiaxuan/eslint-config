@@ -1,7 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-config-monorepo",
-  "version": "0.8.6",
-
+  "version": "0.10.0",
   "scripts": {
     "lint": "nix cross-env ESLINT_USE_FLAT_CONFIG=false eslint -c=.eslintrc.js .",
     "lint:flat": "nix cross-env ESLINT_USE_FLAT_CONFIG=true eslint .",

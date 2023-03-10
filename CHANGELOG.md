@@ -1,9 +1,16 @@
 # Changelog
 
-Tag ranges `v0.0.2...v0.8.6` (44). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...v0.10.0` (45). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v0.10.0 <sub>(2023-03-10)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.6...main)
+
+### &nbsp;&nbsp;&nbsp;✨ Enhancements
+
+- module stuff. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(e52dd)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e52ddf3)
 
 ## v0.8.6 <sub>(2023-03-09)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.5...main)
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.5...v0.8.6)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
