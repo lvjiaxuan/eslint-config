@@ -1,12 +1,12 @@
 import typescript from '@lvjiaxuan/eslint-config-ts/flat'
 import vue from 'eslint-plugin-vue'
-import tsParser from '@typescript-eslint/parser'
+import * as tsParser from '@typescript-eslint/parser'
 import vueParser from 'vue-eslint-parser'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
 import vueTS from '@vue/eslint-config-typescript'
 import vueTSRecommended from '@vue/eslint-config-typescript/recommended.js'
 import globals from 'globals'
-import index from './index'
+import index from './index.cjs'
 
 const files = [ '**/*.vue' ]
 
