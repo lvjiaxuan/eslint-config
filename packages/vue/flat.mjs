@@ -53,6 +53,6 @@ export default [
     },
   },
 
-  ...vueTS.overrides,
+  // ...vueTS.overrides,
   ...vueTSRecommended.overrides,
 ]
