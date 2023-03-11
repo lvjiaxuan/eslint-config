@@ -1,9 +1,9 @@
 # Changelog
 
-Tag ranges `v0.0.2...v0.10.0` (45). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...v0.10.0`. [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
 
 ## v0.10.0 <sub>(2023-03-10)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.6...main)
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.6...v0.10.0)
 
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
