@@ -9,9 +9,6 @@
     "prepare": "nr build"
   },
   "devDependencies": {
-    "@lvjiaxuan/eslint-config-js": "workspace:^",
-    "@lvjiaxuan/eslint-config-ts": "workspace:^",
-    "@lvjiaxuan/eslint-config-vue": "workspace:^",
     "@lvjiaxuan/eslint-plugin": "workspace:^",
     "@types/eslint": "^8.21.1",
     "eslint": "^8.36.0",

@@ -4,9 +4,6 @@ importers:
 
   .:
     specifiers:
-      '@lvjiaxuan/eslint-config-js': workspace:^
-      '@lvjiaxuan/eslint-config-ts': workspace:^
-      '@lvjiaxuan/eslint-config-vue': workspace:^
       '@lvjiaxuan/eslint-plugin': workspace:^
       '@types/eslint': ^8.21.1
       eslint: ^8.36.0
@@ -15,9 +12,6 @@ importers:
       typescript: ^4.9.5
       unbuild: ^1.1.2
     devDependencies:
-      '@lvjiaxuan/eslint-config-js': link:packages/javascript
-      '@lvjiaxuan/eslint-config-ts': link:packages/typescript
-      '@lvjiaxuan/eslint-config-vue': link:packages/vue
       '@lvjiaxuan/eslint-plugin': link:packages/eslint-plugin
       '@types/eslint': 8.21.1
       eslint: 8.36.0
