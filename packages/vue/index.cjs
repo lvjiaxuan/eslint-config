@@ -1,3 +1,7 @@
+if (!process.env.ESLINT_USE_FLAT_CONFIG) {
+  require('@rushstack/eslint-patch/modern-module-resolution')
+}
+
 module.exports = {
   extends: '@lvjiaxuan/ts',
 

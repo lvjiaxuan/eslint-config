@@ -1,7 +1,9 @@
 ![actions](https://github.com/lvjiaxuan/eslint-config/actions/workflows/ci.yml/badge.svg)
 [![npm](https://img.shields.io/npm/v/@lvjiaxuan/eslint-config)](https://www.npmjs.com/package/@lvjiaxuan/eslint-config)
 
-# Features
+According to this [issue](https://github.com/eslint/eslint/pull/15933), i highly recommend using the new flat config because it includes `.cjs` and `.mjs` files by default.
+
+# Feature
 
 - Support **Flat Config**.
 - `vue` package includes `ts` package which includes `js` package. It means that if you code vue with ts, you should install vue package only instead of ts package in company.
@@ -38,10 +40,9 @@ Fix on save. VScode settings as below:
 # [Flat Config](https://eslint.org/docs/latest/use/configure/configuration-files-new)
 
 1. shortcut: `nix @lvjiaxuan/eslint-plugin --flat` .
-2. Ensure the prop `"type": "module"` in package.json.
 2. Setting `settings.json` to let ESLint extension supports flat config: `"eslint.experimental.useFlatConfig": true` .
 
-> All packages own its flat config export like `pkg/flat` .
+> BTW, all packages own its flat config export like `pkg/flat` .
 
 # Refer
 

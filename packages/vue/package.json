@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@lvjiaxuan/eslint-config-ts": "workspace:^",
+    "@rushstack/eslint-patch": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
     "@vue/eslint-config-typescript": "^11.0.2",
@@ -34,7 +35,6 @@
     "vue-eslint-parser": "^9.1.0"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.2.0",
     "eslint": "^8.36.0"
   }
 }

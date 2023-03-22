@@ -101,6 +101,7 @@ importers:
       vue-eslint-parser: ^9.1.0
     dependencies:
       '@lvjiaxuan/eslint-config-ts': link:../typescript
+      '@rushstack/eslint-patch': 1.2.0
       '@typescript-eslint/eslint-plugin': 5.54.1_4rfaf6mlw2mmutqjcopwvbftpu
       '@typescript-eslint/parser': 5.54.1_vgl77cfdswitgr47lm5swmv43m
       '@vue/eslint-config-typescript': 11.0.2_75cttubc7yphoaabg6k3yrjnke
@@ -108,7 +109,6 @@ importers:
       globals: 13.20.0
       vue-eslint-parser: 9.1.0_eslint@8.36.0
     devDependencies:
-      '@rushstack/eslint-patch': 1.2.0
       eslint: 8.36.0
 
 packages:
@@ -727,7 +727,7 @@ packages:
 
   /@rushstack/eslint-patch/1.2.0:
     resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
-    dev: true
+    dev: false
 
   /@types/chai-subset/1.3.3:
     resolution: {integrity: sha512-frBecisrNGz+F4T6bcc+NLeolfiojh5FxW2klu669+8BARtyQv2C/GkNW6FUodVe4BroGMP/wER/YDGc7rEllw==}
