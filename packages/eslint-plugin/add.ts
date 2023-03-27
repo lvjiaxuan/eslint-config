@@ -2,14 +2,16 @@ import { execaSync } from 'execa'
 import path from 'node:path'
 import fs from 'node:fs'
 
-const flat = process.argv.slice(2).includes('--flat')
+const argv = process.argv.slice(2)
+const flat = argv.includes('--flat')
+const argvWithoutFlat = argv.filter(i => i !== '--flat')
 
 try {
 
   const cwd = process.cwd()
 
   // Install
-  execaSync('nix', [ '@lvjiaxuan/eslint-plugin', 'eslint', '-D', '--workspace-root=true' ], { stdio: 'inherit', cwd })
+  execaSync('ni', [ '@lvjiaxuan/eslint-plugin', 'eslint', '-D', ...argvWithoutFlat ], { stdio: 'inherit', cwd })
 
   if (flat) {
     fs.writeFileSync(path.resolve(cwd, 'eslint.config.js'), 'import lvjiaxuan from \'@lvjiaxuan/eslint-plugin/flat\'\n\nexport default lvjiaxuan.configs.recommended', { encoding: 'utf-8' })
