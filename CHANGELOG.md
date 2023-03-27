@@ -1,6 +1,13 @@
 # Changelog
 
-Tag ranges `v0.0.2...v0.11.0` (47). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...v0.11.1` (48). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v0.11.1 <sub>(2023-03-27)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.11.0...main)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- proper usage of @r/e-p &nbsp;-&nbsp; by @lvjiaxuan [<samp>(d9535)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/d953525)
 
 ## v0.11.0 <sub>(2023-03-27)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.10.1...v0.11.0)
