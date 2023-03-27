@@ -44,6 +44,10 @@ Fix on save. VScode settings as below:
 
 > BTW, all packages own its flat config export like `pkg/flat` .
 
+# Use [@rushstack/eslint-patch](https://www.npmjs.com/package/@rushstack/eslint-patch) with non-flat config
+
+A patch that improves how ESLint loads plugins when working in a monorepo with a reusable toolchain
+
 # Refer
 
 - https://github.com/antfu/eslint-config

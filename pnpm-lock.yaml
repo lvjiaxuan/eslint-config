@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@lvjiaxuan/eslint-plugin': workspace:^
+      '@rushstack/eslint-patch': ^1.2.0
       '@types/eslint': ^8.21.1
       eslint: ^8.36.0
       execa: ^7.0.0
@@ -13,6 +14,7 @@ importers:
       unbuild: ^1.1.2
     devDependencies:
       '@lvjiaxuan/eslint-plugin': link:packages/eslint-plugin
+      '@rushstack/eslint-patch': 1.2.0
       '@types/eslint': 8.21.1
       eslint: 8.36.0
       execa: 7.0.0
@@ -91,7 +93,6 @@ importers:
   packages/vue:
     specifiers:
       '@lvjiaxuan/eslint-config-ts': workspace:^
-      '@rushstack/eslint-patch': ^1.2.0
       '@typescript-eslint/eslint-plugin': ^5.54.1
       '@typescript-eslint/parser': ^5.54.1
       '@vue/eslint-config-typescript': ^11.0.2
@@ -101,7 +102,6 @@ importers:
       vue-eslint-parser: ^9.1.0
     dependencies:
       '@lvjiaxuan/eslint-config-ts': link:../typescript
-      '@rushstack/eslint-patch': 1.2.0
       '@typescript-eslint/eslint-plugin': 5.54.1_4rfaf6mlw2mmutqjcopwvbftpu
       '@typescript-eslint/parser': 5.54.1_vgl77cfdswitgr47lm5swmv43m
       '@vue/eslint-config-typescript': 11.0.2_75cttubc7yphoaabg6k3yrjnke
@@ -727,7 +727,7 @@ packages:
 
   /@rushstack/eslint-patch/1.2.0:
     resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
-    dev: false
+    dev: true
 
   /@types/chai-subset/1.3.3:
     resolution: {integrity: sha512-frBecisrNGz+F4T6bcc+NLeolfiojh5FxW2klu669+8BARtyQv2C/GkNW6FUodVe4BroGMP/wER/YDGc7rEllw==}
