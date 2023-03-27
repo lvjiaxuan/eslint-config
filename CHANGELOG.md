@@ -1,6 +1,20 @@
 # Changelog
 
-Tag ranges `v0.0.2...v0.10.0`. [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...v0.11.0` (47). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v0.11.0 <sub>(2023-03-27)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.10.1...v0.11.0)
+
+### &nbsp;&nbsp;&nbsp;✨ Enhancements
+
+- support append params, fixed #7. &nbsp;-&nbsp; by @lvjiaxuan in [#7](https://github.com/lvjiaxuan/eslint-config/issues/7) [<samp>(8353d)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/8353da1)
+
+## v0.10.1 <sub>(2023-03-11)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.10.0...v0.10.1)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- import * as default for those no default module &nbsp;-&nbsp; by @lvjiaxuan [<samp>(a9201)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/a92010e)
 
 ## v0.10.0 <sub>(2023-03-10)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.6...v0.10.0)
