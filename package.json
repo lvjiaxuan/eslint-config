@@ -10,7 +10,7 @@
     "prepare": "nr build"
   },
   "devDependencies": {
-    "@lvjiaxuan/eslint-plugin": "workspace:^",
+    "@lvjiaxuan/eslint-plugin": "workspace:*",
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/eslint": "^8.21.1",
     "eslint": "^8.36.0",
