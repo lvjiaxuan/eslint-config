@@ -1,9 +1,16 @@
 # Changelog
 
-Tag ranges `v0.0.2...v0.11.1` (48). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...v0.11.2` (49). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v0.11.2 <sub>(2023-03-28)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.11.1...v0.11.2)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- **plugin**: @typescript-eslint/utils is not devDep &nbsp;-&nbsp; by @lvjiaxuan [<samp>(744de)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/744dec8)
 
 ## v0.11.1 <sub>(2023-03-27)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.11.0...main)
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.11.0...v0.11.1)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
