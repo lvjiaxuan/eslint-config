@@ -3,8 +3,8 @@
   "version": "0.11.4",
   "private": true,
   "scripts": {
-    "lint": "nix cross-env ESLINT_USE_FLAT_CONFIG=false eslint -c=.eslintrc.cjs .",
-    "lint:flat": "nix cross-env ESLINT_USE_FLAT_CONFIG=true eslint .",
+    "lint": "nlx cross-env ESLINT_USE_FLAT_CONFIG=false eslint -c=.eslintrc.cjs .",
+    "lint:flat": "nlx cross-env ESLINT_USE_FLAT_CONFIG=true eslint .",
     "test": "nr -r test",
     "build": "nr -r build",
     "prepare": "nr build"

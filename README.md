@@ -24,8 +24,8 @@ ni @lvjiaxuan/eslint-config -D # By @antfu/ni
 npm i lvjiaxuan/eslint-config -D
 pnpm add lvjiaxuan/eslint-config -D
 
-nix @lvjiaxuan/eslint-config # Shortcut
-nix @lvjiaxuan/eslint-plugin # Include custom rules
+nlx @lvjiaxuan/eslint-config # Shortcut
+nlx @lvjiaxuan/eslint-plugin # Include custom rules
 ```
 
 Fix on save. VScode settings as below:
@@ -39,7 +39,7 @@ Fix on save. VScode settings as below:
 
 # [Flat Config](https://eslint.org/docs/latest/use/configure/configuration-files-new)
 
-1. shortcut: `nix @lvjiaxuan/eslint-plugin --flat` .
+1. shortcut: `nlx @lvjiaxuan/eslint-plugin --flat` .
 2. Setting `settings.json` to let ESLint extension supports flat config: `"eslint.experimental.useFlatConfig": true` .
 
 > BTW, all packages own its flat config export like `pkg/flat` .
