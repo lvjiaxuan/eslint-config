@@ -16,7 +16,7 @@ import basic from './basic'
  * @returns {import('eslint').Linter.FlatConfig}
  */
 const compatPluginConfig = (plugin, name = 'recommended') => {
-  // It seems that `@eslint/eslintrc` could only be used in `eslint.config.js` of root rather than packing it for import.
+  // It seems that `@eslint/eslintrc` could only be used in `eslint.config.js` of root rather than packing it to import.
   // So I need to do a temporary compatibility by myself.
 
   /** @type {import('eslint').Linter.FlatConfig} */
@@ -76,7 +76,7 @@ const compatMarkdownPluginConfigs = () => {
       // markdown plugin name
       [recommended.plugins[0]]: markdownPlugin,
     },
-    processor: recommended.overrides[0].processor,
+    processor: markdownPlugin.processors.markdown,
   }
 
   /** @type {import('eslint').Linter.FlatConfig} */

@@ -20,6 +20,7 @@ export default [
     // https://github.dev/vuejs/eslint-plugin-vue/blob/master/lib/configs/vue3-recommended.js#L1
     files,
     plugins: { vue },
+    processor: vue.processors['.vue'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
