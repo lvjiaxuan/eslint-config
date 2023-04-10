@@ -1,13 +1,20 @@
 # Changelog
 
-Tag ranges `v0.0.2...v0.11.4` (51). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...ColdRocketsPost` (52). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
 
-## v0.11.4 <sub>(2023-03-29)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.11.3...main)
+## ColdRocketsPost <sub>(2023-04-10)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.11.4...main)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- lock file &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(d4a0c)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/d4a0cc4)
+- add processor, close #8 &nbsp;-&nbsp; by @lvjiaxuan in [#8](https://github.com/lvjiaxuan/eslint-config/issues/8) [<samp>(b5716)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/b5716fd)
+
+## v0.11.4 <sub>(2023-03-29)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.11.3...v0.11.4)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- lock file &nbsp;-&nbsp; by @lvjiaxuan [<samp>(d4a0c)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/d4a0cc4)
 
 ## v0.11.3 <sub>(2023-03-29)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.11.2...v0.11.3)
@@ -17,119 +24,119 @@ Tag ranges `v0.0.2...v0.11.4` (51). [All GitHub Releases](https://github.com/lvj
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- **plugin**: @typescript-eslint/utils is not devDep &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(744de)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/744dec8)
+- **plugin**: @typescript-eslint/utils is not devDep &nbsp;-&nbsp; by @lvjiaxuan [<samp>(744de)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/744dec8)
 
 ## v0.11.1 <sub>(2023-03-27)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.11.0...v0.11.1)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- proper usage of @r/e-p &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(d9535)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/d953525)
+- proper usage of @r/e-p &nbsp;-&nbsp; by @lvjiaxuan [<samp>(d9535)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/d953525)
 
 ## v0.11.0 <sub>(2023-03-27)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.10.1...v0.11.0)
 
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
-- support append params, fixed #7. &nbsp;-&nbsp; by **lvjiaxuan** in [#7](https://github.com/lvjiaxuan/eslint-config/issues/7) [<samp>(8353d)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/8353da1)
+- support append params, fixed #7. &nbsp;-&nbsp; by @lvjiaxuan in [#7](https://github.com/lvjiaxuan/eslint-config/issues/7) [<samp>(8353d)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/8353da1)
 
 ## v0.10.1 <sub>(2023-03-11)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.10.0...v0.10.1)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- import * as default for those no default module &nbsp;-&nbsp; by **unknown** [<samp>(a9201)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/a92010e)
+- import * as default for those no default module &nbsp;-&nbsp; by @lvjiaxuan [<samp>(a9201)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/a92010e)
 
 ## v0.10.0 <sub>(2023-03-10)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.6...v0.10.0)
 
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
-- module stuff. &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(e52dd)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e52ddf3)
+- module stuff. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(e52dd)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e52ddf3)
 
 ## v0.8.6 <sub>(2023-03-09)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.5...v0.8.6)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- correct `files` glob. &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(a5de5)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/a5de528)
+- correct `files` glob. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(a5de5)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/a5de528)
 
 ## v0.8.5 <sub>(2023-03-09)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.4...v0.8.5)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- mis publish files. &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(4db95)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/4db9523)
+- mis publish files. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(4db95)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/4db9523)
 
 ## v0.8.4 <sub>(2023-03-09)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.3...v0.8.4)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- ni to nix. &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(fac97)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/fac9756)
+- ni to nix. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(fac97)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/fac9756)
 
 ## v0.8.3 <sub>(2023-03-08)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.2...v0.8.3)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- change workspace corresponding version &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(26e20)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/26e200d)
+- change workspace corresponding version &nbsp;-&nbsp; by @lvjiaxuan [<samp>(26e20)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/26e200d)
 
 ## v0.8.2 <sub>(2023-03-08)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.1...v0.8.2)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- publish ts dist &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(d7f9b)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/d7f9b66)
+- publish ts dist &nbsp;-&nbsp; by @lvjiaxuan [<samp>(d7f9b)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/d7f9b66)
 
 ## v0.8.1 <sub>(2023-03-06)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.8.0...v0.8.1)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- publish dist &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(160b4)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/160b486)
+- publish dist &nbsp;-&nbsp; by @lvjiaxuan [<samp>(160b4)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/160b486)
 
 ## v0.8.0 <sub>(2023-03-06)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.7.0...v0.8.0)
 
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
-- Flat Config &nbsp;-&nbsp; by **lvjiaxuan** in [#5](https://github.com/lvjiaxuan/eslint-config/issues/5) [<samp>(c2e74)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/c2e7459)
+- Flat Config &nbsp;-&nbsp; by @lvjiaxuan in [#5](https://github.com/lvjiaxuan/eslint-config/issues/5) [<samp>(c2e74)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/c2e7459)
 
 ## v0.7.0 <sub>(2023-03-02)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.6.0...v0.7.0)
 
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
-- **vue**: recommended config &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(22b1c)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/22b1c7e)
+- **vue**: recommended config &nbsp;-&nbsp; by @lvjiaxuan [<samp>(22b1c)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/22b1c7e)
 
 ## v0.6.0 <sub>(2023-03-02)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.3...v0.6.0)
 
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
-- **vue**: add a config &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(53be3)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/53be33f)
+- **vue**: add a config &nbsp;-&nbsp; by @lvjiaxuan [<samp>(53be3)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/53be33f)
 
 ## v0.5.3 <sub>(2023-03-01)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.2...v0.5.3)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- export compat problem from tsup &nbsp;-&nbsp; by **lvjiaxuan** [<samp>(f615d)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/f615da3)
+- export compat problem from tsup &nbsp;-&nbsp; by @lvjiaxuan [<samp>(f615d)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/f615da3)
 
 ## v0.5.2 <sub>(2023-02-21)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.1...v0.5.2)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- config error. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(e3f0f)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e3f0f32)
+- config error. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(e3f0f)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e3f0f32)
 
 ## v0.5.1 <sub>(2023-02-20)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.5.0...v0.5.1)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
-- set dist to files. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(bdfd2)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/bdfd23d)
+- set dist to files. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(bdfd2)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/bdfd23d)
 
 ## v0.5.0 <sub>(2023-02-20)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.4.2...v0.5.0)
@@ -137,11 +144,11 @@ Tag ranges `v0.0.2...v0.11.4` (51). [All GitHub Releases](https://github.com/lvj
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
 - add scripts. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(87f3f)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/87f3fc6)
-- **eslint-plugin**: add install script. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(05402)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/0540225)
+- **eslint-plugin**: add install script. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(05402)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/0540225)
 
 ### &nbsp;&nbsp;&nbsp;📝 Documentation
 
-- my rule. &nbsp;-&nbsp; by **lvjiaxuan 吕嘉轩** [<samp>(ea4c2)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/ea4c265)
+- my rule. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(ea4c2)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/ea4c265)
 
 ## v0.4.2 <sub>(2022-12-08)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.4.1...v0.4.2)
