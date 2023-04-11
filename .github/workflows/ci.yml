@@ -3,7 +3,7 @@ name: Release and Publish
 on:
   push:
     tags:
-      - v*
+      - '*'
 
 jobs:
 
@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 16.x
 
-      - run: npx lvr --release
+      - run: npx lvr release
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 

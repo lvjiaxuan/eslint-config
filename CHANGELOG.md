@@ -1,9 +1,9 @@
 # Changelog
 
-Tag ranges `v0.0.2...ColdRocketsPost` (52). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...ClearDollsTravel` (52). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
 
-## ColdRocketsPost <sub>(2023-04-10)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.11.4...main)
+## ClearDollsTravel <sub>(2023-04-11)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.11.4...ClearDollsTravel)
 
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
