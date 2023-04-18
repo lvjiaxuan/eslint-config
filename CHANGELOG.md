@@ -1,6 +1,13 @@
 # Changelog
 
-Tag ranges `v0.0.2...ClearDollsTravel` (52). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...NiceWomenBeg` (53). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## NiceWomenBeg <sub>(2023-04-18)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/ClearDollsTravel...NiceWomenBeg)
+
+### &nbsp;&nbsp;&nbsp;✨ Enhancements
+
+- match more tsconfig file &nbsp;-&nbsp; by @lvjiaxuan [<samp>(40242)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/40242c8)
 
 ## ClearDollsTravel <sub>(2023-04-11)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v0.11.4...ClearDollsTravel)
