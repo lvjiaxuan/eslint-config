@@ -13,7 +13,7 @@
     "@lvjiaxuan/eslint-plugin": "workspace:*",
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/eslint": "^8.37.0",
-    "eslint": "^8.38.0",
+    "eslint": "^8.40.0",
     "execa": "^7.1.1",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4",
