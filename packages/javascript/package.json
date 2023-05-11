@@ -27,12 +27,12 @@
   "dependencies": {
     "@eslint/js": "^8.40.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-jsonc": "^2.7.0",
+    "eslint-plugin-jsonc": "^2.8.0",
     "eslint-plugin-markdown": "^2.2.1",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-yml": "^1.5.0",
+    "eslint-plugin-yml": "^1.7.0",
     "globals": "^13.20.0",
-    "yaml-eslint-parser": "^1.2.0"
+    "yaml-eslint-parser": "^1.2.2"
   },
   "devDependencies": {
     "eslint": "^8.40.0"
