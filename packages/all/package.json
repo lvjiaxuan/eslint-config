@@ -16,15 +16,12 @@
     }
   },
   "main": "index.cjs",
-  "bin": "./bin/add.mjs",
   "files": [
     "dist",
     "./flat.cjs",
-    "./flat.mjs",
-    "!./add.ts"
+    "./flat.mjs"
   ],
   "scripts": {
-    "build": "tsup add.ts --format=esm --target=node16",
     "prepublishOnly": "nr build"
   },
   "peerDependencies": {
