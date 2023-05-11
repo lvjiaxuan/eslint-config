@@ -37,6 +37,7 @@ jobs:
           version: 8
 
       - run: |
+          pnpm i @antfu/ni -g
           pnpm i
           pnpm -r publish --access public --no-git-checks
 

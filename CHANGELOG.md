@@ -1,6 +1,9 @@
 # Changelog
 
-Tag ranges `v0.0.2...NiceWomenBeg` (53). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...WideSpoonsItch` (54). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## WideSpoonsItch <sub>(2023-05-12)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/NiceWomenBeg...WideSpoonsItch)
 
 ## NiceWomenBeg <sub>(2023-04-18)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/ClearDollsTravel...NiceWomenBeg)
