@@ -18,5 +18,10 @@
     "tsup": "^6.7.0",
     "typescript": "^5.0.4",
     "unbuild": "^1.2.1"
+  },
+  "lv": {
+    "release": {
+      "all": true
+    }
   }
 }
