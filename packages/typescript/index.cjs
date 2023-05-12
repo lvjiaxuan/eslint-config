@@ -45,6 +45,9 @@ module.exports = {
 
         // js to ts
         ...tsRules,
+
+        // https://typescript-eslint.io/linting/troubleshooting#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
+        'no-undef': 'off',
       },
     },
   ],
