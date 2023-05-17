@@ -14,7 +14,7 @@ try {
   execaSync('ni', [ '@lvjiaxuan/eslint-plugin', 'eslint', '-D', ...argvWithoutFlat ], { stdio: 'inherit', cwd })
 
   if (flat) {
-    fs.writeFileSync(path.resolve(cwd, 'eslint.config.js'), 'export * as default from \'@lvjiaxuan/eslint-plugin/flat\'', { encoding: 'utf-8' })
+    fs.writeFileSync(path.resolve(cwd, 'eslint.config.js'), 'import lvjiaxuan from \'@lvjiaxuan/eslint-plugin/flat\'\nexport default lvjiaxuan.configs.recommended', { encoding: 'utf-8' })
     console.log('Flat config is installed and do next depends on you.')
     console.log('1. Create/Append `"eslint.experimental.useFlatConfig": true` to the `.vscode/settings.json`.')
     console.log('2. Append `"types": "module"` to the `package.json`.')

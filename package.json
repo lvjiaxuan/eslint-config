@@ -7,7 +7,7 @@
     "test": "nr -r test",
     "build": "nr -r build",
     "prepare": "nr build",
-    "release": "lvr --no-push"
+    "release": "lvr --all --no-push"
   },
   "devDependencies": {
     "@lvjiaxuan/eslint-plugin": "workspace:*",
