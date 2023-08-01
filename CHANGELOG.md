@@ -1,6 +1,9 @@
 # Changelog
 
-Tag ranges `v0.0.2...CurvyWormsGrow` (57). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...TenWolvesTeach` (58). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## TenWolvesTeach <sub>(2023-08-01)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/CurvyWormsGrow...TenWolvesTeach)
 
 ## CurvyWormsGrow <sub>(2023-05-17)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/BumpyRulesPost...CurvyWormsGrow)
