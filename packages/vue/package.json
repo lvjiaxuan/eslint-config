@@ -26,14 +26,14 @@
   },
   "dependencies": {
     "@lvjiaxuan/eslint-config-ts": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
     "@vue/eslint-config-typescript": "^11.0.3",
-    "eslint-plugin-vue": "^9.16.1",
-    "globals": "^13.20.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "globals": "^13.21.0",
     "vue-eslint-parser": "^9.3.1"
   },
   "devDependencies": {
-    "eslint": "^8.46.0"
+    "eslint": "^8.49.0"
   }
 }
