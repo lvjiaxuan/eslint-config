@@ -1,8 +1,8 @@
-import { ESLintUtils } from '@typescript-eslint/utils'
+import { RuleTester } from '@typescript-eslint/rule-tester';
 import rule, { RULE_NAME } from './no-multi-empty-lines-in-pattern'
-import { describe, it } from 'vitest'
 
-const ruleTester = new ESLintUtils.RuleTester({ parser: '@typescript-eslint/parser' })
+const ruleTester = new RuleTester();
+
 
 // Maybe it could represent the other 3, which are ObjectPattern\ArrayExpression\ArrayPattern
 describe('ObjectExpression', () => {

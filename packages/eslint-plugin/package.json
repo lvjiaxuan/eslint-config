@@ -3,6 +3,7 @@
   "version": "0.16.0",
   "description": "",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
+  "type": "module",
   "keywords": [
     "eslint",
     "eslint-plugin"
@@ -37,8 +38,8 @@
   },
   "devDependencies": {
     "@types/lodash.merge": "^4.6.7",
-    "@types/node": "^20.6.0",
     "@typescript-eslint/parser": "^6.7.0",
+    "@typescript-eslint/rule-tester": "^6.7.0",
     "eslint": "^8.49.0",
     "vitest": "^0.34.4"
   }

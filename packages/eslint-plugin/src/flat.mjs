@@ -1,5 +1,5 @@
 import lvjiaxuan from '@lvjiaxuan/eslint-config/flat'
-import index from './index'
+import index from '.'
 
 const pluginRules = index.rules
 

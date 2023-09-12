@@ -1,8 +1,7 @@
-import { ESLintUtils } from '@typescript-eslint/utils'
+import { RuleTester } from '@typescript-eslint/rule-tester'
 import rule, { RULE_NAME } from './prefer-constraint-tuple-type'
-import { it } from 'vitest'
 
-const ruleTester = new ESLintUtils.RuleTester({ parser: '@typescript-eslint/parser' })
+const ruleTester = new RuleTester()
 
 it('runs', () =>
   ruleTester.run(RULE_NAME, rule, {

@@ -11,13 +11,12 @@ const config = index.overrides[0]
 export default [
   ...javascript,
 
-  // plugin:@typescript-eslint/recommended
-  // https://github.dev/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts#L1
-  //
-  // plugin:@typescript-eslint/recommended-requiring-type-checking
-  // https://github.dev/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.ts#L1
+  // plugin:@typescript-eslint/recommended-type-checked
+  // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended-type-checked.ts
+  // plugin:@typescript-eslint/stylistic-type-checked
+  // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/stylistic-type-checked.ts
   {
-    files: [ '**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts' ],
+    files: config.files,
     ignores: config.excludedFiles,
     plugins: { '@typescript-eslint': typescript },
     languageOptions: {
@@ -28,9 +27,7 @@ export default [
     },
     rules: {
       ...typescript.configs['eslint-recommended'].rules,
-      ...typescript.configs['recommended'].rules,
-      ...typescript.configs['recommended-requiring-type-checking'].rules,
-      ...index.overrides[0].rules,
+      ...config.rules,
     },
   },
 ]

@@ -26,7 +26,7 @@ export default createRule<[BaseOptions] | [PatternOptions] | [ BaseOptions, Patt
     type: 'layout',
     docs: {
       description: '禁止 `[ ... ] | { ... }` 前后多余的空行。',
-      recommended: 'warn',
+      recommended: 'stylistic',
     },
     schema: {
       definitions: {
@@ -55,7 +55,6 @@ export default createRule<[BaseOptions] | [PatternOptions] | [ BaseOptions, Patt
           },
         },
       },
-      items: {
         anyOf: [
           { $ref: '#/definitions/baseConfig' },
           { $ref: '#/definitions/patternConfig' },
@@ -67,7 +66,6 @@ export default createRule<[BaseOptions] | [PatternOptions] | [ BaseOptions, Patt
             ],
           },
         ],
-      },
     },
     fixable: 'whitespace',
     hasSuggestions: true,
