@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "dev": "unbuild --stub",
-    "test": "vitest run",
+    "test": "vitest run --globals",
     "build": "unbuild",
     "prepublishOnly": "nr build"
   },

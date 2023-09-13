@@ -55,17 +55,17 @@ export default createRule<[BaseOptions] | [PatternOptions] | [ BaseOptions, Patt
           },
         },
       },
-        anyOf: [
-          { $ref: '#/definitions/baseConfig' },
-          { $ref: '#/definitions/patternConfig' },
-          {
-            type: 'array',
-            items: [
-              { $ref: '#/definitions/baseConfig' },
-              { $ref: '#/definitions/patternConfig' },
-            ],
-          },
-        ],
+      anyOf: [
+        { $ref: '#/definitions/baseConfig' },
+        { $ref: '#/definitions/patternConfig' },
+        {
+          type: 'array',
+          items: [
+            { $ref: '#/definitions/baseConfig' },
+            { $ref: '#/definitions/patternConfig' },
+          ],
+        },
+      ],
     },
     fixable: 'whitespace',
     hasSuggestions: true,

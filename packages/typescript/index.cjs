@@ -22,7 +22,7 @@ module.exports = {
 
       parserOptions: {
         // https://typescript-eslint.io/docs/linting/type-linting
-        tsconfigRootDir: __dirname,
+        tsconfigRootDir: process.cwd(),
         // https://typescript-eslint.io/linting/typed-linting/monorepos#wide-globs-in-parseroptionsproject
         project: [ './tsconfig.json', './tsconfig.*.json', './packages/*/tsconfig.json' ],
       },

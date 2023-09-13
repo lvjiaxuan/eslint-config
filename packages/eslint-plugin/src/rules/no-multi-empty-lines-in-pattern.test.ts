@@ -1,7 +1,7 @@
-import { RuleTester } from '@typescript-eslint/rule-tester';
+import { RuleTester } from '@typescript-eslint/rule-tester'
 import rule, { RULE_NAME } from './no-multi-empty-lines-in-pattern'
 
-const ruleTester = new RuleTester();
+const ruleTester = new RuleTester()
 
 
 // Maybe it could represent the other 3, which are ObjectPattern\ArrayExpression\ArrayPattern
