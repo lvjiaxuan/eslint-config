@@ -13,15 +13,9 @@ export default createRule<['always' | 'never'], 'omitCurly'>({
     type: 'layout',
     docs: {
       description: 'This arrow function can omit block body.',
-      recommended: 'warn',
+      recommended: 'stylistic',
     },
-    schema: [
-      {
-        enum: [ 'always', 'never' ],
-        minItems: 0,
-        maxItems: 1,
-      },
-    ],
+    schema: { type: [ 'string' ], enum: [ 'always', 'never' ] },
     fixable: 'whitespace',
     hasSuggestions: true,
     messages: { omitCurly: 'This arrow function can omit block body.' },

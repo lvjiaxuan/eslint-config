@@ -12,13 +12,13 @@ export default createRule<[], 'noSpaces'>({
   meta: {
     type: 'layout',
     docs: {
-      description: '禁止空行上出现空格（个人洁癖）。',
-      recommended: 'warn',
+      description: '禁止空行上出现空格。',
+      recommended: 'stylistic',
     },
     schema: [],
     fixable: 'whitespace',
     hasSuggestions: true,
-    messages: { noSpaces: '禁止空行上出现空格（个人洁癖），这里有 {{spacesLength}} 个空格。' },
+    messages: { noSpaces: '禁止空行上出现空格，这里有 {{spacesLength}} 个空格。' },
     deprecated: true, // The `no-trailing-spaces` of official eslint rule has already done.
     replacedBy: [ 'no-trailing-spaces' ],
   },

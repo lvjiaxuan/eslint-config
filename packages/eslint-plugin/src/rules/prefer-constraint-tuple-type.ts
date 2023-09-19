@@ -13,7 +13,7 @@ export default createRule<[], 'preferConstraint'>({
     type: 'suggestion',
     docs: {
       description: '建议缺省范形数组（元组）被类型约束。',
-      recommended: 'warn',
+      recommended: 'recommended',
     },
     schema: [],
     fixable: 'code',
