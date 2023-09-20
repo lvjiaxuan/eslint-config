@@ -3,7 +3,7 @@ import rule, { RULE_NAME } from './prefer-constraint-tuple-type'
 
 const ruleTester = new RuleTester()
 
-it('runs', () =>
+describe('prefer-constraint-tuple-type: tests', () => it('runs', () =>
   ruleTester.run(RULE_NAME, rule, {
     valid: [
       'const foo = 123\n\ntype ArrayType<T extends unknown[] = []> = [...T]',
@@ -27,4 +27,4 @@ it('runs', () =>
         errors: [ { messageId: 'preferConstraint' } ],
       },
     ],
-  }))
+  })))

@@ -5,7 +5,7 @@ import Ajv from 'ajv'
 const ruleTester = new RuleTester()
 
 // Maybe it could represent the other 3, which are ObjectPattern\ArrayExpression\ArrayPattern
-describe('no-empty-line-after-import: ObjectExpression', () => {
+describe('no-empty-line-after-import: test ObjectExpression', () => {
 
   it('default', () => ruleTester.run(RULE_NAME, rule, {
     valid: [

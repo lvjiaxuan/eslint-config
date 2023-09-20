@@ -1,10 +1,22 @@
-import { ESLintUtils, type TSESTree } from '@typescript-eslint/utils'
+import { ESLintUtils, type JSONSchema, type TSESTree } from '@typescript-eslint/utils'
 
 const createRule = ESLintUtils.RuleCreator(
   name => `https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin-lvjiaxuan/src/rules/${ name }.ts`,
 )
 
 export const RULE_NAME = 'omit-arrow-curly'
+
+export const schema: JSONSchema.JSONSchema4 = {
+  type: 'array',
+  minItems: 0,
+  maxItems: 1,
+  items: [
+    {
+      type: 'string',
+      enum: [ 'always', 'never' ],
+    },
+  ],
+}
 
 export default createRule<['always' | 'never'], 'omitCurly'>({
   name: RULE_NAME,
@@ -15,7 +27,7 @@ export default createRule<['always' | 'never'], 'omitCurly'>({
       description: 'This arrow function can omit block body.',
       recommended: 'stylistic',
     },
-    schema: { type: [ 'string' ], enum: [ 'always', 'never' ] },
+    schema,
     fixable: 'whitespace',
     hasSuggestions: true,
     messages: { omitCurly: 'This arrow function can omit block body.' },

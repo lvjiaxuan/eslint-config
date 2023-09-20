@@ -1,9 +1,9 @@
-import { RuleTester } from '@typescript-eslint/rule-tester';
+import { RuleTester } from '@typescript-eslint/rule-tester'
 import rule, { RULE_NAME } from './no-spaces-on-empty-line'
 
 const ruleTester = new RuleTester()
 
-it('runs', () =>
+describe('no-spaces-on-empty-line: tests', () => it('base', () =>
   ruleTester.run(RULE_NAME, rule, {
     valid: [
       // base
@@ -20,4 +20,5 @@ it('runs', () =>
       },
       // template strings
     ],
-  }))
+  })))
+
