@@ -3,52 +3,16 @@ name: Release and Publish
 on:
   push:
     tags:
-      - '*'
+      - v*
 
 jobs:
-
   release:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - run: npx lvr release
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    permissions:
+      contents: write
+      id-token: write
+    uses: lvjiaxuan/github-action-templates/.github/workflows/lvr-release.yml@main
+    secrets: inherit
 
   publish:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-        with:
-          node-version: 18
-          registry-url: "https://registry.npmjs.org"
-
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
-      - run: |
-          pnpm i @antfu/ni -g
-          pnpm i
-          pnpm -r publish --access public --no-git-checks
-
-  cnpm_sync:
-    needs: publish
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - run: npm install -g cnpm
-
-      - run: cnpm sync @lvjiaxuan/eslint-config @lvjiaxuan/eslint-config-js @lvjiaxuan/eslint-config-ts @lvjiaxuan/eslint-config-vue @lvjiaxuan/eslint-plugin --sync-publish
+    uses: lvjiaxuan/github-action-templates/.github/workflows/publish.yml@main
+    secrets: inherit
