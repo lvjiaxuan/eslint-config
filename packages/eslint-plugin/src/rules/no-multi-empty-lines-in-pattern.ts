@@ -1,4 +1,4 @@
-import { ESLintUtils, type TSESTree } from '@typescript-eslint/utils'
+import { ESLintUtils, type JSONSchema, type TSESTree } from '@typescript-eslint/utils'
 import lodashMerge from 'lodash.merge'
 
 const createRule = ESLintUtils.RuleCreator(
@@ -8,8 +8,8 @@ const createRule = ESLintUtils.RuleCreator(
 export const RULE_NAME = 'no-multi-empty-lines-in-pattern'
 
 export interface BaseOptions {
-  afterMaxLines: number
-  beforeMaxLines: number
+  afterMaxLines?: number
+  beforeMaxLines?: number
 }
 
 export interface PatternOptions {
@@ -17,6 +17,47 @@ export interface PatternOptions {
   ObjectPattern?: BaseOptions
   ArrayExpression?: BaseOptions
   ArrayPattern?: BaseOptions
+}
+
+export const schema: JSONSchema.JSONSchema4 = {
+  // TSESLint.RuleMetaData<string>['schema']
+  definitions: {
+    baseConfig: {
+      type: 'object',
+      additionalProperties: false,
+      properties: {
+        afterMaxLines: {
+          description: 'afterMaxLines',
+          type: 'number',
+        },
+        beforeMaxLines: {
+          description: 'beforeMaxLines',
+          type: 'number',
+        },
+      },
+    },
+    patternConfig: {
+      type: 'object',
+      additionalProperties: false,
+      properties: {
+        ObjectExpression: { $ref: '#/definitions/baseConfig' },
+        ObjectPattern: { $ref: '#/definitions/baseConfig' },
+        ArrayExpression: { $ref: '#/definitions/baseConfig' },
+        ArrayPattern: { $ref: '#/definitions/baseConfig' },
+      },
+    },
+  },
+  type: 'array',
+  minItems: 0,
+  maxItems: 2,
+  items: [
+    {
+      anyOf: [
+        { $ref: '#/definitions/baseConfig' },
+        { $ref: '#/definitions/patternConfig' },
+      ],
+    },
+  ],
 }
 
 export default createRule<[BaseOptions] | [PatternOptions] | [ BaseOptions, PatternOptions ], 'noEmptyLine'>({
@@ -28,45 +69,7 @@ export default createRule<[BaseOptions] | [PatternOptions] | [ BaseOptions, Patt
       description: '禁止 `[ ... ] | { ... }` 前后多余的空行。',
       recommended: 'stylistic',
     },
-    schema: {
-      definitions: {
-        baseConfig: {
-          type: 'object',
-          additionalProperties: false,
-          properties: {
-            afterMaxLines: {
-              description: 'afterMaxLines',
-              type: 'number',
-            },
-            beforeMaxLines: {
-              description: 'beforeMaxLines',
-              type: 'number',
-            },
-          },
-        },
-        patternConfig: {
-          type: 'object',
-          additionalProperties: false,
-          properties: {
-            ObjectExpression: { $ref: '#/definitions/baseConfig' },
-            ObjectPattern: { $ref: '#/definitions/baseConfig' },
-            ArrayExpression: { $ref: '#/definitions/baseConfig' },
-            ArrayPattern: { $ref: '#/definitions/baseConfig' },
-          },
-        },
-      },
-      anyOf: [
-        { $ref: '#/definitions/baseConfig' },
-        { $ref: '#/definitions/patternConfig' },
-        {
-          type: 'array',
-          items: [
-            { $ref: '#/definitions/baseConfig' },
-            { $ref: '#/definitions/patternConfig' },
-          ],
-        },
-      ],
-    },
+    schema: [],
     fixable: 'whitespace',
     hasSuggestions: true,
     messages: { noEmptyLine: '禁止 `{{patternType}}` 前后超过 {{maxLines}} 行的空行。当前一共 {{linesCount}} 行。' },

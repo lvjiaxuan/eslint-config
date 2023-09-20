@@ -1,13 +1,13 @@
 import { RuleTester } from '@typescript-eslint/rule-tester'
-import rule, { RULE_NAME } from './no-multi-empty-lines-in-pattern'
+import rule, { RULE_NAME, schema } from './no-multi-empty-lines-in-pattern'
+import Ajv from 'ajv'
 
 const ruleTester = new RuleTester()
 
-
 // Maybe it could represent the other 3, which are ObjectPattern\ArrayExpression\ArrayPattern
-describe('ObjectExpression', () => {
+describe('no-empty-line-after-import: ObjectExpression', () => {
 
-  it('base', () => ruleTester.run(RULE_NAME, rule, {
+  it('default', () => ruleTester.run(RULE_NAME, rule, {
     valid: [
       'const obj = { // valid' +
         '\n  a: 1, // valid' +
@@ -45,7 +45,7 @@ describe('ObjectExpression', () => {
     ],
   }))
 
-  it('afterMaxLines is 2', () => ruleTester.run(RULE_NAME, rule, {
+  it('{ afterMaxLines: 2 }', () => ruleTester.run(RULE_NAME, rule, {
     valid: [
       {
         code: `const obj = { // valid
@@ -54,7 +54,6 @@ describe('ObjectExpression', () => {
 
 
 } // valid`,
-        // @ts-ignore
         options: [ { afterMaxLines: 2 } ],
       },
     ],
@@ -80,13 +79,12 @@ describe('ObjectExpression', () => {
             endLine: 4,
           },
         ],
-        // @ts-ignore
         options: [ { afterMaxLines: 2 } ],
       },
     ],
   }))
 
-  it('with nested', () => ruleTester.run(RULE_NAME, rule, {
+  it('default with nested', () => ruleTester.run(RULE_NAME, rule, {
     valid: [],
     invalid: [
       {
@@ -115,7 +113,7 @@ b: { // valid
     ],
   }))
 
-  it('beforeMaxLines is 1', () => ruleTester.run(RULE_NAME, rule, {
+  it('{ beforeMaxLines: 1 }', () => ruleTester.run(RULE_NAME, rule, {
     valid: [],
     invalid: [
       {
@@ -146,9 +144,38 @@ b: { // valid
           },
           { messageId: 'noEmptyLine' },
         ],
-        // @ts-ignore
         options: [ { beforeMaxLines: 1 } ],
       },
     ],
   }))
+})
+
+describe('no-empty-line-after-import: schema', () => {
+  const ajv = new Ajv()
+  const validator = ajv.compile(schema)
+
+
+  it('single', () => {
+    const valid = [
+      [],
+      [ { afterMaxLines: 4 } ],
+      [ { afterMaxLines: 4, beforeMaxLines: 3 } ],
+      [ { ObjectExpression: { afterMaxLines: 4 } } ],
+    ]
+
+    const res = valid.map(i => validator(i)).filter(Boolean)
+
+    expect(res).not.toContain(false)
+  })
+
+  it('multiple', () => {
+    const valid = [
+      [ { beforeMaxLines: 3 }, { ArrayPattern: { afterMaxLines: 4 } } ],
+      [ { ArrayPattern: { afterMaxLines: 4 } }, { beforeMaxLines: 3 } ],
+    ]
+
+    const res = valid.map(i => validator(i)).filter(Boolean)
+
+    expect(res).not.toContain(false)
+  })
 })

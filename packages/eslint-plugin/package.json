@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "dev": "unbuild --stub",
-    "test": "vitest run --globals",
+    "test": "vitest --globals",
     "build": "unbuild",
     "prepublishOnly": "nr build"
   },
@@ -39,6 +39,7 @@
     "@types/lodash.merge": "^4.6.7",
     "@typescript-eslint/parser": "^6.7.0",
     "@typescript-eslint/rule-tester": "^6.7.0",
+    "ajv": "^6.12.6",
     "eslint": "^8.49.0",
     "vitest": "^0.34.4"
   }

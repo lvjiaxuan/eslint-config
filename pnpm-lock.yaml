@@ -67,6 +67,9 @@ importers:
       '@typescript-eslint/rule-tester':
         specifier: ^6.7.0
         version: 6.7.0(@eslint/eslintrc@2.1.2)(eslint@8.49.0)(typescript@5.2.2)
+      ajv:
+        specifier: ^6.12.6
+        version: 6.12.6
       eslint:
         specifier: ^8.49.0
         version: 8.49.0
