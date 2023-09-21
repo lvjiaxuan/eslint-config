@@ -11,8 +11,8 @@
   "exports": {
     ".": "./index.cjs",
     "./flat": {
-      "require": "./dist/flat.cjs",
-      "import": "./dist/flat.mjs"
+      "import": "./dist/flat.mjs",
+      "require": "./dist/flat.cjs"
     }
   },
   "main": "./index.cjs",

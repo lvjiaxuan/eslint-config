@@ -95,7 +95,7 @@ export default createRule<[BaseOptions] | [PatternOptions] | [ BaseOptions, Patt
       if ('afterMaxLines' in options[0] || 'beforeMaxLines' in options[0]) {
         // [ BaseOptions ]
 
-        const { afterMaxLines = 0, beforeMaxLines = Infinity } = options[0] as BaseOptions
+        const { afterMaxLines = 0, beforeMaxLines = Infinity } = options[0]
         patternOptions.ObjectExpression
           = patternOptions.ObjectPattern
           = patternOptions.ArrayExpression

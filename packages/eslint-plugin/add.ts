@@ -22,7 +22,7 @@ try {
     // Overwritten setup
     const pkgPath = path.resolve(cwd, 'package.json')
     const pkgInfo = JSON.parse(fs.readFileSync(pkgPath, 'utf-8')) as {
-      scripts?: { [x: string]: string }
+      scripts?: Record<string, string>
       eslintConfig?: {
         extends?: string | string[]
       }
