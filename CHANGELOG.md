@@ -1,6 +1,13 @@
 # Changelog
 
-Tag ranges `v0.0.2...GentleSquidsMake` (59). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...NiceBottlesShop` (60). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## NiceBottlesShop <sub>(2023-09-21)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/GentleSquidsMake...NiceBottlesShop)
+
+### &nbsp;&nbsp;&nbsp;✨ Enhancements
+
+- follow antfu's config &nbsp;-&nbsp; by @lvjiaxuan [<samp>(52e08)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/52e08a3)
 
 ## GentleSquidsMake <sub>(2023-09-20)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/TenWolvesTeach...GentleSquidsMake)
