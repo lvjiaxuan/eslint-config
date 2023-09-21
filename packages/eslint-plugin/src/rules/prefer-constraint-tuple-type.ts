@@ -1,4 +1,4 @@
-import { ESLintUtils, type TSESTree } from '@typescript-eslint/utils'
+import { ESLintUtils, TSESTree } from '@typescript-eslint/utils'
 
 const createRule = ESLintUtils.RuleCreator(
   name => `https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin-lvjiaxuan/src/rules/${ name }.ts`,
@@ -27,7 +27,7 @@ export default createRule<[], 'preferConstraint'>({
 
     return {
       TSTypeParameter(node) {
-        if (node.default?.type === 'TSTupleType' && !node.constraint) {
+        if (node.default?.type === TSESTree.AST_NODE_TYPES.TSTupleType && !node.constraint) {
           // defaults is array without constraint
           context.report({
             node,

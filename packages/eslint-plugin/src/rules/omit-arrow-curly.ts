@@ -1,4 +1,4 @@
-import { ESLintUtils, type JSONSchema, type TSESTree } from '@typescript-eslint/utils'
+import { ESLintUtils, type JSONSchema, TSESTree } from '@typescript-eslint/utils'
 
 const createRule = ESLintUtils.RuleCreator(
   name => `https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin-lvjiaxuan/src/rules/${ name }.ts`,
@@ -40,7 +40,7 @@ export default createRule<['always' | 'never'], 'omitCurly'>({
 
     return {
       ArrowFunctionExpression(node) {
-        if (options[0] == 'always' && node.body.type === 'BlockStatement') {
+        if (options[0] == 'always' && node.body.type === TSESTree.AST_NODE_TYPES.BlockStatement) {
 
           const blockStatementNode = node.body
 
@@ -73,7 +73,13 @@ export default createRule<['always' | 'never'], 'omitCurly'>({
               const beforeLastToken = sourceCode.getTokenBefore(lastToken)!
 
               return [
-                fixer.removeRange([ blockStatementNode.range[0] - 1, blockStatementNode.range[0] + 1 + afterFirstToken.loc.start.column + (blockStatementNode.body[0].type === 'ReturnStatement' ? 7 : 0) ]),
+                fixer.removeRange([
+                  blockStatementNode.range[0] - 1,
+                  blockStatementNode.range[0]
+                    + 1
+                    + afterFirstToken.loc.start.column
+                    + (blockStatementNode.body[0].type === TSESTree.AST_NODE_TYPES.ReturnStatement ? 7 : 0),
+                ]),
                 fixer.removeRange([ beforeLastToken.range[1], blockStatementNode.range[1] ]),
                 // ..
               ]

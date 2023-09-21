@@ -101,7 +101,7 @@ export default createRule<[BaseOptions] | [PatternOptions] | [ BaseOptions, Patt
           = patternOptions.ArrayExpression
           = patternOptions.ArrayPattern = {
                 afterMaxLines,
-                beforeMaxLines: beforeMaxLines == null ? Infinity : beforeMaxLines,
+                beforeMaxLines: beforeMaxLines ?? Infinity
               }
       } else {
         // [ PatternOptions ]
