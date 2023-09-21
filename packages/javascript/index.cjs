@@ -5,7 +5,24 @@ module.exports = {
     // https://eslint.org/docs/rules/
 
     // My custom rules
-    indent: [ 'warn', 2 ],
+    indent: [
+      'warn', 2, {
+        SwitchCase: 1,
+        VariableDeclarator: 1,
+        outerIIFEBody: 1,
+        MemberExpression: 1,
+        FunctionDeclaration: { parameters: 1, body: 1 },
+        FunctionExpression: { parameters: 1, body: 1 },
+        CallExpression: { arguments: 1 },
+        ArrayExpression: 1,
+        ObjectExpression: 1,
+        ImportDeclaration: 1,
+        flatTernaryExpressions: false,
+        ignoreComments: false,
+        ignoredNodes: [ 'TemplateLiteral *', 'JSXElement', 'JSXElement > *', 'JSXAttribute', 'JSXIdentifier', 'JSXNamespacedName', 'JSXMemberExpression', 'JSXSpreadAttribute', 'JSXExpressionContainer', 'JSXOpeningElement', 'JSXClosingElement', 'JSXFragment', 'JSXOpeningFragment', 'JSXClosingFragment', 'JSXText', 'JSXEmptyExpression', 'JSXSpreadChild' ],
+        offsetTernaryExpressions: true,
+      },
+    ],
     semi: [ 'warn', 'never' ], // prettier semi: false
     quotes: [ 'warn', 'single' ], // prettier singleQuote: true
     'no-empty': [ 'error', { allowEmptyCatch: true } ],
@@ -162,8 +179,21 @@ module.exports = {
             order: { type: 'asc' },
           },
           {
+            pathPattern: '^resolutions$',
+            order: { type: 'asc' },
+          },
+          {
+            pathPattern: '^pnpm.overrides$',
+            order: { type: 'asc' },
+          },
+          {
             pathPattern: '^exports.*$',
-            order: [ 'types', 'require', 'import' ],
+            order: [
+              'types',
+              'import',
+              'require',
+              'default',
+            ],
           },
         ],
       },

@@ -1,4 +1,4 @@
-import { execaSync } from 'execa'
+import { spawnSync } from 'node:child_process'
 import path from 'node:path'
 import fs from 'node:fs'
 
@@ -11,7 +11,7 @@ try {
   const cwd = process.cwd()
 
   // Install
-  execaSync('ni', [ '@lvjiaxuan/eslint-plugin', 'eslint', '-D', ...argvWithoutFlat ], { stdio: 'inherit', cwd })
+  spawnSync('ni', [ '@lvjiaxuan/eslint-plugin', 'eslint', '-D', ...argvWithoutFlat ], { stdio: 'inherit', cwd })
 
   if (flat) {
     fs.writeFileSync(path.resolve(cwd, 'eslint.config.js'), 'export { default } from \'@lvjiaxuan/eslint-plugin/flat\'', { encoding: 'utf-8' })

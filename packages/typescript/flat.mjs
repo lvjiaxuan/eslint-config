@@ -4,6 +4,7 @@ import typescript from '@typescript-eslint/eslint-plugin'
 import index from './index.cjs'
 
 const config = index.overrides[0]
+const tsconfigJsonConfig = index.overrides[1]
 
 /**
  * @type {Array.<import('eslint').Linter.FlatConfig>}
@@ -26,8 +27,11 @@ export default [
       parserOptions: config.parserOptions,
     },
     rules: {
-      ...typescript.configs['eslint-recommended'].rules,
+      ...typescript.configs['eslint-recommended'].overrides[0].rules,
+      ...typescript.configs['recommended-type-checked'].rules,
+      ...typescript.configs['stylistic-type-checked'].rules,
       ...config.rules,
     },
   },
+  tsconfigJsonConfig,
 ]

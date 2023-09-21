@@ -68,7 +68,7 @@ export default [
       // TS already checks for that, and Typescript-Eslint recommends to disable it
       // https://typescript-eslint.io/linting/troubleshooting#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
       'no-undef': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'off',
     },
   },
 
