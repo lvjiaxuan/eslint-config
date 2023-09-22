@@ -5,9 +5,8 @@ According to this [issue](https://github.com/eslint/eslint/pull/15933), i highly
 
 # Feature
 
-- Support **Flat Config**.
-- `vue` package includes `ts` package which includes `js` package. It means that if you code vue with ts, you should install vue package only instead of ts package in company.
-- The base rules for ts are automatically disabled.
+- Support [ESLint Flat Config](https://eslint.org/docs/latest/use/configure/configuration-files-new).
+- As a monorepo, the `vue` package includes the `ts` package, which in turn includes the `js` package. This means that if you are coding vue with ts, you only need to install the `vue` package instead of the ts package in the company..
 
 ## [My custom rules](./packages/eslint-plugin/README.md)
 
@@ -37,7 +36,7 @@ Fix on save. VScode settings as below:
 }
 ```
 
-# [Flat Config](https://eslint.org/docs/latest/use/configure/configuration-files-new)
+# Install the Flat Config
 
 1. shortcut: `nlx @lvjiaxuan/eslint-plugin --flat` .
 2. Setting `settings.json` to let ESLint extension supports flat config: `"eslint.experimental.useFlatConfig": true` .
@@ -48,7 +47,7 @@ Fix on save. VScode settings as below:
 
 A patch that improves how ESLint loads plugins when working in a monorepo with a reusable toolchain
 
-# Refer
+# Reference
 
 - https://github.com/antfu/eslint-config
 - https://eslint.org
