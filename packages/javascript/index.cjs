@@ -4,7 +4,30 @@ module.exports = {
   rules: {
     // https://eslint.org/docs/rules/
 
-    // My custom rules
+    // Possible Problems which are not included in recommended rules
+    'array-callback-return': [ 'error', { allowImplicit: true, checkForEach: false } ],
+    'no-await-in-loop': 'error',
+    'no-constant-binary-expression': 'warn',
+    'no-constructor-return': 'error',
+    'no-duplicate-imports': 'warn',
+    'no-new-native-nonconstructor': 'error',
+    'no-promise-executor-return': 'warn',
+    'no-self-compare': 'error',
+    'no-template-curly-in-string': 'warn',
+    'no-unmodified-loop-condition': 'off',
+    'no-unreachable-loop': 'error',
+    'no-unused-private-class-members': 'off',
+    'no-use-before-define': [
+      'error', {
+        functions: false,
+        classes: false,
+        variables: false,
+        allowNamedExports: true,
+      },
+    ],
+    'require-atomic-updates': 'error',
+
+    // My custom
     indent: [
       'warn', 2, {
         SwitchCase: 1,
@@ -32,8 +55,9 @@ module.exports = {
     'sort-imports': [
       'warn',
       {
+        // The default setting.
         ignoreCase: false,
-        ignoreDeclarationSort: true,
+        ignoreDeclarationSort: false,
         ignoreMemberSort: false,
         memberSyntaxSortOrder: [ 'none', 'all', 'multiple', 'single' ],
         allowSeparatedGroups: false,
@@ -46,32 +70,41 @@ module.exports = {
     'comma-dangle': [ 'warn', 'always-multiline' ], // prettier like trailingComma: 'es5'
     'arrow-parens': [ 'warn', 'as-needed' ], // prettier arrowParens: 'avoid'
     'eol-last': [ 'warn', 'always' ], // prettier endOfLine: 'lf'
-    'no-extra-parens': 'warn',
     'arrow-body-style': [ 'warn', 'as-needed', { requireReturnForObjectLiteral: false } ],
-
-    // Possible Problems which are not included in recommended rules
-    'array-callback-return': 'error',
-    'no-await-in-loop': 'warn',
-    'no-constant-binary-expression': 'warn',
-    'no-constructor-return': 'warn',
-    'no-duplicate-imports': 'warn',
-    'no-promise-executor-return': 'off',
-    'no-self-compare': 'error',
-    'no-unmodified-loop-condition': 'error',
-    'no-unreachable-loop': 'warn',
-    'no-unused-private-class-members': 'off',
-    'no-use-before-define': [
-      'error', {
-        functions: false,
-        classes: false,
-        variables: false,
-        allowNamedExports: true,
+    // 'default-param-last': 'off',
+    'no-invalid-this': 'error',
+    'no-loop-func': 'error',
+    'no-magic-numbers': [
+      'warn', {
+        ignore: [ 0, 1 ],
+        // ignoreArrayIndexes: false,
+        // ignoreDefaultValues: false,
+        // ignoreClassFieldInitialValues: false,
+        enforceConst: true,
+        // detectObjects: false,
       },
     ],
-    'require-atomic-updates': 'error',
+    'no-restricted-imports': 'off',
+    'no-shadow': [
+      'warn', {
+        builtinGlobals: true,
+        // hoist: 'functions',
+        // allow: [],
+        // ignoreOnInitialization: false,
+      },
+    ],
+    'no-unused-expressions': [
+      'warn', {
+        allowShortCircuit: true,
+        allowTernary: true,
+        allowTaggedTemplates: true,
+        enforceForJSX: false,
+      },
+    ],
 
     // Layout & Formatting
     'no-multiple-empty-lines': [ 'warn', { max: 2 } ],
+    'no-extra-parens': 'warn',
 
     // object-*
     'object-curly-spacing': [ 'warn', 'always' ],

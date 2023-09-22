@@ -28,10 +28,47 @@ module.exports = {
       },
 
       rules: {
-        // turn off js rules
+        // https://typescript-eslint.io/rules/
+
+        // turn off js rules.
         ...tsRules,
 
-        // https://typescript-eslint.io/rules/
+
+        // Rules that are not grouped.
+        // '@typescript-eslint/explicit-function-return-type': 'off',
+        // '@typescript-eslint/explicit-module-boundary-types': 'off',
+        // '@typescript-eslint/member-ordering': 'off',
+        '@typescript-eslint/no-require-imports': 'warn',
+        // "@typescript-eslint/parameter-properties": "off",
+        // '@typescript-eslint/typedef': 'off',
+        '@typescript-eslint/no-dupe-class-members': 'error',
+        '@typescript-eslint/no-magic-numbers': [
+          'warn', {
+            ignore: [ 0, 1 ],
+            // ignoreArrayIndexes: false,
+            // ignoreDefaultValues: false,
+            // ignoreClassFieldInitialValues: false,
+            enforceConst: true,
+            // detectObjects: false,
+            ignoreEnums: true,
+            ignoreNumericLiteralTypes: true,
+            ignoreReadonlyClassProperties: true,
+            ignoreTypeIndexes: true,
+          },
+        ],
+        '@typescript-eslint/no-redeclare': 'off',
+        '@typescript-eslint/no-shadow': [
+          'warn', {
+            builtinGlobals: true,
+            // hoist: 'functions',
+            // allow: [],
+            // ignoreOnInitialization: false,
+            ignoreTypeValueShadow: true,
+            ignoreFunctionTypeParameterNameValueShadow: false,
+          },
+        ],
+
+        // My custom.
         '@typescript-eslint/ban-ts-comment': [
           'warn', {
             'ts-check': 'allow-with-description',
