@@ -1,6 +1,14 @@
 # Changelog
 
-Tag ranges `v0.0.2...NiceBottlesShop` (60). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v0.0.2...PinkEelsRelate` (61). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## PinkEelsRelate <sub>(2023-09-22)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/NiceBottlesShop...PinkEelsRelate)
+
+### &nbsp;&nbsp;&nbsp;✨ Enhancements
+
+- deprecate `omit-arrow-curly` &nbsp;-&nbsp; by @lvjiaxuan [<samp>(e2796)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e279608)
+- update js/ts rules &nbsp;-&nbsp; by @lvjiaxuan [<samp>(a9071)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/a90711b)
 
 ## NiceBottlesShop <sub>(2023-09-21)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/GentleSquidsMake...NiceBottlesShop)
