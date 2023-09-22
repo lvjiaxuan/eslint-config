@@ -110,6 +110,6 @@ const [
 ### [@lvjiaxuan/omit-arrow-curly](./src/rules/omit-arrow-curly.ts)
 
 [Check Test-Cases.](./src/rules/omit-arrow-curly.test.ts)
-## Refer
+## Reference
 
 - https://typescript-eslint.io/play/#showAST=es

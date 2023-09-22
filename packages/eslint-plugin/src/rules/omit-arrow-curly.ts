@@ -31,6 +31,8 @@ export default createRule<['always' | 'never'], 'omitCurly'>({
     fixable: 'whitespace',
     hasSuggestions: true,
     messages: { omitCurly: 'This arrow function can omit block body.' },
+    deprecated: true,
+    replacedBy: [ 'arrow-body-style' ],
   },
 
   defaultOptions: [ 'always' ],

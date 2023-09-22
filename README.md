@@ -10,10 +10,10 @@ According to this [issue](https://github.com/eslint/eslint/pull/15933), i highly
 
 ## [My custom rules](./packages/eslint-plugin/README.md)
 
-- [~~@lvjiaxuan/no-spaces-on-empty-line~~](./packages/eslint-plugin/src/rules/no-spaces-on-empty-line.ts) is deprecated.
 - [@lvjiaxuan/prefer-constraint-tuple-type](./packages/eslint-plugin/src/rules/prefer-constraint-tuple-type.ts) is warning by default.
 - [@lvjiaxuan/no-multi-empty-lines-in-pattern](./packages/eslint-plugin/src/rules/no-multi-empty-lines-in-pattern.ts) is warning by default.
-- [@lvjiaxuan/omit-arrow-curly](./packages/eslint-plugin/src/rules/omit-arrow-curly.ts) is warning by default.
+- [~~@lvjiaxuan/no-spaces-on-empty-line~~](./packages/eslint-plugin/src/rules/no-spaces-on-empty-line.ts) is deprecated as it can be replaced by [no-trailing-spaces](https://eslint.org/docs/latest/rules/no-trailing-spaces).
+- [~~@lvjiaxuan/omit-arrow-curly~~](./packages/eslint-plugin/src/rules/omit-arrow-curly.ts) is deprecated as it can be replaced by [arrow-body-style](https://eslint.org/docs/latest/rules/arrow-body-style)
 
 # Usage
 
