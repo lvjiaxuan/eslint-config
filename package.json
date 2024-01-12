@@ -1,0 +1,46 @@
+{
+  "name": "@lvjiaxuan/eslint-config",
+  "type": "module",
+  "version": "0.0.0",
+  "private": false,
+  "description": "My personal ESLint config preset.",
+  "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lvjiaxuan/eslint-config"
+  },
+  "keywords": [
+    "eslint-config"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.ms",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "nr build --watch",
+    "build": "tsup src/index.ts --format=esm,cjs --dts",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.6.2",
+    "@lvjiaxuan/eslint-plugin": "workspace:*",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.10.6",
+    "eslint": "npm:eslint-ts-patch@8.56.0-0",
+    "eslint-ts-patch": "8.56.0-0",
+    "fs-extra": "^11.2.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}
