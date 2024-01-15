@@ -23,7 +23,8 @@
   "scripts": {
     "test": "vitest --globals",
     "build": "tsup src/index.ts --format=esm,cjs --dts",
-    "prepack": "pnpm build"
+    "prepare": "pnpm build",
+    "prepublishOnly": "nr build"
   },
   "peerDependencies": {
     "eslint": ">=8"
