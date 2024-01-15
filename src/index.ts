@@ -1,12 +1,12 @@
 import { join } from 'node:path'
 import process from 'node:process'
-import antfu, { typescript } from '@antfu/eslint-config'
+import antfu, { GLOB_SRC, typescript } from '@antfu/eslint-config'
 import type { FlatConfigItem, OptionsTypeScriptWithTypes } from '@antfu/eslint-config'
 import pluginLv from '@lvjiaxuan/eslint-plugin'
 import { pathExists } from 'fs-extra'
 
 const pluginItem: FlatConfigItem = {
-  files: ['*'],
+  files: [GLOB_SRC],
   name: '@lvjiaxuan:plugin',
   plugins: {
     '@lvjiaxuan': pluginLv,
