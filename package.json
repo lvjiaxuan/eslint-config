@@ -29,18 +29,21 @@
   ],
   "scripts": {
     "dev": "nr build --watch",
+    "view": "nr dev & nlx eslint-flat-config-viewer",
     "build": "tsup src/index.ts --format=esm,cjs --dts",
     "lint": "eslint .",
     "prepublishOnly": "nr build"
   },
-  "devDependencies": {
+  "dependencies": {
     "@antfu/eslint-config": "^2.6.3",
     "@lvjiaxuan/eslint-plugin": "workspace:*",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.11.5",
     "eslint": "npm:eslint-ts-patch@8.56.0-0",
     "eslint-ts-patch": "8.56.0-0",
-    "fs-extra": "^11.2.0",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   }

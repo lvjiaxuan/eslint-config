@@ -7,7 +7,7 @@ import { pathExists } from 'fs-extra'
 
 const pluginItem: FlatConfigItem = {
   files: [GLOB_SRC],
-  name: '@lvjiaxuan:plugin',
+  name: '@lvjiaxuan:plugin:setup',
   plugins: {
     '@lvjiaxuan': pluginLv,
   },
@@ -29,28 +29,38 @@ const lv: typeof antfu = async (...args) => {
   ) as FlatConfigItem[]
 
   if (merged.find(item => item.name === 'antfu:typescript:setup')) {
-    // Means ts is setup
+    // Means ts is setup.
     let tsOptions = args[0]?.typescript
 
-    // Overwrite with tsconfigPath
+    let isUseDetect = false
+    // Overwrite with detected `tsconfigPath` if no-set.
     if (typeof tsOptions === 'object') {
-      (tsOptions as OptionsTypeScriptWithTypes).tsconfigPath ??= await detectTsconfigPath()
+      if (!Object.hasOwn(tsOptions, 'tsconfigPath')) {
+        (tsOptions as OptionsTypeScriptWithTypes).tsconfigPath = await detectTsconfigPath()
+        isUseDetect = true
+      }
     }
     else {
-      // @ts-expect-errord typescript = true means {}
+      // @ts-expect-error typescript = true means {} .
       ;(tsOptions as OptionsTypeScriptWithTypes) = { tsconfigPath: await detectTsconfigPath() }
+      isUseDetect = true
     }
 
-    // New ts options with `tsconfigPath`.
-    const tsItems = await typescript(tsOptions as OptionsTypeScriptWithTypes)
+    if (isUseDetect) {
+      // New ts flat config with detected `tsconfigPath`.
+      const tsItemsWithTsConfig = await typescript(tsOptions as OptionsTypeScriptWithTypes)
 
-    const tsRulesItemName = 'antfu:typescript:rules'
-    const tsRulesItemIdx = merged.findIndex(item => item.name === tsRulesItemName)
-    merged.splice(tsRulesItemIdx, 1, tsItems.find(item => item.name === tsRulesItemName)!)
+      const parserItemName = 'antfu:typescript:parser'
+      const originParserItemIdx = merged.findIndex(item => item.name === parserItemName)
+      merged.splice(originParserItemIdx, 1, tsItemsWithTsConfig.find(item => item.name === parserItemName)!)
 
-    const tsTypeAwareItemName = 'antfu:typescript:rules-type-aware'
-    const tsTypeAwareItemIdx = merged.findIndex(item => item.name === tsTypeAwareItemName)
-    merged.splice(tsTypeAwareItemIdx, 1, tsItems.find(item => item.name === tsTypeAwareItemName)!)
+      const typeAwareParserItemName = 'antfu:typescript:type-aware-parser'
+      merged.splice(originParserItemIdx + 1, 0, tsItemsWithTsConfig.find(item => item.name === typeAwareParserItemName)!)
+
+      const typeAwareItemName = 'antfu:typescript:rules-type-aware'
+      const tsTypeAwareItemIdx = merged.findIndex(item => item.name === typeAwareItemName)
+      merged.splice(tsTypeAwareItemIdx, 1, tsItemsWithTsConfig.find(item => item.name === typeAwareItemName)!)
+    }
   }
 
   return merged
