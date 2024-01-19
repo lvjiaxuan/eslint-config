@@ -34,10 +34,10 @@
     "prepublishOnly": "nr build"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.2",
+    "@antfu/eslint-config": "^2.6.3",
     "@lvjiaxuan/eslint-plugin": "workspace:*",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.10.6",
+    "@types/node": "^20.11.5",
     "eslint": "npm:eslint-ts-patch@8.56.0-0",
     "eslint-ts-patch": "8.56.0-0",
     "fs-extra": "^11.2.0",
