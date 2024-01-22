@@ -16,5 +16,5 @@ jobs:
   publish:
     uses: lvjiaxuan/github-action-templates/.github/workflows/lvr-publish.yml@main
     with:
-      sycn_cnpm: true
+      sync_cnpm: true
     secrets: inherit

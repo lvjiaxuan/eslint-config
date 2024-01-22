@@ -1,7 +1,7 @@
 {
   "name": "@lvjiaxuan/eslint-config",
   "type": "module",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "private": false,
   "packageManager": "pnpm@8.14.1",
   "description": "My personal ESLint config preset.",
@@ -46,5 +46,9 @@
     "eslint-ts-patch": "8.56.0-0",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
+  },
+  "lvr": {
+    "all": true,
+    "tag": 10
   }
 }
