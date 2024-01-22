@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/v/@lvjiaxuan/eslint-config)](https://www.npmjs.com/package/@lvjiaxuan/eslint-config)
+
 ALl rules extend from [@antfu/eslint-config](https://github.com/antfu/eslint-config).
 
 # Features
