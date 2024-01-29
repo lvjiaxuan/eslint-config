@@ -1,0 +1,35 @@
+{
+  "name": "eslint-plugin-oxlint",
+  "type": "module",
+  "version": "1.7.0",
+  "description": "Turn off rules supported by oxlint, provide classified configs",
+  "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
+  "keywords": [
+    "eslint-plugin"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "g": "nlx jiti scripts/generate-rules.ts",
+    "build": "tsup src/index.ts --format=esm,cjs --dts",
+    "prepare": "pnpm dlx gen && pnpm dlx build",
+    "prepublishOnly": "nr build"
+  },
+  "devDependencies": {
+    "execa": "^8.0.1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
