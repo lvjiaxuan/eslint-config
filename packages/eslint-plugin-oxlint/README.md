@@ -4,18 +4,10 @@
 
 Flat config:
 ```js
+// eslint.config.js
 import { oxlint } from '@lvjiaxuan/eslint-plugin-oxlint'
 
-export default [
-  oxlint()
+export default async () => [
+  await oxlint()
 ]
-```
-
-Options:
-```ts
-type OptionsOXLint = {
-  deny?: Category | 'all'
-  allow?: (keyof OXLintRules)[]
-  // plugins: TODO
-} | boolean
 ```
