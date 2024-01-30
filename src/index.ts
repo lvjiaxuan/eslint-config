@@ -4,6 +4,7 @@ import antfu, { GLOB_SRC, typescript } from '@antfu/eslint-config'
 import type { FlatConfigItem, OptionsTypeScriptWithTypes } from '@antfu/eslint-config'
 import pluginLv from '@lvjiaxuan/eslint-plugin'
 import { pathExists } from 'fs-extra'
+import { type OptionsOXLint, oxlint } from '@lvjiaxuan/eslint-plugin-oxlint'
 
 const pluginItem: FlatConfigItem = {
   files: [GLOB_SRC],
@@ -22,10 +23,18 @@ async function detectTsconfigPath() {
     return defaultFile
 }
 
-const lv: typeof antfu = async (...args) => {
+type Antfu = typeof antfu
+type _Params<Params extends Parameters<Antfu> = Parameters<Antfu>> = [ options?: Params[0] & { oxlint: OptionsOXLint }, ...userConfigs: Params[1][] ]
+
+const lv: (...args: _Params) => ReturnType<Antfu> = async (...args) => {
+  const [options] = args
+  const plugins = [pluginItem]
+  if (options?.oxlint)
+    plugins.push(...(await oxlint(options.oxlint)))
+
   const merged = await antfu(
     ...args,
-    pluginItem,
+    ...plugins,
   ) as FlatConfigItem[]
 
   if (merged.find(item => item.name === 'antfu:typescript:setup')) {

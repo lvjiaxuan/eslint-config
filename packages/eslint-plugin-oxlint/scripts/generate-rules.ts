@@ -1,3 +1,4 @@
+import { join } from 'node:path'
 import { $ } from 'execa'
 import fs from 'fs-extra'
 
@@ -18,7 +19,12 @@ async function main() {
     }
     else {
       const ruleMatch = line.match(ruleRegex)
-      ruleMatch && categoryRules.get(lastAddCategory)?.add(ruleMatch.groups!.ruleName)
+      if (ruleMatch) {
+        const { pluginName, ruleName } = ruleMatch.groups!
+        categoryRules
+          .get(lastAddCategory)
+          ?.add(`${pluginName === 'eslint' ? '' : `${pluginName}/`}${ruleName}`)
+      }
     }
   })
 
@@ -31,12 +37,12 @@ async function main() {
     }, {} as Record<string, 'off'>)
   }
 
-  // await fs.writeJSON('./../test.json', json)
+  await fs.writeJSON(join(__dirname, '..', 'category-rules.json'), json)
 }
 
 try {
   void main()
 }
 catch (e) {
-  console.log(e)
+  console.error(e)
 }

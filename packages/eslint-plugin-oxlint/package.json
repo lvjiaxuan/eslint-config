@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-oxlint",
+  "name": "@lvjiaxuan/eslint-plugin-oxlint",
   "type": "module",
   "version": "1.7.0",
   "description": "Turn off rules supported by oxlint, provide classified configs",
@@ -21,15 +21,19 @@
     "dist"
   ],
   "scripts": {
-    "g": "nlx jiti scripts/generate-rules.ts",
+    "g": "pnpm dlx jiti scripts/generate-rules.ts",
     "build": "tsup src/index.ts --format=esm,cjs --dts",
-    "prepare": "pnpm dlx gen && pnpm dlx build",
-    "prepublishOnly": "nr build"
+    "postinstall": "pnpm run g && pnpm run build",
+    "prepublishOnly": "pnpm run build"
   },
-  "devDependencies": {
-    "execa": "^8.0.1"
+  "dependencies": {
+    "execa": "^8.0.1",
+    "local-pkg": "^0.5.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@antfu/eslint-define-config": "1.23.0-2"
   }
 }
