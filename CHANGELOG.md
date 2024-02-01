@@ -1,6 +1,15 @@
 # Changelog
 
-Tag ranges `NiceWomenBeg...v1.7.0` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `WideSpoonsItch...v1.8.0` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v1.8.0 <sub>(2024-02-01)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.7.0...v1.8.0)
+
+### &nbsp;&nbsp;&nbsp;✨ Enhancements
+
+- add OXLint &nbsp;-&nbsp; by @lvjiaxuan in [#11](https://github.com/lvjiaxuan/eslint-config/issues/11) [<samp>(92181)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/921816e)
+- **lvPlugin**: split legacy and flat configs export. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(c8791)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/c8791b9)
+- **oxlin-plugin**: respect legacy config. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(4e3ec)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/4e3ec4e)
 
 ## v1.7.0 <sub>(2024-01-22)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/PinkEelsRelate...v1.7.0)
@@ -128,10 +137,3 @@ Tag ranges `NiceWomenBeg...v1.7.0` (10). [All GitHub Releases](https://github.co
 
 ## WideSpoonsItch <sub>(2023-05-12)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/NiceWomenBeg...WideSpoonsItch)
-
-## NiceWomenBeg <sub>(2023-04-18)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/ClearDollsTravel...NiceWomenBeg)
-
-### &nbsp;&nbsp;&nbsp;✨ Enhancements
-
-- match more tsconfig file &nbsp;-&nbsp; by @lvjiaxuan [<samp>(40242)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/40242c8)
