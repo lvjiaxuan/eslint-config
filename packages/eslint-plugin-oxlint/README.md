@@ -21,7 +21,7 @@ type OptionsOXLint = {
 } | boolean
 ```
 
-By default `true` options, equals to `{ deny: 'correctness' }`.
+Uses `true` options By default, equals to `{ deny: 'correctness' }`.
 
 > [!NOTE]
 > See OXLint's [categories](https://github.com/oxc-project/oxc/blob/2beacd3f4d2707ab64ff98bf05462673e9993b71/crates/oxc_linter/src/rule.rs#L37).

@@ -36,7 +36,7 @@ type FlatConfigItem = Omit<FlatESLintConfigItem<OXLintRules, false>, 'plugins'> 
 
 export async function oxlint(options: OptionsOXLint = true): Promise<FlatConfigItem[]> {
   if (options === true) {
-    options = { deny: 'Correctness' }
+    options = { deny: 'correctness' }
   }
   else {
     return [{

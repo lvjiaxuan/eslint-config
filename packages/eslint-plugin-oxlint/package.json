@@ -12,7 +12,8 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./category-rules": "./category-rules.json"
   },
   "main": "dist/index.cjs",
   "module": "dist/index.js",
