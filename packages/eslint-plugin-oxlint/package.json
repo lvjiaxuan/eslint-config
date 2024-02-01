@@ -33,6 +33,7 @@
     "local-pkg": "^0.5.0"
   },
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
