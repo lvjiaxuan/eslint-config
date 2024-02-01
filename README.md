@@ -40,7 +40,7 @@ type OptionsOXLint = {
 
 Modify lint scritp:
 <!-- eslint-skip -->
-```json
+```diff
 // package.json
 {
   "scripts": {
