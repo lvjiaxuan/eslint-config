@@ -14,8 +14,9 @@ async function main() {
     const categoryRegexMatch = line.match(categoryRegex)
 
     if (categoryRegexMatch) {
-      categoryRules.set(categoryRegexMatch[0], new Set())
-      lastAddCategory = categoryRegexMatch[0]
+      const category = categoryRegexMatch[0].toLowerCase()
+      categoryRules.set(category, new Set())
+      lastAddCategory = category
     }
     else {
       const ruleMatch = line.match(ruleRegex)
@@ -23,7 +24,7 @@ async function main() {
         const { pluginName, ruleName } = ruleMatch.groups!
         categoryRules
           .get(lastAddCategory)
-          ?.add(`${pluginName === 'eslint' ? '' : `${pluginName}/`}${ruleName}`)
+          ?.add(`${pluginName === 'eslint' ? '' : `${pluginName.toLowerCase()}/`}${ruleName.toLowerCase()}`)
       }
     }
   })

@@ -1,8 +1,7 @@
-(OXLint)[https://github.com/oxc-project/oxc#-linter].
+[OXLint](https://github.com/oxc-project/oxc#-linter)
 
 # Usage
 
-Flat config:
 ```js
 // eslint.config.js
 import { oxlint } from '@lvjiaxuan/eslint-plugin-oxlint'
@@ -11,3 +10,18 @@ export default async () => [
   await oxlint()
 ]
 ```
+
+options:
+<!-- eslint-skip -->
+```ts
+type OptionsOXLint = {
+  deny?: Categories | 'all'
+  allow?: (keyof OXLintRules)[]
+  // plugins: TODO
+} | boolean
+```
+
+By default `true` options, equals to `{ deny: 'correctness' }`.
+
+> [!NOTE]
+> See OXLint's [categories](https://github.com/oxc-project/oxc/blob/2beacd3f4d2707ab64ff98bf05462673e9993b71/crates/oxc_linter/src/rule.rs#L37).
