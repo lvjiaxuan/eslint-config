@@ -1,6 +1,9 @@
 # Changelog
 
-Tag ranges `WideSpoonsItch...v1.8.0` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `@lvjiaxuan/eslint-config-ts@0.14.0...v1.8.1` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v1.8.1 <sub>(2024-02-01)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.8.0...v1.8.1)
 
 ## v1.8.0 <sub>(2024-02-01)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.7.0...v1.8.0)
@@ -134,6 +137,3 @@ Tag ranges `WideSpoonsItch...v1.8.0` (10). [All GitHub Releases](https://github.
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
 - no-undef to ts &nbsp;-&nbsp; by @lvjiaxuan [<samp>(572f3)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/572f39a)
-
-## WideSpoonsItch <sub>(2023-05-12)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/NiceWomenBeg...WideSpoonsItch)
