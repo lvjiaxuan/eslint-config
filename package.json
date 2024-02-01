@@ -12,7 +12,8 @@
     "url": "https://github.com/lvjiaxuan/eslint-config"
   },
   "keywords": [
-    "eslint-config"
+    "eslint-config",
+    "oxlint"
   ],
   "exports": {
     ".": {

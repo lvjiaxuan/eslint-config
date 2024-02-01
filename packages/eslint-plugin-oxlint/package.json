@@ -5,7 +5,8 @@
   "description": "Turn off rules supported by oxlint, provide classified configs",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "keywords": [
-    "eslint-plugin"
+    "eslint-plugin",
+    "oxlint"
   ],
   "exports": {
     ".": {
