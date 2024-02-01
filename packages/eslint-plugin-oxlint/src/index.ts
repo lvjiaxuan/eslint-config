@@ -60,3 +60,15 @@ export async function oxlint(options: OptionsOXLint = true): Promise<FlatConfigI
     rules: denyRules,
   }]
 }
+
+// The legacy config.
+export default {
+  configs: {
+    // categories classification
+    ...Object.entries(categoryRules).reduce((acc, [c, r]) => {
+      acc[c as Categories] = { rules: r as CategoryRules[Categories] }
+      return acc
+    }, {} as Record<Categories, { rules: CategoryRules[Categories] }>),
+    // plugins classification
+  },
+}

@@ -13,6 +13,8 @@ As same as [antfu's](https://github.com/antfu/eslint-config).
 
 ## With [OXLint](https://github.com/oxc-project/oxc#-linter)
 
+> Aim to improve lint performance.
+
 ```js
 // eslint.config.js
 import lv from '@lvjiaxuan/eslint-config'
@@ -36,13 +38,14 @@ type OptionsOXLint = {
 > 1. [Categories](https://github.com/oxc-project/oxc/blob/2beacd3f4d2707ab64ff98bf05462673e9993b71/crates/oxc_linter/src/rule.rs#L37) of OXLint.
 > 2. [Rules](https://github.com/oxc-project/oxc/tree/main/crates/oxc_linter/src/rules) supported by OXLint.
 
-Modify lint scritps:
+Modify lint scritp:
+<!-- eslint-skip -->
 ```json
 // package.json
 {
   "scripts": {
 -    "lint": "eslint ."
-+    "lint": "oxlint . && eslint ." // `oxlint` installed, or use alternative `npx oxlint` .
++    "lint": "oxlint . && eslint ." // `oxlint` installed, otherwise use alternative `npx oxlint`.
   }
 }
 ```
