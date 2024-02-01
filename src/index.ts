@@ -1,21 +1,10 @@
 import { join } from 'node:path'
 import process from 'node:process'
-import antfu, { GLOB_SRC, typescript } from '@antfu/eslint-config'
+import antfu, { typescript } from '@antfu/eslint-config'
 import type { FlatConfigItem, OptionsTypeScriptWithTypes } from '@antfu/eslint-config'
-import pluginLv from '@lvjiaxuan/eslint-plugin'
+import { lvPlugin } from '@lvjiaxuan/eslint-plugin'
 import { pathExists } from 'fs-extra'
 import { type OptionsOXLint, oxlint } from '@lvjiaxuan/eslint-plugin-oxlint'
-
-const pluginItem: FlatConfigItem = {
-  files: [GLOB_SRC],
-  name: '@lvjiaxuan:plugin:setup',
-  plugins: {
-    '@lvjiaxuan': pluginLv,
-  },
-  rules: {
-    '@lvjiaxuan/prefer-generic-rest-extends': 'warn',
-  },
-}
 
 async function detectTsconfigPath() {
   const defaultFile = 'tsconfig.json' as const
@@ -28,13 +17,15 @@ type _Params<Params extends Parameters<Antfu> = Parameters<Antfu>> = [ options?:
 
 const lv: (...args: _Params) => ReturnType<Antfu> = async (...args) => {
   const [options] = args
-  const plugins = [pluginItem]
+
+  const pluginsInstalled = [lvPlugin()]
+
   if (options?.oxlint)
-    plugins.push(...(await oxlint(options.oxlint)))
+    pluginsInstalled.push(...(await oxlint(options.oxlint)))
 
   const merged = await antfu(
     ...args,
-    ...plugins,
+    ...pluginsInstalled,
   ) as FlatConfigItem[]
 
   if (merged.find(item => item.name === 'antfu:typescript:setup')) {
