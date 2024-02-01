@@ -1,21 +1,21 @@
 import type { FlatESLintConfigItem, RuleLevel } from '@antfu/eslint-define-config'
-import _rules from './../category-rules.json'
+import type { MergeInsertions, UnionToIntersection } from '@type-challenges/utils'
+import categoryRules from './../category-rules.json'
 
-type _UnionToIntersection<U> = (U extends unknown ? (k: U) => void : never) extends (k: infer I) => void ? I : never
-
-const rules = _rules as CategoryRules
-type CategoryRules<Rules extends typeof _rules = typeof _rules> = {
+type CategoryRules<Rules extends typeof categoryRules = typeof categoryRules> = MergeInsertions<{
   [K in keyof Rules]: {
     [KK in keyof Rules[K]]: RuleLevel
   }
-}
+}>
 
-type Category = keyof typeof _rules
+type Categories = keyof typeof categoryRules
 
-export type OXLintRules = _UnionToIntersection<CategoryRules[Category]>
+const rules = categoryRules as CategoryRules
+
+export type OXLintRules = MergeInsertions<UnionToIntersection<CategoryRules[Categories]>>
 
 export type OptionsOXLint = {
-  deny?: Category | 'all'
+  deny?: Categories | 'all'
   allow?: (keyof OXLintRules)[]
   // plugins: TODO
 } | boolean
@@ -45,18 +45,18 @@ export async function oxlint(options: OptionsOXLint = true): Promise<FlatConfigI
     }]
   }
 
-  let category: Partial<OXLintRules> = {}
+  let denyRules: Partial<OXLintRules> = {}
 
   if (options.deny === 'all') {
     for (const c in rules)
-      category = { ...category, ...rules[c as Category] }
+      denyRules = { ...denyRules, ...rules[c as Categories] }
   }
   else if (options.deny) {
-    category = rules[options.deny]
+    denyRules = rules[options.deny]
   }
 
   return [{
     name: 'lvjixuan:eslint-oxlint',
-    rules: category,
+    rules: denyRules,
   }]
 }

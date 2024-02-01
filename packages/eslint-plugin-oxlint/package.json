@@ -34,6 +34,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@antfu/eslint-define-config": "1.23.0-2"
+    "@antfu/eslint-define-config": "1.23.0-2",
+    "@type-challenges/utils": "^0.1.1"
   }
 }
