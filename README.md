@@ -7,6 +7,10 @@ All rules inherit from [@antfu/eslint-config](https://github.com/antfu/eslint-co
 2. Try to detect `tsconfig.json` if TypeScript is enabled, which means enabling type-aware rules.
 3. Add my [eslint-plugin-oxlint](https://github.com/lvjiaxuan/eslint-config/tree/main/packages/eslint-plugin-oxlint/src/index.ts).
 
+> [!NOTE]
+> *Why not just set `typescript.tsconfigPath` ?<br />*
+> I have just encountered the Q. Perhaps a forced way of saying it is that the `tsconfig.json` is guaranteed to exists. :frowning:
+
 # Usage
 
 Follow [antfu's](https://github.com/antfu/eslint-config).
@@ -45,7 +49,7 @@ Modify lint scritp:
 {
   "scripts": {
 -    "lint": "eslint ."
-+    "lint": "oxlint . && eslint ." // `oxlint` installed, otherwise use alternative `npx oxlint`.
++    "lint": "oxlint . && eslint ." // The `oxlint` has been installed, otherwise use alternative `npx oxlint`.
   }
 }
 ```
