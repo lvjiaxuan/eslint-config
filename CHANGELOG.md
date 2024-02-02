@@ -1,6 +1,13 @@
 # Changelog
 
-Tag ranges `@lvjiaxuan/eslint-config-ts@0.14.0...v1.8.1` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `BumpyRulesPost...v1.8.2` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v1.8.2 <sub>(2024-02-02)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.8.1...v1.8.2)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- use `prepare` life cycle script. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(091ef)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/091efa9)
 
 ## v1.8.1 <sub>(2024-02-01)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.8.0...v1.8.1)
@@ -130,10 +137,3 @@ Tag ranges `@lvjiaxuan/eslint-config-ts@0.14.0...v1.8.1` (10). [All GitHub Relea
 
 ## BumpyRulesPost <sub>(2023-05-12)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/@lvjiaxuan/eslint-config-ts@0.14.0...BumpyRulesPost)
-
-## @lvjiaxuan/eslint-config-ts@0.14.0 <sub>(2023-05-12)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/WideSpoonsItch...@lvjiaxuan/eslint-config-ts@0.14.0)
-
-### &nbsp;&nbsp;&nbsp;🐛 Fixes
-
-- no-undef to ts &nbsp;-&nbsp; by @lvjiaxuan [<samp>(572f3)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/572f39a)
