@@ -25,7 +25,7 @@
   "scripts": {
     "g": "pnpm dlx jiti scripts/generate-rules.ts",
     "build": "pnpm run g && tsup src/index.ts --format=esm,cjs --dts",
-    "postinstall": "pnpm run build",
+    "prepare": "pnpm run build",
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {

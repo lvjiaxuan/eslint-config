@@ -23,7 +23,7 @@
   "scripts": {
     "test": "vitest --globals",
     "build": "tsup src/index.ts --format=esm,cjs --dts",
-    "postinstall": "pnpm run build",
+    "prepare": "pnpm run build",
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
