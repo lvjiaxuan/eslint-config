@@ -1,0 +1,15 @@
+diff --git a/dist/index.d.ts b/dist/index.d.ts
+index 089791f9291a88889e5238f9c229380eeb8fa5fa..3303a09743f7b6177abd52d41f84011aedc70403 100644
+--- a/dist/index.d.ts
++++ b/dist/index.d.ts
+@@ -216,6 +216,10 @@ interface OptionsTypeScriptWithTypes {
+      * @see https://typescript-eslint.io/linting/typed-linting/
+      */
+     tsconfigPath?: string | string[];
++    /**
++     * Don't `tsconfigPath` anyway.
++     */
++    notDetectTsconfig?: boolean
+ }
+ interface OptionsHasTypeScript {
+     typescript?: boolean;

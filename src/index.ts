@@ -33,12 +33,17 @@ const lv: (...args: _Params) => ReturnType<Antfu> = async (...args) => {
     let tsOptions = args[0]?.typescript
 
     let isUseDetect = false
-    // Overwrite with detected `tsconfigPath` if no-set.
     if (typeof tsOptions === 'object') {
-      if (!Object.hasOwn(tsOptions, 'tsconfigPath')) {
+      if ('notDetectTsconfig' in tsOptions && tsOptions.notDetectTsconfig === true) {
+        // Do nothing.
+      }
+      else if (!Object.hasOwn(tsOptions, 'tsconfigPath')) {
+        // Overwrite with detected `tsconfigPath` if no-set.
         (tsOptions as OptionsTypeScriptWithTypes).tsconfigPath = await detectTsconfigPath()
         isUseDetect = true
       }
+
+      // Use settings.
     }
     else {
       // @ts-expect-error typescript = true means {} .

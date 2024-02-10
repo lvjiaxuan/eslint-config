@@ -4,13 +4,18 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@antfu/eslint-config@2.6.4':
+    hash: gu2hrzyo6puel3o64motp22jhu
+    path: patches/@antfu__eslint-config@2.6.4.patch
+
 importers:
 
   .:
     dependencies:
       '@antfu/eslint-config':
         specifier: ^2.6.4
-        version: 2.6.4(@vue/compiler-sfc@3.4.15)(eslint-ts-patch@8.56.0-0)(typescript@5.3.3)
+        version: 2.6.4(patch_hash=gu2hrzyo6puel3o64motp22jhu)(@vue/compiler-sfc@3.4.15)(eslint-ts-patch@8.56.0-0)(typescript@5.3.3)
       '@lvjiaxuan/eslint-plugin':
         specifier: workspace:*
         version: link:packages/eslint-plugin
@@ -169,7 +174,7 @@ packages:
       - vitest
     dev: false
 
-  /@antfu/eslint-config@2.6.4(@vue/compiler-sfc@3.4.15)(eslint-ts-patch@8.56.0-0)(typescript@5.3.3):
+  /@antfu/eslint-config@2.6.4(patch_hash=gu2hrzyo6puel3o64motp22jhu)(@vue/compiler-sfc@3.4.15)(eslint-ts-patch@8.56.0-0)(typescript@5.3.3):
     resolution: {integrity: sha512-dMD/QC5KWS1OltdpKLhfZM7W7y7zils85opk8d4lyNr7yn0OFjZs7eMYtcC6DrrN2kQ1JrFvBM7uB0QdWn5PUQ==}
     hasBin: true
     peerDependencies:
@@ -244,6 +249,7 @@ packages:
       - typescript
       - vitest
     dev: false
+    patched: true
 
   /@antfu/eslint-define-config@1.23.0-2:
     resolution: {integrity: sha512-LvxY21+ZhpuBf/aHeBUtGQhSEfad4PkNKXKvDOSvukaM3XVTfBhwmHX2EKwAsdq5DlfjbT3qqYyMiueBIO5iDQ==}
@@ -662,6 +668,7 @@ packages:
     resolution: {integrity: sha512-71c7EIEXpgG9eiBYsyd388GtEpnXKswfn2nR9Raw5twA/Y/nDuxibMsRFMOOxbi5saapjQbVoxao3xt2uv4Jsg==}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: true
     optional: true
@@ -670,6 +677,7 @@ packages:
     resolution: {integrity: sha512-uB2w0xfAIOsrFqsh9c9LoAuvAT2QibQHQL5LFkIAtCW9XdMfk0YtDwm9zNJel1p/R3F3W9A+L4fJFIoqiXrLLQ==}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     dev: true
     optional: true
@@ -678,6 +686,7 @@ packages:
     resolution: {integrity: sha512-d4IxS+B1j+u4XQom18CiHVzg5QSrNjG8xD1PHqyinwUXcq7re9LyH40yCxMxb3VZt5sNoX0M4BIfVcXrt3h8cg==}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: true
     optional: true
@@ -686,6 +695,7 @@ packages:
     resolution: {integrity: sha512-cIy3mNX2UY2CHnuJOCF50ki0XlogQatcCKg3OcxjI/PCpwZE1idNEZ8A2gXXodsyp0bDP74lgX/rhDKz63gvIg==}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     dev: true
     optional: true

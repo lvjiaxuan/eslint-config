@@ -61,6 +61,11 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "pnpm": {
+    "patchedDependencies": {
+      "@antfu/eslint-config@2.6.4": "patches/@antfu__eslint-config@2.6.4.patch"
+    }
+  },
   "simple-git-hooks": {
     "pre-commit": [
       "npx lint-staged"
