@@ -44,7 +44,7 @@
   "devDependencies": {
     "@types/eslint": "^8.56.2",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.11.18",
+    "@types/node": "^20.11.19",
     "eslint": "npm:eslint-ts-patch@8.56.0-0",
     "eslint-plugin-oxlint": "^0.2.3",
     "eslint-ts-patch": "8.56.0-0",
