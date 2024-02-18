@@ -1,4 +1,5 @@
 [![npm](https://img.shields.io/npm/v/@lvjiaxuan/eslint-config)](https://www.npmjs.com/package/@lvjiaxuan/eslint-config)
+[![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config)
 
 All rules inherit from [@antfu/eslint-config](https://github.com/antfu/eslint-config).
 
