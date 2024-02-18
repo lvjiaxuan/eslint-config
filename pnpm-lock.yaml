@@ -19,13 +19,13 @@ importers:
       '@lvjiaxuan/eslint-plugin':
         specifier: workspace:*
         version: link:packages/eslint-plugin
-      '@lvjiaxuan/eslint-plugin-oxlint':
-        specifier: workspace:*
-        version: link:packages/eslint-plugin-oxlint
       fs-extra:
         specifier: ^11.2.0
         version: 11.2.0
     devDependencies:
+      '@lvjiaxuan/eslint-plugin-oxlint':
+        specifier: workspace:*
+        version: link:packages/eslint-plugin-oxlint
       '@types/eslint':
         specifier: ^8.56.2
         version: 8.56.2

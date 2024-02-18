@@ -35,13 +35,21 @@
     "lint": "oxlint . && eslint .",
     "prepublishOnly": "pnpm run build"
   },
+  "peerDependencies": {
+    "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*"
+  },
+  "peerDependenciesMeta": {
+    "@lvjiaxuan/eslint-plugin-oxlint": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "@antfu/eslint-config": "^2.6.4",
     "@lvjiaxuan/eslint-plugin": "workspace:*",
-    "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*",
     "fs-extra": "^11.2.0"
   },
   "devDependencies": {
+    "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*",
     "@types/eslint": "^8.56.2",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.11.19",

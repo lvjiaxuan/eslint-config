@@ -1,10 +1,10 @@
 import { join } from 'node:path'
 import process from 'node:process'
-import antfu, { typescript } from '@antfu/eslint-config'
+import antfu, { ensurePackages, typescript } from '@antfu/eslint-config'
 import type { FlatConfigItem, OptionsTypeScriptWithTypes } from '@antfu/eslint-config'
 import { lvPlugin } from '@lvjiaxuan/eslint-plugin'
 import { pathExists } from 'fs-extra'
-import { type OptionsOXLint, oxlint } from '@lvjiaxuan/eslint-plugin-oxlint'
+import type { OptionsOXLint } from '@lvjiaxuan/eslint-plugin-oxlint'
 
 async function detectTsconfigPath() {
   const defaultFile = 'tsconfig.json' as const
@@ -20,8 +20,11 @@ const lv: (...args: _Params) => ReturnType<Antfu> = async (...args) => {
 
   const pluginsInstalled = [lvPlugin()]
 
-  if (options?.oxlint)
+  if (options?.oxlint) {
+    await ensurePackages(['@lvjiaxuan/eslint-plugin-oxlint'])
+    const { oxlint } = await import('@lvjiaxuan/eslint-plugin-oxlint')
     pluginsInstalled.push(...(await oxlint(options.oxlint)))
+  }
 
   const merged = await antfu(
     ...args,
