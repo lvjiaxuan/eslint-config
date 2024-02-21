@@ -84,3 +84,5 @@ _fixtures
 .history
 
 *.local
+
+packages/eslint-plugin-oxlint/category-rules.json
