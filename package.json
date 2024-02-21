@@ -36,7 +36,8 @@
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
-    "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*"
+    "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*",
+    "eslint": ">=8.21.0"
   },
   "peerDependenciesMeta": {
     "@lvjiaxuan/eslint-plugin-oxlint": {
