@@ -5,8 +5,8 @@ All rules inherit from [@antfu/eslint-config](https://github.com/antfu/eslint-co
 
 # Features
 1. Add my [@lvjiaxuan/eslint-plugin](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin/src/index.ts).
-2. Support auto-detect `tsconfig.json` by default if TypeScript is enabled, which means enabling type-aware rules.
-3. Add my [eslint-plugin-oxlint](https://github.com/lvjiaxuan/eslint-config/tree/main/packages/eslint-plugin-oxlint/src/index.ts).
+2. Support auto-detect `tsconfig.json` if TypeScript is enabled, which means enabling type-aware rules.
+3. Add my [@lvjiaxuan/eslint-plugin-oxlint](https://github.com/lvjiaxuan/eslint-config/tree/main/packages/eslint-plugin-oxlint/src/index.ts).
 
 > [!NOTE]
 > *Why not just set `typescript.tsconfigPath` ?<br />*
@@ -63,7 +63,8 @@ Modify lint scritp:
 {
   "scripts": {
 -    "lint": "eslint ."
-+    "lint": "oxlint . && eslint ." // The `oxlint` has been installed, otherwise use alternative `npx oxlint`.
++    "lint": "npx oxlint . && eslint .",
++    "lint:fix": "npx oxlint . --fix && eslint . --fix"
   }
 }
 ```
