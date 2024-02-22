@@ -22,9 +22,18 @@ async function main() {
       const ruleMatch = line.match(ruleRegex)
       if (ruleMatch) {
         const { pluginName, ruleName } = ruleMatch.groups!
+
+        // Rename
+        const renamePlugins = {
+          import: 'i',
+          typescript: 'ts',
+        }
+
+        const pluginNameLowerCase = pluginName.toLowerCase() as keyof typeof renamePlugins
+
         categoryRules
           .get(lastAddCategory)
-          ?.add(`${pluginName === 'eslint' ? '' : `${pluginName.toLowerCase()}/`}${ruleName.toLowerCase()}`)
+          ?.add(`${pluginName === 'eslint' ? '' : `${renamePlugins[pluginNameLowerCase] ?? pluginNameLowerCase}/`}${ruleName.toLowerCase()}`)
       }
     }
   })
