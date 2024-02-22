@@ -40,7 +40,7 @@ export async function oxlint(options: OptionsOXLint = true): Promise<FlatConfigI
   }
   else {
     return [{
-      name: 'lvjixuan:eslint-oxlint',
+      name: 'lvjixuan/oxlint:rules',
       rules: {},
     }]
   }

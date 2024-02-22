@@ -14,7 +14,7 @@ const rulesSettings = {
 export function lvPlugin(): FlatConfigItem {
   return {
     files: [GLOB_SRC],
-    name: '@lvjiaxuan:plugin:setup',
+    name: 'lvjiaxuan:rules',
     plugins: {
       '@lvjiaxuan': { rules: rulesSetup },
     },
