@@ -35,15 +35,10 @@ type FlatConfigItem = Omit<FlatESLintConfigItem<OXLintRules, false>, 'plugins'> 
 }
 
 export async function oxlint(options: OptionsOXLint = true): Promise<FlatConfigItem[]> {
-  if (options === true) {
+  if (options === true)
     options = { deny: 'correctness' }
-  }
-  else {
-    return [{
-      name: 'lvjixuan/oxlint:rules',
-      rules: {},
-    }]
-  }
+  else if (options === false)
+    return []
 
   let denyRules: Partial<OXLintRules> = {}
 
