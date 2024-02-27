@@ -1,6 +1,27 @@
 # Changelog
 
-Tag ranges `BumpyRulesPost...v1.8.2` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `CurvyWormsGrow...v1.9.0` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v1.9.0 <sub>(2024-02-27)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.8.2...v1.9.0)
+
+### &nbsp;&nbsp;&nbsp;✨ Enhancements
+
+- optionally detect tsconfig. close #12. &nbsp;-&nbsp; by @lvjiaxuan in [#12](https://github.com/lvjiaxuan/eslint-config/issues/12) [<samp>(f0095)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/f009507)
+- optional oxlint plugin. close #13 . &nbsp;-&nbsp; by @lvjiaxuan in [#13](https://github.com/lvjiaxuan/eslint-config/issues/13) [<samp>(c8864)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/c886466)
+- rename plugin name of OXLint rules, referencing Antfu's. resolve #18. &nbsp;-&nbsp; by @lvjiaxuan in [#18](https://github.com/lvjiaxuan/eslint-config/issues/18) [<samp>(f00bc)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/f00bc73)
+- detect all tsconfig files and suppport project references. resolve #17. &nbsp;-&nbsp; by @lvjiaxuan in [#17](https://github.com/lvjiaxuan/eslint-config/issues/17) [<samp>(45415)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/4541574)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- oxlint obj options fails. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(3eb19)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/3eb1976)
+
+### &nbsp;&nbsp;&nbsp;📝 Documentation
+
+- update &nbsp;-&nbsp; by @lvjiaxuan [<samp>(0a9aa)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/0a9aa91)
+- add a's badge. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(21251)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/21251a2)
+- update &nbsp;-&nbsp; by @lvjiaxuan [<samp>(bc986)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/bc986d4)
+- typo. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(6c4d3)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/6c4d3d1)
 
 ## v1.8.2 <sub>(2024-02-02)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.8.1...v1.8.2)
@@ -134,6 +155,3 @@ Tag ranges `BumpyRulesPost...v1.8.2` (10). [All GitHub Releases](https://github.
 ### &nbsp;&nbsp;&nbsp;🐛 Fixes
 
 - add script &nbsp;-&nbsp; by @lvjiaxuan [<samp>(c1adf)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/c1adf50)
-
-## BumpyRulesPost <sub>(2023-05-12)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/@lvjiaxuan/eslint-config-ts@0.14.0...BumpyRulesPost)
