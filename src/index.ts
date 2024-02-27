@@ -1,16 +1,8 @@
-import { join } from 'node:path'
-import process from 'node:process'
 import antfu, { ensurePackages, typescript } from '@antfu/eslint-config'
-import type { FlatConfigItem, OptionsTypeScriptWithTypes } from '@antfu/eslint-config'
+import type { FlatConfigItem, OptionsTypeScriptParserOptions, OptionsTypeScriptWithTypes } from '@antfu/eslint-config'
 import { lvPlugin } from '@lvjiaxuan/eslint-plugin'
-import { pathExists } from 'fs-extra'
 import type { OptionsOXLint } from '@lvjiaxuan/eslint-plugin-oxlint'
-
-async function detectTsconfigPath() {
-  const defaultFile = 'tsconfig.json' as const
-  if (await pathExists(join(process.cwd(), defaultFile)))
-    return defaultFile
-}
+import { detectTsconfigPaths } from './tsconfigs'
 
 type Antfu = typeof antfu
 type _Params<Params extends Parameters<Antfu> = Parameters<Antfu>> = [ options?: Params[0] & { oxlint: OptionsOXLint }, ...userConfigs: Params[1][] ]
@@ -33,28 +25,47 @@ const lv: (...args: _Params) => ReturnType<Antfu> = async (...args) => {
 
   if (merged.find(item => item.name === 'antfu:typescript:setup')) {
     // Means ts is setup.
-    let tsOptions = args[0]?.typescript
+    let tsOptions = args[0]?.typescript as OptionsTypeScriptWithTypes & OptionsTypeScriptParserOptions
 
-    let isUseDetect = false
+    let isUseDetected = false
     if (typeof tsOptions === 'object') {
       if ('notDetectTsconfig' in tsOptions && tsOptions.notDetectTsconfig === true) {
         // Do nothing.
       }
       else if (!Object.hasOwn(tsOptions, 'tsconfigPath')) {
         // Overwrite with detected `tsconfigPath` if no-set.
-        (tsOptions as OptionsTypeScriptWithTypes).tsconfigPath = await detectTsconfigPath()
-        isUseDetect = true
+        const paths = await detectTsconfigPaths()
+        if (paths.length) {
+          tsOptions.tsconfigPath = paths
+          isUseDetected = true
+        }
       }
 
       // Use settings.
+
+      tsOptions.parserOptions ??= {}
+      tsOptions.parserOptions = {
+        warnOnUnsupportedTypeScriptVersion: true,
+        EXPERIMENTAL_useProjectService: true,
+        ...tsOptions.parserOptions,
+      }
     }
     else {
-      // @ts-expect-error typescript = true means {} .
-      ;(tsOptions as OptionsTypeScriptWithTypes) = { tsconfigPath: await detectTsconfigPath() }
-      isUseDetect = true
+      const paths = await detectTsconfigPaths()
+      if (paths.length) {
+        // typescript = true means {}
+        tsOptions = {
+          tsconfigPath: paths,
+          parserOptions: {
+            warnOnUnsupportedTypeScriptVersion: true,
+            EXPERIMENTAL_useProjectService: true,
+          },
+        }
+        isUseDetected = true
+      }
     }
 
-    if (isUseDetect) {
+    if (isUseDetected) {
       // New ts flat config with detected `tsconfigPath`.
       const tsItemsWithTsConfig = await typescript(tsOptions as OptionsTypeScriptWithTypes)
 

@@ -5,12 +5,8 @@ All rules inherit from [@antfu/eslint-config](https://github.com/antfu/eslint-co
 
 # Features
 1. Add my [@lvjiaxuan/eslint-plugin](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin/src/index.ts).
-2. Support auto-detect `tsconfig.json` if TypeScript is enabled, which means enabling type-aware rules.
+2. Auto-detect `tsconfig.json` and its references if TypeScript is enabled, which means enabling type-aware rules.
 3. Add my [@lvjiaxuan/eslint-plugin-oxlint](https://github.com/lvjiaxuan/eslint-config/tree/main/packages/eslint-plugin-oxlint/src/index.ts).
-
-> [!NOTE]
-> *Why not just set `typescript.tsconfigPath` ?<br />*
-> I have just encountered the Q. Perhaps a forced way of saying it is that the `tsconfig.json` is guaranteed to exists. :frowning:
 
 # Usage
 
@@ -31,7 +27,10 @@ export default lv({
 
 ## With [OXLint](https://github.com/oxc-project/oxc#-linter)
 
-> Aim to improve lint performance.
+A number of rules will be taken care of by OXLint to reduce ESLint's burden.
+
+> [!NOTE]
+> The rules settings of antfu's will be overwritten.
 
 ```js
 // eslint.config.js

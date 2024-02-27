@@ -1,13 +1,58 @@
-diff --git a/dist/index.d.ts b/dist/index.d.ts
-index 089791f9291a88889e5238f9c229380eeb8fa5fa..3303a09743f7b6177abd52d41f84011aedc70403 100644
---- a/dist/index.d.ts
-+++ b/dist/index.d.ts
-@@ -216,6 +216,10 @@ interface OptionsTypeScriptWithTypes {
+diff --git a/dist/index.d.cts b/dist/index.d.cts
+index 089791f9291a88889e5238f9c229380eeb8fa5fa..b98ee505787751ce6b9aa22080db6f4ec24592b1 100644
+--- a/dist/index.d.cts
++++ b/dist/index.d.cts
+@@ -203,7 +203,13 @@ interface OptionsTypeScriptParserOptions {
+     /**
+      * Additional parser options for TypeScript.
+      */
+-    parserOptions?: Partial<ParserOptions>;
++    parserOptions?: Partial<ParserOptions & {
++        /**
++         * @see https://github.com/typescript-eslint/typescript-eslint/issues/2094#issuecomment-1820936720
++         */
++        warnOnUnsupportedTypeScriptVersion: boolean,
++        EXPERIMENTAL_useProjectService: boolean,
++    }>;
+     /**
+      * Glob patterns for files that should be type aware.
+      * @default ['**\/*.{ts,tsx}']
+@@ -216,6 +222,10 @@ interface OptionsTypeScriptWithTypes {
       * @see https://typescript-eslint.io/linting/typed-linting/
       */
      tsconfigPath?: string | string[];
 +    /**
-+     * Don't `tsconfigPath` anyway.
++     * Don't detect `tsconfigPath` anyway.
++     */
++    notDetectTsconfig?: boolean
+ }
+ interface OptionsHasTypeScript {
+     typescript?: boolean;
+diff --git a/dist/index.d.ts b/dist/index.d.ts
+index 089791f9291a88889e5238f9c229380eeb8fa5fa..b98ee505787751ce6b9aa22080db6f4ec24592b1 100644
+--- a/dist/index.d.ts
++++ b/dist/index.d.ts
+@@ -203,7 +203,13 @@ interface OptionsTypeScriptParserOptions {
+     /**
+      * Additional parser options for TypeScript.
+      */
+-    parserOptions?: Partial<ParserOptions>;
++    parserOptions?: Partial<ParserOptions & {
++        /**
++         * @see https://github.com/typescript-eslint/typescript-eslint/issues/2094#issuecomment-1820936720
++         */
++        warnOnUnsupportedTypeScriptVersion: boolean,
++        EXPERIMENTAL_useProjectService: boolean,
++    }>;
+     /**
+      * Glob patterns for files that should be type aware.
+      * @default ['**\/*.{ts,tsx}']
+@@ -216,6 +222,10 @@ interface OptionsTypeScriptWithTypes {
+      * @see https://typescript-eslint.io/linting/typed-linting/
+      */
+     tsconfigPath?: string | string[];
++    /**
++     * Don't detect `tsconfigPath` anyway.
 +     */
 +    notDetectTsconfig?: boolean
  }
