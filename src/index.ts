@@ -42,12 +42,27 @@ const lv: (...args: _Params) => ReturnType<Antfu> = async (...args) => {
       }
 
       // Use settings.
+
+      // @ts-expect-error missing type
+      tsOptions.parserOptions ??= {
+        warnOnUnsupportedTypeScriptVersion: true,
+        EXPERIMENTAL_useProjectService: true,
+        // @ts-expect-error missing type
+        ...tsOptions.parserOptions,
+      }
     }
     else {
       const paths = await detectTsconfigPaths()
       if (paths.length) {
         // @ts-expect-error typescript = true means {} .
-        (tsOptions as OptionsTypeScriptWithTypes) = { tsconfigPath: paths }
+        (tsOptions as OptionsTypeScriptWithTypes) = {
+          tsconfigPath: paths,
+          // @ts-expect-error missing type
+          parserOptions: {
+            warnOnUnsupportedTypeScriptVersion: true,
+            EXPERIMENTAL_useProjectService: true,
+          },
+        }
         isUseDetected = true
       }
     }
