@@ -1,5 +1,5 @@
 import antfu, { ensurePackages, typescript } from '@antfu/eslint-config'
-import type { FlatConfigItem, OptionsTypeScriptWithTypes } from '@antfu/eslint-config'
+import type { FlatConfigItem, OptionsTypeScriptParserOptions, OptionsTypeScriptWithTypes } from '@antfu/eslint-config'
 import { lvPlugin } from '@lvjiaxuan/eslint-plugin'
 import type { OptionsOXLint } from '@lvjiaxuan/eslint-plugin-oxlint'
 import { detectTsconfigPaths } from './tsconfigs'
@@ -25,7 +25,7 @@ const lv: (...args: _Params) => ReturnType<Antfu> = async (...args) => {
 
   if (merged.find(item => item.name === 'antfu:typescript:setup')) {
     // Means ts is setup.
-    let tsOptions = args[0]?.typescript
+    let tsOptions = args[0]?.typescript as OptionsTypeScriptWithTypes & OptionsTypeScriptParserOptions
 
     let isUseDetected = false
     if (typeof tsOptions === 'object') {
@@ -36,28 +36,26 @@ const lv: (...args: _Params) => ReturnType<Antfu> = async (...args) => {
         // Overwrite with detected `tsconfigPath` if no-set.
         const paths = await detectTsconfigPaths()
         if (paths.length) {
-          (tsOptions as OptionsTypeScriptWithTypes).tsconfigPath = paths
+          tsOptions.tsconfigPath = paths
           isUseDetected = true
         }
       }
 
       // Use settings.
 
-      // @ts-expect-error missing type
-      tsOptions.parserOptions ??= {
+      tsOptions.parserOptions ??= {}
+      tsOptions.parserOptions = {
         warnOnUnsupportedTypeScriptVersion: true,
         EXPERIMENTAL_useProjectService: true,
-        // @ts-expect-error missing type
         ...tsOptions.parserOptions,
       }
     }
     else {
       const paths = await detectTsconfigPaths()
       if (paths.length) {
-        // @ts-expect-error typescript = true means {} .
-        (tsOptions as OptionsTypeScriptWithTypes) = {
+        // typescript = true means {}
+        tsOptions = {
           tsconfigPath: paths,
-          // @ts-expect-error missing type
           parserOptions: {
             warnOnUnsupportedTypeScriptVersion: true,
             EXPERIMENTAL_useProjectService: true,
