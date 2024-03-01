@@ -29,8 +29,7 @@
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
-    "execa": "^8.0.1",
-    "local-pkg": "^0.5.0"
+    "execa": "^8.0.1"
   },
   "publishConfig": {
     "access": "public",

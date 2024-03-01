@@ -1,0 +1,60 @@
+{
+  "name": "@lvjiaxuan/eslint-config",
+  "type": "module",
+  "version": "1.9.0",
+  "private": false,
+  "packageManager": "pnpm@8.15.4",
+  "description": "My personal ESLint config preset.",
+  "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lvjiaxuan/eslint-config"
+  },
+  "keywords": [
+    "eslint-config",
+    "oxlint"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.ms",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "pnpm run build --watch",
+    "view": "pnpm run dev & pnpm dlx eslint-flat-config-viewer",
+    "build": "tsup src/index.ts --format=esm,cjs --dts",
+    "test": "vitest --globals",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*",
+    "eslint": ">=8.21.0"
+  },
+  "peerDependenciesMeta": {
+    "@lvjiaxuan/eslint-plugin-oxlint": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "^2.6.4",
+    "@lvjiaxuan/eslint-plugin": "workspace:*",
+    "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

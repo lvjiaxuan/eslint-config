@@ -1,63 +1,18 @@
 {
-  "name": "@lvjiaxuan/eslint-config",
-  "type": "module",
-  "version": "1.9.0",
-  "private": false,
-  "packageManager": "pnpm@8.15.4",
-  "description": "My personal ESLint config preset.",
-  "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lvjiaxuan/eslint-config"
-  },
-  "keywords": [
-    "eslint-config",
-    "oxlint"
-  ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.ms",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "name": "@lvjiaxuan/eslint-config-monorepo",
+  "private": true,
   "scripts": {
-    "dev": "pnpm run build --watch",
-    "view": "pnpm run dev & pnpm dlx eslint-flat-config-viewer",
-    "build": "tsup src/index.ts --format=esm,cjs --dts",
-    "test": "vitest --globals",
     "lint": "oxlint . && eslint .",
-    "lint:fix": "oxlint . --fix && eslint . --fix",
-    "prepublishOnly": "pnpm run build"
-  },
-  "peerDependencies": {
-    "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*",
-    "eslint": ">=8.21.0"
-  },
-  "peerDependenciesMeta": {
-    "@lvjiaxuan/eslint-plugin-oxlint": {
-      "optional": true
-    }
+    "lint:fix": "oxlint . --fix && eslint . --fix"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^2.6.4",
-    "@lvjiaxuan/eslint-plugin": "workspace:*",
-    "fs-extra": "^11.2.0"
   },
   "devDependencies": {
-    "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*",
+    "@antfu/eslint-config": "^2.6.4",
+    "@lvjiaxuan/eslint-config": "workspace:*",
     "@types/eslint": "^8.56.3",
-    "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.11.20",
     "eslint": "npm:eslint-ts-patch@8.56.0-0",
-    "eslint-plugin-oxlint": "^0.2.3",
     "eslint-ts-patch": "8.56.0-0",
     "oxlint": "^0.2.11",
     "simple-git-hooks": "^2.9.0",
@@ -68,10 +23,6 @@
   "lvr": {
     "all": true,
     "tag": 10
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
   },
   "pnpm": {
     "patchedDependencies": {
