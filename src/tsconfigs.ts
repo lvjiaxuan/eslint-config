@@ -1,6 +1,7 @@
 import process from 'node:process'
 import { join } from 'node:path'
-import { readJson, stat } from 'fs-extra'
+import { stat } from 'node:fs/promises'
+import { readJson } from 'fs-extra/esm'
 
 /**
  * Respect project references.
