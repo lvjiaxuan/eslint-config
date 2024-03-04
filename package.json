@@ -1,21 +1,21 @@
 {
   "name": "@lvjiaxuan/eslint-config-monorepo",
+  "version": "1.9.0",
   "private": true,
   "scripts": {
     "lint": "oxlint . && eslint .",
     "lint:fix": "oxlint . --fix && eslint . --fix"
   },
-  "dependencies": {
-  },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.4",
+    "@antfu/eslint-config": "^2.7.0",
     "@lvjiaxuan/eslint-config": "workspace:*",
-    "@types/eslint": "^8.56.3",
-    "@types/node": "^20.11.20",
+    "@lvjiaxuan/eslint-plugin-oxlint": "workspace:^",
+    "@types/eslint": "^8.56.5",
+    "@types/node": "^20.11.24",
     "eslint": "npm:eslint-ts-patch@8.56.0-0",
     "eslint-ts-patch": "8.56.0-0",
-    "oxlint": "^0.2.11",
-    "simple-git-hooks": "^2.9.0",
+    "oxlint": "^0.2.12",
+    "simple-git-hooks": "^2.10.0",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3",
     "vitest": "^1.3.1"
@@ -26,7 +26,7 @@
   },
   "pnpm": {
     "patchedDependencies": {
-      "@antfu/eslint-config@2.6.4": "patches/@antfu__eslint-config@2.6.4.patch"
+      "@antfu/eslint-config@2.7.0": "patches/@antfu__eslint-config@2.7.0.patch"
     }
   },
   "simple-git-hooks": {

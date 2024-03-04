@@ -33,6 +33,7 @@
     "view": "pnpm run dev & pnpm dlx eslint-flat-config-viewer",
     "build": "tsup src/index.ts --format=esm,cjs --dts",
     "test": "vitest --globals",
+    "prepare": "pnpm run build",
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
@@ -45,7 +46,7 @@
     }
   },
   "dependencies": {
-    "@antfu/eslint-config": "^2.6.4",
+    "@antfu/eslint-config": "^2.7.0",
     "@lvjiaxuan/eslint-plugin": "workspace:*",
     "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*",
     "fs-extra": "^11.2.0"
