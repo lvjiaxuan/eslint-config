@@ -1,7 +1,7 @@
 {
   "name": "@lvjiaxuan/eslint-plugin-oxlint",
   "type": "module",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "Turn off rules supported by oxlint, provide classified configs",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "keywords": [

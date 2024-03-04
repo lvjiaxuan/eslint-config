@@ -1,7 +1,7 @@
 {
   "name": "@lvjiaxuan/eslint-config",
   "type": "module",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "private": false,
   "packageManager": "pnpm@8.15.4",
   "description": "My personal ESLint config preset.",

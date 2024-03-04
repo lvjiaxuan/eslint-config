@@ -1,6 +1,13 @@
 # Changelog
 
-Tag ranges `CurvyWormsGrow...v1.9.0` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `TenWolvesTeach...v1.9.1` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v1.9.1 <sub>(2024-03-04)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.9.0...v1.9.1)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- `fs-extra` doesn't support named exports. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(46ef8)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/46ef867)
 
 ## v1.9.0 <sub>(2024-02-27)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.8.2...v1.9.0)
@@ -148,10 +155,3 @@ Tag ranges `CurvyWormsGrow...v1.9.0` (10). [All GitHub Releases](https://github.
 
 ## TenWolvesTeach <sub>(2023-08-01)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/CurvyWormsGrow...TenWolvesTeach)
-
-## CurvyWormsGrow <sub>(2023-05-17)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/BumpyRulesPost...CurvyWormsGrow)
-
-### &nbsp;&nbsp;&nbsp;🐛 Fixes
-
-- add script &nbsp;-&nbsp; by @lvjiaxuan [<samp>(c1adf)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/c1adf50)
