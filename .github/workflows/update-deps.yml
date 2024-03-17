@@ -10,4 +10,4 @@ jobs:
     uses: lvjiaxuan/github-action-templates/.github/workflows/update-deps.yml@main
     with:
       tools: taze
-      args: -r
+      args: -r --exclude @antfu/eslint-config
