@@ -10,14 +10,14 @@
     "@antfu/eslint-config": "^2.9.0",
     "@lvjiaxuan/eslint-config": "workspace:*",
     "@lvjiaxuan/eslint-plugin-oxlint": "workspace:^",
-    "@types/eslint": "^8.56.5",
-    "@types/node": "^20.11.28",
+    "@types/eslint": "^8.56.6",
+    "@types/node": "^20.11.30",
     "eslint": "npm:eslint-ts-patch@8.56.0-0",
     "eslint-ts-patch": "8.56.0-0",
-    "oxlint": "^0.2.13",
+    "oxlint": "^0.2.14",
     "simple-git-hooks": "^2.11.0",
     "tsup": "^8.0.2",
-    "typescript": "^5.4.2",
+    "typescript": "^5.4.3",
     "vitest": "^1.4.0"
   },
   "lvr": {
