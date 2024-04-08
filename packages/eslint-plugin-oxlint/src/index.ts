@@ -1,4 +1,5 @@
-import type { FlatESLintConfigItem, RuleLevel } from '@antfu/eslint-define-config'
+import type { RuleLevel } from '@antfu/eslint-define-config'
+import { TypedFlatConfigItem } from '@antfu/eslint-config'
 import type { MergeInsertions, UnionToIntersection } from '@type-challenges/utils'
 import categoryRules from './../category-rules.json'
 
@@ -14,27 +15,13 @@ const rules = categoryRules as CategoryRules
 
 export type OXLintRules = MergeInsertions<UnionToIntersection<CategoryRules[Categories]>>
 
-export type OptionsOXLint = {
+export type OXLintOptions = {
   deny?: Categories | 'all'
   allow?: (keyof OXLintRules)[]
   // TODO plugins
 } | boolean
 
-// https://github.com/antfu/eslint-config/blob/3707078921b8d246b1d2980c5c4cfe7f39c67699/src/types.ts#L59
-type TypedFlatConfigItem = Omit<FlatESLintConfigItem<OXLintRules, false>, 'plugins'> & {
-  /**
-   * Custom name of each config item
-   */
-  name?: string
-  /**
-   * An object containing a name-value mapping of plugin names to plugin objects. When `files` is specified, these plugins are only available to the matching files.
-   *
-   * @see [Using plugins in your configuration](https://eslint.org/docs/latest/user-guide/configuring/configuration-files-new#using-plugins-in-your-configuration)
-   */
-  plugins?: Record<string, any>
-}
-
-export async function oxlint(options: OptionsOXLint = true): Promise<TypedFlatConfigItem[]> {
+export function oxlint(options: OXLintOptions = true): TypedFlatConfigItem[] {
   if (options === true)
     options = { deny: 'correctness' }
   else if (options === false)

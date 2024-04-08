@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-define-config": "1.23.0-2",
-    "@type-challenges/utils": "^0.1.1"
+    "@type-challenges/utils": "^0.1.1",
+    "@antfu/eslint-config": "^2.12.2"
   }
 }
