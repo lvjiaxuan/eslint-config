@@ -71,19 +71,22 @@ const lv: (...args: AntfuParams) => AntfuReturnType = (...args) => {
         // New ts flat config items with detected `tsconfigPath`.
         const flatConfigItemsWithTsConfig = await typescript(tsOptions as OptionsTypeScriptWithTypes)
 
-        // const parserItemName = 'antfu:typescript:parser'
-        // const originParserItemIdx = merged.findIndex(item => item.name === parserItemName)
-        // merged.splice(originParserItemIdx, 1, tsItemsWithTsConfig.find(item => item.name === parserItemName)!)
+        const parserItemIdx = configs.findIndex(item => item.name === 'antfu/typescript/parser')
+        configs.splice(
+          parserItemIdx,
+          1,
+          flatConfigItemsWithTsConfig.find(item => item.name === 'antfu/typescript/type-aware-parser')!,
+          flatConfigItemsWithTsConfig.find(item => item.name === 'antfu/typescript/parser')!,
+          )
 
-        // const typeAwareParserItemName = 'antfu:typescript:type-aware-parser'
-        // merged.splice(originParserItemIdx + 1, 0, tsItemsWithTsConfig.find(item => item.name === typeAwareParserItemName)!)
-
-        // const typeAwareItemName = 'antfu:typescript:rules-type-aware'
-        // const tsTypeAwareItemIdx = merged.findIndex(item => item.name === typeAwareItemName)
-        // merged.splice(tsTypeAwareItemIdx, 1, tsItemsWithTsConfig.find(item => item.name === typeAwareItemName)!)
+        const rulesItemIdx = configs.findIndex(item => item.name = 'antfu/typescript/rules')
+        configs.splice(
+          rulesItemIdx + 1,
+          0,
+          flatConfigItemsWithTsConfig.find(item => item.name === 'antfu/typescript/rules-type-aware')!,
+        )
       }
     }
-
   })
 
   return pipeline
