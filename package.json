@@ -7,7 +7,7 @@
     "lint:fix": "oxlint . --fix && eslint . --fix"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.9.0",
+    "@antfu/eslint-config": "^2.12.2",
     "@lvjiaxuan/eslint-config": "workspace:*",
     "@lvjiaxuan/eslint-plugin-oxlint": "workspace:^",
     "@types/eslint": "^8.56.7",
@@ -24,11 +24,6 @@
     "all": true,
     "tag": 10
   },
-  "pnpm": {
-    "patchedDependencies": {
-      "@antfu/eslint-config@2.9.0": "patches/@antfu__eslint-config@2.9.0.patch"
-    }
-  },
   "simple-git-hooks": {
     "pre-commit": [
       "npx lint-staged"
@@ -36,5 +31,10 @@
   },
   "lint-staged": {
     "*": "pnpm run lint:fix"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@antfu/eslint-config@2.12.2": "patches/@antfu__eslint-config@2.12.2.patch"
+    }
   }
 }

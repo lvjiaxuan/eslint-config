@@ -17,11 +17,11 @@ export type OXLintRules = MergeInsertions<UnionToIntersection<CategoryRules[Cate
 export type OptionsOXLint = {
   deny?: Categories | 'all'
   allow?: (keyof OXLintRules)[]
-  // plugins: TODO
+  // TODO plugins
 } | boolean
 
 // https://github.com/antfu/eslint-config/blob/3707078921b8d246b1d2980c5c4cfe7f39c67699/src/types.ts#L59
-type FlatConfigItem = Omit<FlatESLintConfigItem<OXLintRules, false>, 'plugins'> & {
+type TypedFlatConfigItem = Omit<FlatESLintConfigItem<OXLintRules, false>, 'plugins'> & {
   /**
    * Custom name of each config item
    */
@@ -34,7 +34,7 @@ type FlatConfigItem = Omit<FlatESLintConfigItem<OXLintRules, false>, 'plugins'> 
   plugins?: Record<string, any>
 }
 
-export async function oxlint(options: OptionsOXLint = true): Promise<FlatConfigItem[]> {
+export async function oxlint(options: OptionsOXLint = true): Promise<TypedFlatConfigItem[]> {
   if (options === true)
     options = { deny: 'correctness' }
   else if (options === false)

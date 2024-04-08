@@ -1,5 +1,5 @@
 import type { TSESLint } from '@typescript-eslint/utils'
-import { type FlatConfigItem, GLOB_SRC } from '@antfu/eslint-config'
+import { TypedFlatConfigItem, GLOB_SRC } from '@antfu/eslint-config'
 import preferGenericRestExtends from './prefer-generic-rest-extends'
 
 const rulesSetup = {
@@ -8,15 +8,17 @@ const rulesSetup = {
 
 const rulesSettings = {
   '@lvjiaxuan/prefer-generic-rest-extends': 'warn',
-} as const // Support types later, reference to my oxlint plugin.
+} as const // TODO type hints
+
+const pluginName = '@lvjiaxuan'
 
 // For flat config.
-export function lvPlugin(): FlatConfigItem {
+export function lvPlugin(): TypedFlatConfigItem {
   return {
     files: [GLOB_SRC],
-    name: 'lvjiaxuan:rules',
+    name: 'lvjiaxuan:plugin',
     plugins: {
-      '@lvjiaxuan': { rules: rulesSetup },
+      pluginName: { rules: rulesSetup },
     },
     rules: rulesSettings,
   }
@@ -27,7 +29,7 @@ export default {
   rules: rulesSetup,
   configs: {
     recommended: {
-      plugins: ['@lvjiaxuan'],
+      plugins: [pluginName],
       rules: rulesSettings,
     },
   },
