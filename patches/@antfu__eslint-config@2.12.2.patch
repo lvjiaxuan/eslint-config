@@ -1,8 +1,8 @@
 diff --git a/dist/index.d.cts b/dist/index.d.cts
-index 054ef1e86a49d76248087894f57b6d47e05af143..9bb95f6b80aca4d4e66516fbbeb1704da6a13d07 100644
+index 64907250c0d27e43bc980da3e50f9b564919df42..3f54df246b333472c46b60e68d28c06a1a8ec496 100644
 --- a/dist/index.d.cts
 +++ b/dist/index.d.cts
-@@ -211,7 +211,13 @@ interface OptionsTypeScriptParserOptions {
+@@ -15180,7 +15180,13 @@ interface OptionsTypeScriptParserOptions {
      /**
       * Additional parser options for TypeScript.
       */
@@ -17,7 +17,7 @@ index 054ef1e86a49d76248087894f57b6d47e05af143..9bb95f6b80aca4d4e66516fbbeb1704d
      /**
       * Glob patterns for files that should be type aware.
       * @default ['**\/*.{ts,tsx}']
-@@ -224,6 +230,10 @@ interface OptionsTypeScriptWithTypes {
+@@ -15193,6 +15199,10 @@ interface OptionsTypeScriptWithTypes {
       * @see https://typescript-eslint.io/linting/typed-linting/
       */
      tsconfigPath?: string | string[];
@@ -29,10 +29,10 @@ index 054ef1e86a49d76248087894f57b6d47e05af143..9bb95f6b80aca4d4e66516fbbeb1704d
  interface OptionsHasTypeScript {
      typescript?: boolean;
 diff --git a/dist/index.d.ts b/dist/index.d.ts
-index 054ef1e86a49d76248087894f57b6d47e05af143..9bb95f6b80aca4d4e66516fbbeb1704da6a13d07 100644
+index 64907250c0d27e43bc980da3e50f9b564919df42..3f54df246b333472c46b60e68d28c06a1a8ec496 100644
 --- a/dist/index.d.ts
 +++ b/dist/index.d.ts
-@@ -211,7 +211,13 @@ interface OptionsTypeScriptParserOptions {
+@@ -15180,7 +15180,13 @@ interface OptionsTypeScriptParserOptions {
      /**
       * Additional parser options for TypeScript.
       */
@@ -47,7 +47,7 @@ index 054ef1e86a49d76248087894f57b6d47e05af143..9bb95f6b80aca4d4e66516fbbeb1704d
      /**
       * Glob patterns for files that should be type aware.
       * @default ['**\/*.{ts,tsx}']
-@@ -224,6 +230,10 @@ interface OptionsTypeScriptWithTypes {
+@@ -15193,6 +15199,10 @@ interface OptionsTypeScriptWithTypes {
       * @see https://typescript-eslint.io/linting/typed-linting/
       */
      tsconfigPath?: string | string[];
