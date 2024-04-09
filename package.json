@@ -8,14 +8,14 @@
     "lint:fix": "oxlint . --fix && eslint . --fix"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.12.2",
+    "@antfu/eslint-config": "^2.13.0",
     "@lvjiaxuan/eslint-config": "workspace:*",
     "@lvjiaxuan/eslint-plugin-oxlint": "workspace:^",
     "@types/eslint": "^8.56.7",
-    "@types/node": "^20.12.5",
+    "@types/node": "^20.12.6",
     "eslint": "npm:eslint-ts-patch@8.56.0-0",
     "eslint-ts-patch": "8.56.0-0",
-    "oxlint": "^0.2.15",
+    "oxlint": "^0.2.16",
     "simple-git-hooks": "^2.11.1",
     "tsup": "^8.0.2",
     "typescript": "^5.4.4",
@@ -24,11 +24,6 @@
   "lvr": {
     "all": true,
     "tag": 10
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "@antfu/eslint-config@2.12.2": "patches/@antfu__eslint-config@2.12.2.patch"
-    }
   },
   "simple-git-hooks": {
     "pre-commit": [

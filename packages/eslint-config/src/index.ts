@@ -24,70 +24,74 @@ const lv: (...args: AntfuParams) => AntfuReturnType = (...args) => {
     })())
   }
 
-  void pipeline.onResolved(async (configs) => {
-    // The name comes from https://github.com/antfu/eslint-config/blob/main/src/configs/typescript.ts .
-    if (configs.findIndex(item => item.name === 'antfu/typescript/setup') > -1) {
-      let tsOptions = antfuOptions!.typescript as OptionsTypeScriptWithTypes & OptionsTypeScriptParserOptions
+  // void pipeline.onResolved(async (configs) => {
+  //   // The name comes from https://github.com/antfu/eslint-config/blob/main/src/configs/typescript.ts .
+  //   if (configs.findIndex(item => item.name === 'antfu/typescript/setup') > -1) {
+  //     let tsOptions = antfuOptions!.typescript as OptionsTypeScriptWithTypes & OptionsTypeScriptParserOptions
 
-      let isUseDetected = false
-      if (typeof tsOptions === 'object') {
-        if (tsOptions.notDetectTsconfig === true) {
-          // Do nothing.
-        }
-        else if (!Object.hasOwn(tsOptions, 'tsconfigPath')) {
-          // Add detected `tsconfigPath` if no-set.
-          const paths = await detectTsconfigPaths()
-          if (paths.length) {
-            tsOptions.tsconfigPath = paths
-            isUseDetected = true
-          }
-        }
+  //     let isUseDetected = false
+  //     if (typeof tsOptions === 'object') {
+  //       if ('notDetectTsconfig' in tsOptions && tsOptions.notDetectTsconfig === true) {
+  //         // Do nothing.
+  //       }
+  //       else if (!Object.hasOwn(tsOptions, 'tsconfigPath')) {
+  //         // Add detected `tsconfigPath` if no-set.
+  //         const paths = await detectTsconfigPaths()
+          
+  //         if (paths.length) {
+  //           tsOptions.tsconfigPath = paths
+  //           isUseDetected = true
+  //         }
+  //       }
 
-        // Use settings.
+  //       // Use settings.
 
-        tsOptions.parserOptions ??= {}
-        tsOptions.parserOptions = {
-          warnOnUnsupportedTypeScriptVersion: true,
-          EXPERIMENTAL_useProjectService: true,
-          ...tsOptions.parserOptions,
-        }
-      }
-      else {
-        const paths = await detectTsconfigPaths()
-        if (paths.length) {
-          // typescript = true means {}
-          tsOptions = {
-            tsconfigPath: paths,
-            parserOptions: {
-              warnOnUnsupportedTypeScriptVersion: true,
-              EXPERIMENTAL_useProjectService: true,
-            },
-          }
-          isUseDetected = true
-        }
-      }
+  //       tsOptions.parserOptions ??= {}
+  //       tsOptions.parserOptions = {
+  //         /**
+  //          * @see https://github.com/typescript-eslint/typescript-eslint/issues/2094#issuecomment-1820936720
+  //          */
+  //         warnOnUnsupportedTypeScriptVersion: true,
+  //         EXPERIMENTAL_useProjectService: true,
+  //         ...tsOptions.parserOptions,
+  //       }
+  //     }
+  //     else {
+  //       const paths = await detectTsconfigPaths()
+  //       if (paths.length) {
+  //         // typescript = true means {}
+  //         tsOptions = {
+  //           tsconfigPath: paths,
+  //           parserOptions: {
+  //             warnOnUnsupportedTypeScriptVersion: true,
+  //             EXPERIMENTAL_useProjectService: true,
+  //           },
+  //         }
+  //         isUseDetected = true
+  //       }
+  //     }
 
-      if (isUseDetected) {
-        // New ts flat config items with detected `tsconfigPath`.
-        const flatConfigItemsWithTsConfig = await typescript(tsOptions as OptionsTypeScriptWithTypes)
+  //     if (isUseDetected) {
+  //       // New ts flat config items with detected `tsconfigPath`.
+  //       const flatConfigItemsWithTsConfig = await typescript(tsOptions as OptionsTypeScriptWithTypes)
 
-        const parserItemIdx = configs.findIndex(item => item.name === 'antfu/typescript/parser')
-        configs.splice(
-          parserItemIdx,
-          1,
-          flatConfigItemsWithTsConfig.find(item => item.name === 'antfu/typescript/type-aware-parser')!,
-          flatConfigItemsWithTsConfig.find(item => item.name === 'antfu/typescript/parser')!,
-        )
+  //       const parserItemIdx = configs.findIndex(item => item.name === 'antfu/typescript/parser')
+  //       configs.splice(
+  //         parserItemIdx,
+  //         1,
+  //         flatConfigItemsWithTsConfig.find(item => item.name === 'antfu/typescript/type-aware-parser')!,
+  //         flatConfigItemsWithTsConfig.find(item => item.name === 'antfu/typescript/parser')!,
+  //       )
 
-        const rulesItemIdx = configs.findIndex(item => item.name = 'antfu/typescript/rules')
-        configs.splice(
-          rulesItemIdx + 1,
-          0,
-          flatConfigItemsWithTsConfig.find(item => item.name === 'antfu/typescript/rules-type-aware')!,
-        )
-      }
-    }
-  })
+  //       const rulesItemIdx = configs.findIndex(item => item.name = 'antfu/typescript/rules')
+  //       configs.splice(
+  //         rulesItemIdx + 1,
+  //         0,
+  //         flatConfigItemsWithTsConfig.find(item => item.name === 'antfu/typescript/rules-type-aware')!,
+  //       )
+  //     }
+  //   }
+  // })
 
   return pipeline
 }

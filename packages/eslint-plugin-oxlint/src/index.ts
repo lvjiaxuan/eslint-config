@@ -1,25 +1,10 @@
-import type { RuleLevel } from '@antfu/eslint-define-config'
 import type { TypedFlatConfigItem } from '@antfu/eslint-config'
-import type { MergeInsertions, UnionToIntersection } from '@type-challenges/utils'
+import type { Categories, CategoryRules, OXLintOptions, OXLintRules } from './types'
 import categoryRules from './../category-rules.json'
-
-type CategoryRules<Rules extends typeof categoryRules = typeof categoryRules> = MergeInsertions<{
-  [K in keyof Rules]: {
-    [KK in keyof Rules[K]]: RuleLevel
-  }
-}>
-
-type Categories = keyof typeof categoryRules
 
 const rules = categoryRules as CategoryRules
 
-export type OXLintRules = MergeInsertions<UnionToIntersection<CategoryRules[Categories]>>
-
-export type OXLintOptions = {
-  deny?: Categories | 'all'
-  allow?: (keyof OXLintRules)[]
-  // TODO plugins
-} | boolean
+export * from './types'
 
 export function oxlint(options: OXLintOptions = true): TypedFlatConfigItem[] {
   if (options === true)
@@ -29,16 +14,29 @@ export function oxlint(options: OXLintOptions = true): TypedFlatConfigItem[] {
 
   let denyRules: Partial<OXLintRules> = {}
 
+  // deny option
   if (options.deny === 'all') {
     for (const c in rules)
       denyRules = { ...denyRules, ...rules[c as Categories] }
   }
-  else if (options.deny) {
+  else if (typeof options.deny === 'string') {
     denyRules = rules[options.deny]
+  }
+  else if (Array.isArray(options.deny)) {
+    for (const c of options.deny) {
+      if (options.deny.includes(c as Categories))
+        denyRules = { ...denyRules, ...rules[c as Categories] }
+    }
+  }
+
+  // allow option
+  for (const r of options?.allow ?? []) {
+    if (denyRules[r as keyof OXLintRules])
+      delete denyRules[r as keyof OXLintRules]
   }
 
   return [{
-    name: 'lvjixuan/plugin/oxlint',
+    name: 'lvjiaxuan/plugin/oxlint',
     rules: denyRules,
   }]
 }
@@ -51,6 +49,5 @@ export default {
       acc[c as Categories] = { rules: r as CategoryRules[Categories] }
       return acc
     }, {} as Record<Categories, { rules: CategoryRules[Categories] }>),
-    // plugins classification
   },
 }
