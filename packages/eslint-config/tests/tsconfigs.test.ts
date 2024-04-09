@@ -3,7 +3,7 @@ import { detectTsconfigPaths } from './../src/tsconfigs'
 
 it('detectTsconfigPaths basic', async () => {
   const paths = await detectTsconfigPaths({
-    cwd: join(__dirname, 'fixtures'),
+    cwd: join(import.meta.dirname, 'fixtures'),
   })
 
   expect(paths).toMatchInlineSnapshot(`
