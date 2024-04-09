@@ -38,7 +38,7 @@ export function oxlint(options: OXLintOptions = true): TypedFlatConfigItem[] {
   }
 
   return [{
-    name: 'lvjixuan:eslint-oxlint',
+    name: 'lvjixuan/plugin/oxlint',
     rules: denyRules,
   }]
 }
