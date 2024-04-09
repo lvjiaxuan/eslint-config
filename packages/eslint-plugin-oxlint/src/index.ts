@@ -1,5 +1,5 @@
 import type { RuleLevel } from '@antfu/eslint-define-config'
-import { TypedFlatConfigItem } from '@antfu/eslint-config'
+import type { TypedFlatConfigItem } from '@antfu/eslint-config'
 import type { MergeInsertions, UnionToIntersection } from '@type-challenges/utils'
 import categoryRules from './../category-rules.json'
 

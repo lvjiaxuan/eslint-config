@@ -1,5 +1,6 @@
 {
   "name": "@lvjiaxuan/eslint-config-monorepo",
+  "type": "module",
   "version": "1.9.1",
   "private": true,
   "scripts": {
@@ -24,6 +25,11 @@
     "all": true,
     "tag": 10
   },
+  "pnpm": {
+    "patchedDependencies": {
+      "@antfu/eslint-config@2.12.2": "patches/@antfu__eslint-config@2.12.2.patch"
+    }
+  },
   "simple-git-hooks": {
     "pre-commit": [
       "npx lint-staged"
@@ -31,10 +37,5 @@
   },
   "lint-staged": {
     "*": "pnpm run lint:fix"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "@antfu/eslint-config@2.12.2": "patches/@antfu__eslint-config@2.12.2.patch"
-    }
   }
 }

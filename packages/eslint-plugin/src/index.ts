@@ -1,5 +1,6 @@
 import type { TSESLint } from '@typescript-eslint/utils'
-import { TypedFlatConfigItem, GLOB_SRC } from '@antfu/eslint-config'
+import type { TypedFlatConfigItem } from '@antfu/eslint-config'
+import { GLOB_SRC } from '@antfu/eslint-config'
 import preferGenericRestExtends from './prefer-generic-rest-extends'
 
 const rulesSetup = {
@@ -18,7 +19,7 @@ export function lvPlugin(): TypedFlatConfigItem {
     files: [GLOB_SRC],
     name: 'lvjiaxuan:plugin',
     plugins: {
-      pluginName: { rules: rulesSetup },
+      [pluginName]: { rules: rulesSetup },
     },
     rules: rulesSettings,
   }

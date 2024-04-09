@@ -1,5 +1,5 @@
 import antfu, { ensurePackages, typescript } from '@antfu/eslint-config'
-import type { TypedFlatConfigItem, OptionsTypeScriptParserOptions, OptionsTypeScriptWithTypes } from '@antfu/eslint-config'
+import type { OptionsTypeScriptParserOptions, OptionsTypeScriptWithTypes } from '@antfu/eslint-config'
 import { lvPlugin } from '@lvjiaxuan/eslint-plugin'
 import type { OXLintOptions } from '@lvjiaxuan/eslint-plugin-oxlint'
 import { detectTsconfigPaths } from './tsconfigs'
@@ -9,14 +9,13 @@ type AntfuParams<Params extends Parameters<Antfu> = Parameters<Antfu>> = [ optio
 type AntfuReturnType = ReturnType<Antfu>
 
 const lv: (...args: AntfuParams) => AntfuReturnType = (...args) => {
-
   let pipeline = antfu(...args)
 
   pipeline = pipeline.append(
     lvPlugin(),
   )
 
-  const [ antfuOptions ] = args
+  const [antfuOptions] = args
   if (antfuOptions?.oxlint) {
     pipeline = pipeline.append((async () => {
       await ensurePackages(['@lvjiaxuan/eslint-plugin-oxlint'])
@@ -25,7 +24,7 @@ const lv: (...args: AntfuParams) => AntfuReturnType = (...args) => {
     })())
   }
 
-  pipeline.onResolved(async (configs) => {
+  void pipeline.onResolved(async (configs) => {
     // The name comes from https://github.com/antfu/eslint-config/blob/main/src/configs/typescript.ts .
     if (configs.findIndex(item => item.name === 'antfu/typescript/setup') > -1) {
       let tsOptions = antfuOptions!.typescript as OptionsTypeScriptWithTypes & OptionsTypeScriptParserOptions
@@ -52,7 +51,8 @@ const lv: (...args: AntfuParams) => AntfuReturnType = (...args) => {
           EXPERIMENTAL_useProjectService: true,
           ...tsOptions.parserOptions,
         }
-      } else {
+      }
+      else {
         const paths = await detectTsconfigPaths()
         if (paths.length) {
           // typescript = true means {}
@@ -77,7 +77,7 @@ const lv: (...args: AntfuParams) => AntfuReturnType = (...args) => {
           1,
           flatConfigItemsWithTsConfig.find(item => item.name === 'antfu/typescript/type-aware-parser')!,
           flatConfigItemsWithTsConfig.find(item => item.name === 'antfu/typescript/parser')!,
-          )
+        )
 
         const rulesItemIdx = configs.findIndex(item => item.name = 'antfu/typescript/rules')
         configs.splice(
