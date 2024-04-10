@@ -24,6 +24,8 @@ const lv: (...args: AntfuParams) => AntfuReturnType = (...args) => {
     })())
   }
 
+  return pipeline
+
   // void pipeline.onResolved(async (configs) => {
   //   // The name comes from https://github.com/antfu/eslint-config/blob/main/src/configs/typescript.ts .
   //   if (configs.findIndex(item => item.name === 'antfu/typescript/setup') > -1) {
@@ -37,7 +39,7 @@ const lv: (...args: AntfuParams) => AntfuReturnType = (...args) => {
   //       else if (!Object.hasOwn(tsOptions, 'tsconfigPath')) {
   //         // Add detected `tsconfigPath` if no-set.
   //         const paths = await detectTsconfigPaths()
-          
+
   //         if (paths.length) {
   //           tsOptions.tsconfigPath = paths
   //           isUseDetected = true
@@ -93,7 +95,7 @@ const lv: (...args: AntfuParams) => AntfuReturnType = (...args) => {
   //   }
   // })
 
-  return pipeline
+  // return pipeline
 }
 
 export default lv

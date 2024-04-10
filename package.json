@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "lint": "oxlint . && eslint .",
-    "lint:fix": "oxlint . --fix && eslint . --fix"
+    "lintf": "oxlint . --fix && eslint . --fix",
+    "view": "pnpm dlx @eslint/config-inspector"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.13.0",

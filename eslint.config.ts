@@ -1,6 +1,7 @@
 import lv from '@lvjiaxuan/eslint-config'
+import a from '@antfu/eslint-config'
 
-export default lv({
+export default a({
   oxlint: true,
 }, {
   rules: {
