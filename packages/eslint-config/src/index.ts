@@ -31,12 +31,13 @@ const lv: (...args: AntfuParams) => AntfuReturnType = (...args) => {
 
       let isUseDetected = false
       if (typeof tsOptions === 'object') {
-        if (tsOptions.notDetectTsconfig === true) {
+        if ('notDetectTsconfig' in tsOptions && tsOptions.notDetectTsconfig === true) {
           // Do nothing.
         }
         else if (!Object.hasOwn(tsOptions, 'tsconfigPath')) {
           // Add detected `tsconfigPath` if no-set.
           const paths = await detectTsconfigPaths()
+
           if (paths.length) {
             tsOptions.tsconfigPath = paths
             isUseDetected = true
@@ -47,6 +48,9 @@ const lv: (...args: AntfuParams) => AntfuReturnType = (...args) => {
 
         tsOptions.parserOptions ??= {}
         tsOptions.parserOptions = {
+          /**
+           * @see https://github.com/typescript-eslint/typescript-eslint/issues/2094#issuecomment-1820936720
+           */
           warnOnUnsupportedTypeScriptVersion: true,
           EXPERIMENTAL_useProjectService: true,
           ...tsOptions.parserOptions,
@@ -79,7 +83,7 @@ const lv: (...args: AntfuParams) => AntfuReturnType = (...args) => {
           flatConfigItemsWithTsConfig.find(item => item.name === 'antfu/typescript/parser')!,
         )
 
-        const rulesItemIdx = configs.findIndex(item => item.name = 'antfu/typescript/rules')
+        const rulesItemIdx = configs.findIndex(item => item.name === 'antfu/typescript/rules')
         configs.splice(
           rulesItemIdx + 1,
           0,
