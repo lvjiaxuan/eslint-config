@@ -1,6 +1,14 @@
 # Changelog
 
-Tag ranges `TenWolvesTeach...v1.9.1` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `GentleSquidsMake...v1.10.0` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v1.10.0 <sub>(2024-04-11)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.9.1...v1.10.0)
+
+### &nbsp;&nbsp;&nbsp;✨ Enhancements
+
+- piped antfu &nbsp;-&nbsp; by @lvjiaxuan [<samp>(66e0d)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/66e0dcc)
+- `deny` supports array &nbsp;-&nbsp; by @lvjiaxuan [<samp>(34b26)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/34b26db)
 
 ## v1.9.1 <sub>(2024-03-04)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.9.0...v1.9.1)
@@ -152,6 +160,3 @@ Tag ranges `TenWolvesTeach...v1.9.1` (10). [All GitHub Releases](https://github.
 
 ## GentleSquidsMake <sub>(2023-09-20)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/TenWolvesTeach...GentleSquidsMake)
-
-## TenWolvesTeach <sub>(2023-08-01)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/CurvyWormsGrow...TenWolvesTeach)
