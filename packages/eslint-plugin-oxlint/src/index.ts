@@ -24,15 +24,15 @@ export function oxlint(options: OXLintOptions = true): TypedFlatConfigItem[] {
   }
   else if (Array.isArray(options.deny)) {
     for (const c of options.deny) {
-      if (options.deny.includes(c as Categories))
-        denyRules = { ...denyRules, ...rules[c as Categories] }
+      if (options.deny.includes(c))
+        denyRules = { ...denyRules, ...rules[c] }
     }
   }
 
   // allow option
   for (const r of options?.allow ?? []) {
-    if (denyRules[r as keyof OXLintRules])
-      delete denyRules[r as keyof OXLintRules]
+    if (denyRules[r])
+      delete denyRules[r]
   }
 
   return [{

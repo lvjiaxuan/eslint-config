@@ -30,7 +30,7 @@
   ],
   "scripts": {
     "dev": "pnpm run build --watch",
-    "view": "eslint-config-inspector",
+    "view": "pnpm run dev & pnpm dlx @eslint/config-inspector",
     "build": "tsup src/index.ts --format=esm,cjs --dts",
     "test": "vitest --globals",
     "prepare": "pnpm run build",
