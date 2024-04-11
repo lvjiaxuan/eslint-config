@@ -9,17 +9,17 @@
     "view": "pnpm dlx @eslint/config-inspector"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.13.0",
+    "@antfu/eslint-config": "^2.13.3",
     "@lvjiaxuan/eslint-config": "workspace:*",
     "@lvjiaxuan/eslint-plugin-oxlint": "workspace:^",
     "@types/eslint": "^8.56.7",
-    "@types/node": "^20.12.6",
+    "@types/node": "^20.12.7",
     "eslint": "npm:eslint-ts-patch@8.56.0-0",
     "eslint-ts-patch": "8.56.0-0",
     "oxlint": "^0.2.16",
     "simple-git-hooks": "^2.11.1",
     "tsup": "^8.0.2",
-    "typescript": "^5.4.4",
+    "typescript": "^5.4.5",
     "vitest": "^1.4.0"
   },
   "lvr": {

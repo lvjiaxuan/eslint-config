@@ -44,15 +44,27 @@ export default lv({
 Options type, respects its original [options](https://oxc-project.github.io/docs/guide/usage/linter.html#useful-options):
 <!-- eslint-skip -->
 ```ts
-type OptionsOXLint = {
-  deny?: Categories | 'all'
+/**
+ * References https://oxc-project.github.io/docs/guide/usage/linter.html#useful-options-and-examples
+ */
+export type OXLintOptions = {
+
+  /**
+   * Deny the rule or category.
+   *
+   * @default 'correctness'
+   */
+  deny?: 'all' | Categories | Categories[]
+
+  /**
+   * Allow the rule or category.
+   */
   allow?: (keyof OXLintRules)[]
-  // plugins: TODO
 } | boolean
 ```
 
 > [!Tip]
-> 1. [Categories](https://github.com/oxc-project/oxc/blob/2beacd3f4d2707ab64ff98bf05462673e9993b71/crates/oxc_linter/src/rule.rs#L37) of OXLint.
+> 1. [Categories](https://github.com/oxc-project/oxc/blob/main/crates/oxc_linter/src/rule.rs#L35) of OXLint.
 > 2. [Rules](https://github.com/oxc-project/oxc/tree/main/crates/oxc_linter/src/rules) supported by OXLint.
 
 Modify lint scritp:
@@ -63,7 +75,7 @@ Modify lint scritp:
   "scripts": {
 -    "lint": "eslint ."
 +    "lint": "npx oxlint . && eslint .",
-+    "lint:fix": "npx oxlint . --fix && eslint . --fix"
++    "lintf": "npx oxlint . --fix && eslint . --fix"
   }
 }
 ```
