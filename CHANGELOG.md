@@ -1,6 +1,13 @@
 # Changelog
 
-Tag ranges `GentleSquidsMake...v1.10.0` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `NiceBottlesShop...v1.10.1` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v1.10.1 <sub>(2024-04-12)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.10.0...v1.10.1)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- reading undefined &nbsp;-&nbsp; by @lvjiaxuan [<samp>(66cd5)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/66cd523)
 
 ## v1.10.0 <sub>(2024-04-11)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.9.1...v1.10.0)
@@ -157,6 +164,3 @@ Tag ranges `GentleSquidsMake...v1.10.0` (10). [All GitHub Releases](https://gith
 ### &nbsp;&nbsp;&nbsp;✨ Enhancements
 
 - follow antfu's config &nbsp;-&nbsp; by @lvjiaxuan [<samp>(52e08)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/52e08a3)
-
-## GentleSquidsMake <sub>(2023-09-20)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/TenWolvesTeach...GentleSquidsMake)
