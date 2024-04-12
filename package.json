@@ -4,8 +4,8 @@
   "version": "1.10.0",
   "private": true,
   "scripts": {
-    "lint": "oxlint . && eslint .",
-    "lintf": "oxlint . --fix && eslint . --fix",
+    "lint": "oxlint . && eslint",
+    "lintf": "oxlint . --fix && eslint --fix",
     "view": "pnpm dlx @eslint/config-inspector"
   },
   "devDependencies": {

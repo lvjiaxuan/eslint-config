@@ -74,8 +74,8 @@ Modify lint scritp:
 {
   "scripts": {
 -    "lint": "eslint ."
-+    "lint": "npx oxlint . && eslint .",
-+    "lintf": "npx oxlint . --fix && eslint . --fix"
++    "lint": "npx oxlint . && eslint",
++    "lintf": "npx oxlint . --fix && eslint --fix"
   }
 }
 ```
