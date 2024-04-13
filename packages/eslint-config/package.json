@@ -3,7 +3,6 @@
   "type": "module",
   "version": "1.10.1",
   "private": false,
-  "packageManager": "pnpm@8.15.6",
   "description": "My personal ESLint config preset.",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "license": "MIT",
@@ -38,7 +37,7 @@
   },
   "peerDependencies": {
     "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*",
-    "eslint": ">=8.21.0"
+    "eslint": ">=9"
   },
   "peerDependenciesMeta": {
     "@lvjiaxuan/eslint-plugin-oxlint": {
@@ -46,7 +45,7 @@
     }
   },
   "dependencies": {
-    "@antfu/eslint-config": "^2.13.3",
+    "@antfu/eslint-config": "^2.16.1",
     "@lvjiaxuan/eslint-plugin": "workspace:*",
     "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*",
     "fs-extra": "^11.2.0"
