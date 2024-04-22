@@ -31,10 +31,10 @@
   },
   "dependencies": {
     "@antfu/eslint-config": "^2.13.3",
-    "@typescript-eslint/utils": "^7.6.0"
+    "@typescript-eslint/utils": "^7.7.0"
   },
   "devDependencies": {
-    "@typescript-eslint/rule-tester": "^7.6.0"
+    "@typescript-eslint/rule-tester": "^7.7.0"
   },
   "publishConfig": {
     "access": "public",
