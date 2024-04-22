@@ -37,7 +37,7 @@
   },
   "peerDependencies": {
     "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*",
-    "eslint": ">=8.21.0"
+    "eslint": ">=9"
   },
   "peerDependenciesMeta": {
     "@lvjiaxuan/eslint-plugin-oxlint": {
