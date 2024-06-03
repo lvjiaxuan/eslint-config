@@ -1,16 +1,20 @@
-import antfu, { ensurePackages, typescript } from '@antfu/eslint-config'
+import antfu, { typescript } from '@antfu/eslint-config'
 import type { OptionsTypeScriptWithTypes } from '@antfu/eslint-config'
 import { lvPlugin } from '@lvjiaxuan/eslint-plugin'
-import { tsconfigs, type AntfuParams, type AntfuReturnType } from '.'
+import { type AntfuParams, type AntfuReturnType, oxlint, tsconfigs } from '.'
 
 export const lv: (...args: AntfuParams) => AntfuReturnType = (...args) => {
   let pipeline = antfu(...args)
-
   pipeline = pipeline.append(
     lvPlugin(),
   )
 
   const [antfuOption] = args
+  if (antfuOption?.oxlint) {
+    pipeline = pipeline.append(
+      oxlint(antfuOption.oxlint),
+    )
+  }
 
   void pipeline.onResolved(async (configs) => {
     // The name comes from https://github.com/antfu/eslint-config/blob/main/src/configs/typescript.ts .

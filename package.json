@@ -4,16 +4,16 @@
   "version": "1.10.1",
   "private": true,
   "scripts": {
-    "lint": "oxlint . && eslint",
-    "lintf": "oxlint . --fix && eslint --fix",
-    "view": "pnpm dlx @eslint/config-inspector"
+    "lint": "eslint",
+    "lintf": "oxlint --fix && eslint --fix",
+    "inspect": "pnpm dlx @eslint/config-inspector"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.16.1",
     "@lvjiaxuan/eslint-config": "workspace:*",
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.12.8",
-    "eslint": "9.1.0",
+    "eslint": "^9.4.0",
     "oxlint": "^0.4.2",
     "simple-git-hooks": "^2.11.1",
     "tsup": "^8.0.2",
@@ -30,6 +30,6 @@
     ]
   },
   "lint-staged": {
-    "*": "pnpm run lintf"
+    "*": ""
   }
 }
