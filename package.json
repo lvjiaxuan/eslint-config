@@ -30,6 +30,6 @@
     ]
   },
   "lint-staged": {
-    "*": ""
+    "*": "pnpm run lintf"
   }
 }
