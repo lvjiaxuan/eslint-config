@@ -12,11 +12,11 @@ export function oxlint(options: OXLintOptions = true): TypedFlatConfigItem {
 
   const rulesByX = { ...rulesCategory, ...rulesScope } as typeof rulesCategory & typeof rulesScope
 
-  for (const x in rulesByX) {
-    const xRules = rulesByX[x as keyof typeof rulesByX]
+  for (const xKey in rulesByX) {
+    const xRules = rulesByX[xKey as keyof typeof rulesByX]
 
     const rulesReNamed = Object.keys(xRules).map((i) => {
-      return i.replace(/(.+)\/(.+)/g, (_match, pluginPrefix: string, ruleName: string) => {
+      return i.replace(/(.+?)\/(.+)/g, (_match, pluginPrefix: string, ruleName: string) => {
         if (pluginPrefix in defaultPluginRenaming)
           return `${defaultPluginRenaming[pluginPrefix as keyof typeof defaultPluginRenaming]}/${ruleName}`
 
@@ -25,7 +25,7 @@ export function oxlint(options: OXLintOptions = true): TypedFlatConfigItem {
     })
 
     // @ts-expect-error rename
-    rulesByX[x] = rulesReNamed.reduce((acc, item) => {
+    rulesByX[xKey] = rulesReNamed.reduce((acc, item) => {
       acc[item] = 'off'
       return acc
     }, {} as Record<string, 'off'>)
