@@ -5,19 +5,21 @@
   "private": true,
   "scripts": {
     "lint": "eslint",
-    "lintf": "oxlint --fix && eslint --fix",
+    "lintf": "eslint --fix",
+    "oxlint": "oxlint && eslint",
+    "oxlintf": "oxlint --fix && eslint --fix",
     "build": "nr -C packages/eslint-config build",
     "inspect": "pnpm dlx @eslint/config-inspector"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.16.1",
+    "@antfu/eslint-config": "^2.19.2",
     "@lvjiaxuan/eslint-config": "workspace:*",
     "@types/eslint": "^8.56.10",
-    "@types/node": "^20.12.8",
+    "@types/node": "^20.12.11",
     "eslint": "^9.4.0",
-    "oxlint": "^0.4.2",
+    "oxlint": "^0.4.3",
     "simple-git-hooks": "^2.11.1",
-    "tsup": "^8.0.2",
+    "tsup": "^8.1.0",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
   },
