@@ -1,5 +1,3 @@
 import lv from '@lvjiaxuan/eslint-config'
 
-export default lv({
-  oxlint: true,
-})
+export default lv({ oxlint: true })

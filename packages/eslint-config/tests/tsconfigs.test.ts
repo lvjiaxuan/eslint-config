@@ -1,8 +1,8 @@
 import { join } from 'node:path'
-import { detectTsconfigPaths } from './../src/tsconfigs'
+import { tsconfigs } from './../src/tsconfigs'
 
-it('detectTsconfigPaths basic', async () => {
-  const paths = await detectTsconfigPaths({
+it('detect tsconfigPaths', async () => {
+  const paths = await tsconfigs({
     cwd: join(import.meta.dirname, 'fixtures'),
   })
 
