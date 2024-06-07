@@ -36,18 +36,12 @@
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
-    "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*",
     "eslint": ">=9"
-  },
-  "peerDependenciesMeta": {
-    "@lvjiaxuan/eslint-plugin-oxlint": {
-      "optional": true
-    }
   },
   "dependencies": {
     "@antfu/eslint-config": "^2.16.1",
     "@lvjiaxuan/eslint-plugin": "workspace:*",
-    "@lvjiaxuan/eslint-plugin-oxlint": "workspace:*",
+    "eslint-plugin-oxlint": "^0.4.0",
     "fs-extra": "^11.2.0"
   },
   "devDependencies": {
