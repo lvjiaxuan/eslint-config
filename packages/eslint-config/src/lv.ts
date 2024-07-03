@@ -3,7 +3,7 @@ import type { OptionsTypeScriptWithTypes } from '@antfu/eslint-config'
 import { lvPlugin } from '@lvjiaxuan/eslint-plugin'
 import { type AntfuParams, type AntfuReturnType, oxlint, tsconfigs } from '.'
 
-export const lv: (...args: AntfuParams) => AntfuReturnType = (...args) => {
+export const lv: (...args: AntfuParams) => AntfuReturnType = async (...args) => {
   let pipeline = antfu(...args)
   pipeline = pipeline.append(
     lvPlugin(),

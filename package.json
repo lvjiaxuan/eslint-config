@@ -12,15 +12,15 @@
     "inspect": "pnpm dlx @eslint/config-inspector"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.19.2",
+    "@antfu/eslint-config": "^2.21.2",
     "@lvjiaxuan/eslint-config": "workspace:*",
     "@types/eslint": "^8.56.10",
-    "@types/node": "^20.12.11",
-    "eslint": "^9.4.0",
-    "oxlint": "^0.4.3",
+    "@types/node": "^20.14.9",
+    "eslint": "^9.6.0",
+    "oxlint": "^0.4.4",
     "simple-git-hooks": "^2.11.1",
     "tsup": "^8.1.0",
-    "typescript": "^5.4.5",
+    "typescript": "^5.5.3",
     "vitest": "^1.6.0"
   },
   "lvr": {
