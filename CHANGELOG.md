@@ -1,6 +1,18 @@
 # Changelog
 
-Tag ranges `NiceBottlesShop...v1.10.1` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `PinkEelsRelate...v1.11.0` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v1.11.0 <sub>(2024-07-05)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.10.1...v1.11.0)
+
+### &nbsp;&nbsp;&nbsp;✨ Enhancements
+
+- use `eslint-plugin-oxlint` &nbsp;-&nbsp; by @lvjiaxuan [<samp>(4dcf3)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/4dcf3e4)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- type of oxlint config &nbsp;-&nbsp; by @lvjiaxuan [<samp>(bf3bb)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/bf3bbcd)
+- type stuff &nbsp;-&nbsp; by @lvjiaxuan [<samp>(6fe27)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/6fe27b2)
 
 ## v1.10.1 <sub>(2024-04-12)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.10.0...v1.10.1)
@@ -157,10 +169,3 @@ Tag ranges `NiceBottlesShop...v1.10.1` (10). [All GitHub Releases](https://githu
 
 - deprecate `omit-arrow-curly` &nbsp;-&nbsp; by @lvjiaxuan [<samp>(e2796)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e279608)
 - update js/ts rules &nbsp;-&nbsp; by @lvjiaxuan [<samp>(a9071)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/a90711b)
-
-## NiceBottlesShop <sub>(2023-09-21)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/GentleSquidsMake...NiceBottlesShop)
-
-### &nbsp;&nbsp;&nbsp;✨ Enhancements
-
-- follow antfu's config &nbsp;-&nbsp; by @lvjiaxuan [<samp>(52e08)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/52e08a3)
