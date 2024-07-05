@@ -1,23 +1,23 @@
 import antfu, { typescript } from '@antfu/eslint-config'
 import type { OptionsTypeScriptWithTypes } from '@antfu/eslint-config'
 import { lvPlugin } from '@lvjiaxuan/eslint-plugin'
-import { type AntfuParams, type AntfuReturnType, oxlint, tsconfigs } from '.'
+import { type AntfuParams, oxlint, tsconfigs } from '.'
 
-export const lv: (...args: AntfuParams) => AntfuReturnType = async (...args) => {
+export async function lv(...args: AntfuParams) {
   let pipeline = antfu(...args)
   pipeline = pipeline.append(
     lvPlugin(),
   )
 
   const [antfuOption] = args
-  if (antfuOption?.oxlint) {
+  if (antfuOption?.oxlint === true && typeof antfuOption?.oxlint === 'object') {
     pipeline = pipeline.append(
       oxlint(antfuOption.oxlint),
     )
   }
 
   void pipeline.onResolved(async (configs) => {
-    // The name comes from https://github.com/antfu/eslint-config/blob/main/src/configs/typescript.ts .
+    // The name references to https://github.com/antfu/eslint-config/blob/3f3e3f4515cc12f3b2109b413ac48274896fcb6e/src/configs/typescript.ts#L91
     if (configs.findIndex(item => item.name === 'antfu/typescript/setup') > -1) {
       let tsOptions = antfuOption?.typescript
 
@@ -26,7 +26,7 @@ export const lv: (...args: AntfuParams) => AntfuReturnType = async (...args) => 
         if ('notDetectTsconfig' in tsOptions && tsOptions.notDetectTsconfig === true) {
           // Do nothing.
         }
-        else if ('parserOptions' in tsOptions && !tsOptions.parserOptions!.project) {
+        else if ('parserOptions' in tsOptions && tsOptions.parserOptions?.project == null) { // !tsOptions.parserOptions!.project
           // OptionsTypeScriptParserOptions
           const paths = await tsconfigs()
           if (paths.length) {
@@ -34,7 +34,7 @@ export const lv: (...args: AntfuParams) => AntfuReturnType = async (...args) => 
             isUseDetected = true
           }
         }
-        else if (!(tsOptions as OptionsTypeScriptWithTypes).tsconfigPath) {
+        else if (!('tsconfigPath' in tsOptions)) {
           const paths = await tsconfigs()
           if (paths.length) {
             (tsOptions as OptionsTypeScriptWithTypes).tsconfigPath = paths
