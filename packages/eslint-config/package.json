@@ -41,7 +41,7 @@
   "dependencies": {
     "@antfu/eslint-config": "^2.21.2",
     "@lvjiaxuan/eslint-plugin": "workspace:*",
-    "eslint-plugin-oxlint": "^0.4.0",
+    "eslint-plugin-oxlint": "^0.5.0",
     "fs-extra": "^11.2.0"
   },
   "devDependencies": {
