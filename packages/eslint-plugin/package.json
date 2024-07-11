@@ -30,11 +30,11 @@
     "eslint": ">=9"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^2.21.2",
-    "@typescript-eslint/utils": "^7.15.0"
+    "@antfu/eslint-config": "^2.24.0",
+    "@typescript-eslint/utils": "^7.18.0"
   },
   "devDependencies": {
-    "@typescript-eslint/rule-tester": "^7.15.0"
+    "@typescript-eslint/rule-tester": "^7.18.0"
   },
   "publishConfig": {
     "access": "public",

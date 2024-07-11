@@ -3,6 +3,7 @@
   "type": "module",
   "version": "1.11.0",
   "private": true,
+  "packageManager": "pnpm@9.6.0",
   "scripts": {
     "lint": "eslint",
     "lintf": "eslint --fix",
@@ -12,16 +13,16 @@
     "inspect": "pnpm dlx @eslint/config-inspector"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.21.2",
+    "@antfu/eslint-config": "^2.24.0",
     "@lvjiaxuan/eslint-config": "workspace:*",
-    "@types/eslint": "^8.56.10",
-    "@types/node": "^20.14.9",
-    "eslint": "^9.6.0",
-    "oxlint": "^0.5.2",
+    "@types/eslint": "^9.6.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.8.0",
+    "oxlint": "^0.6.1",
     "simple-git-hooks": "^2.11.1",
-    "tsup": "^8.1.0",
-    "typescript": "^5.5.3",
-    "vitest": "^1.6.0"
+    "tsup": "^8.2.3",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.4"
   },
   "lvr": {
     "all": true,
