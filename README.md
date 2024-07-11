@@ -41,27 +41,7 @@ export default lv({
 })
 ```
 
-Options type, respects its original [options](https://oxc-project.github.io/docs/guide/usage/linter.html#useful-options):
-<!-- eslint-skip -->
-```ts
-/**
- * References https://oxc-project.github.io/docs/guide/usage/linter.html#useful-options-and-examples
- */
-export type OXLintOptions = {
-
-  /**
-   * Deny the rule or category.
-   *
-   * @default 'correctness'
-   */
-  deny?: 'all' | Categories | Categories[]
-
-  /**
-   * Allow the rule or category.
-   */
-  allow?: (keyof OXLintRules)[]
-} | boolean
-```
+Check the type `OXLintOptions` detail on [here](https://github.com/lvjiaxuan/eslint-config/blob/ae297bee80f81b6ecc2a755bd5ec87f2b52f6e2b/packages/eslint-config/src/types.ts#L13).
 
 > [!Tip]
 > 1. [Categories](https://github.com/oxc-project/oxc/blob/main/crates/oxc_linter/src/rule.rs#L35) of OXLint.
