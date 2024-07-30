@@ -33,7 +33,7 @@ export default lv({
 })
 ```
 
-## With [OXLint](https://github.com/oxc-project/oxc#-linter)
+##  With [OXLint](https://github.com/oxc-project/oxc#-linter)
 
 A number of rules will be taken care of by OXLint to reduce ESLint's burden.
 
@@ -63,8 +63,8 @@ Modify lint scritp:
 {
   "scripts": {
 -    "lint": "eslint ."
-+    "lint": "npx oxlint . && eslint",
-+    "lintf": "npx oxlint . --fix && eslint --fix"
++    "lint": "npx oxlint && eslint",
++    "lintf": "npx oxlint --fix && eslint --fix"
   }
 }
 ```
