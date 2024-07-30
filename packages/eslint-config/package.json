@@ -39,7 +39,7 @@
     "eslint": ">=9"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^2.21.2",
+    "@antfu/eslint-config": "^2.24.0",
     "@lvjiaxuan/eslint-plugin": "workspace:*",
     "eslint-plugin-oxlint": "^0.5.0",
     "fs-extra": "^11.2.0"
