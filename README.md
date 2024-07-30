@@ -1,18 +1,26 @@
 [![npm](https://img.shields.io/npm/v/@lvjiaxuan/eslint-config)](https://www.npmjs.com/package/@lvjiaxuan/eslint-config)
 [![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config)
 
-All rules inherit from [@antfu/eslint-config](https://github.com/antfu/eslint-config).
+All rules inherit from [@antfu/eslint-config](https://github.com/antfu/eslint-config). The same as the usage.
 
 # Features
-1. Add my [@lvjiaxuan/eslint-plugin](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin/src/index.ts).
-2. Auto-detect `tsconfig.json` and its references if TypeScript is enabled, which means enabling type-aware rules.
-3. Add my [@lvjiaxuan/eslint-plugin-oxlint](https://github.com/lvjiaxuan/eslint-config/tree/main/packages/eslint-plugin-oxlint/src/index.ts).
+1. Add my [@lvjiaxuan/eslint-plugin](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin/src/index.ts) with some rules.
 
-# Usage
+2. Add my [@lvjiaxuan/eslint-plugin-oxlint](https://github.com/lvjiaxuan/eslint-config/tree/main/packages/eslint-plugin-oxlint/src/index.ts) for reducing ESLint's burden.
 
-Follow [antfu's](https://github.com/antfu/eslint-config).
+3. Auto-list referenced projects in `tsconfig.json` if "TypeScript" is enabled.
 
-## Disable `tsconfig.json` auto-detected
+## Why auto-list referenced projects?
+
+Because typescript-eslint supported project references as far as I know.
+
+The issue https://github.com/typescript-eslint/typescript-eslint/issues/2094 had occurred to me before.
+
+I saw a workaround that is to list all references explicitly in `parserOptions.project`, while the [typescript-eslint docs](https://typescript-eslint.io/packages/parser#project) is saying the same.
+
+Additionally, a flag `EXPERIMENTAL_useSourceOfProjectReferenceRedirect` introduced in https://github.com/typescript-eslint/typescript-eslint/pull/2669 also works.
+
+## Disable referenced projects auto-list
 
 ```js
 // eslint.config.js
@@ -20,7 +28,7 @@ import lv from '@lvjiaxuan/eslint-config'
 
 export default lv({
   typescript: {
-    notDetectTsconfig: true
+    noReferencedProjects: true
   }
 })
 ```
@@ -29,8 +37,9 @@ export default lv({
 
 A number of rules will be taken care of by OXLint to reduce ESLint's burden.
 
-> [!NOTE]
-> The rules settings of antfu's will be overwritten.
+> [!WARNING]
+> 1. The rules settings of antfu's will be overwritten.
+> 2. Maybe some miss-handled rules will conflict with ESLint.
 
 ```js
 // eslint.config.js
@@ -41,7 +50,7 @@ export default lv({
 })
 ```
 
-Check the type `OXLintOptions` detail on [here](https://github.com/lvjiaxuan/eslint-config/blob/ae297bee80f81b6ecc2a755bd5ec87f2b52f6e2b/packages/eslint-config/src/types.ts#L13).
+> [Check](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-config/src/types.ts) the `OXLintOptions` types.
 
 > [!Tip]
 > 1. [Categories](https://github.com/oxc-project/oxc/blob/main/crates/oxc_linter/src/rule.rs#L35) of OXLint.
