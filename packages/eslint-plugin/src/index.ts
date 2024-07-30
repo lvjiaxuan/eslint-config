@@ -17,7 +17,7 @@ const pluginName = '@lvjiaxuan'
 export function lvPlugin(): TypedFlatConfigItem {
   return {
     files: [GLOB_SRC],
-    name: 'lvjiaxuan/plugin',
+    name: 'lvjiaxuan/plugins/rules',
     plugins: {
       [pluginName]: { rules: rulesSetup },
     },

@@ -1,47 +1,56 @@
 import * as rulesCategory from 'eslint-plugin-oxlint/rules-by-category'
 import * as rulesScope from 'eslint-plugin-oxlint/rules-by-scope'
-import type { TypedFlatConfigItem } from '@antfu/eslint-config'
 import { defaultPluginRenaming } from '@antfu/eslint-config'
-import type { OXLintOptions, RuleType } from '.'
+import type { Rules, TypedFlatConfigItem } from '@antfu/eslint-config'
+import type { AntfuReturnType, OXLintConfigsName, OXLintOptions } from '.'
 
-export function oxlint(options: OXLintOptions = true): TypedFlatConfigItem {
+export function oxlint(options: OXLintOptions | undefined, pipeline?: AntfuReturnType): TypedFlatConfigItem {
+  if (!options)
+    return {}
+
   if (typeof options === 'boolean')
     options = { deny: options ? ['recommended'] : [] }
   else if (!Array.isArray(options.deny))
     options = { deny: [options.deny] }
 
-  const rulesByX = { ...rulesCategory, ...rulesScope } as typeof rulesCategory & typeof rulesScope
+  type rulesByXType<R extends (typeof rulesCategory & typeof rulesScope) = (typeof rulesCategory & typeof rulesScope)> = { [K in keyof R]: Partial<Rules> }
+  const rulesByX = { ...rulesCategory, ...rulesScope } as rulesByXType
+
+  // @ts-expect-error Property '_renames' is private and only accessible within class 'FlatConfigComposer<T, ConfigNames>'.ts(2341)
+  const renames = pipeline._renames ?? defaultPluginRenaming as Record<string, string>
 
   for (const xKey in rulesByX) {
-    const xRules = rulesByX[xKey as keyof typeof rulesByX]
+    const typeXKey = xKey as keyof typeof rulesByX
+    const xRules = rulesByX[typeXKey]
 
-    const rulesReNamed = Object.keys(xRules).map((i) => {
+    const rulesRenamed = Object.keys(xRules).map((i) => {
       return i.replace(/(.+?)\/(.+)/g, (_match, pluginPrefix: string, ruleName: string) => {
-        if (pluginPrefix in defaultPluginRenaming)
-          return `${defaultPluginRenaming[pluginPrefix as keyof typeof defaultPluginRenaming]}/${ruleName}`
+        if (pluginPrefix in renames)
+          return `${renames[pluginPrefix]}/${ruleName}`
 
         return _match
       })
-    })
+    }) as (keyof Rules)[]
 
-    // @ts-expect-error rename
-    rulesByX[xKey] = rulesReNamed.reduce((acc, item) => {
+    rulesByX[typeXKey] = rulesRenamed.reduce((acc, item) => {
       acc[item] = 'off'
       return acc
-    }, {} as Record<string, 'off'>)
+    }, {} as Record<keyof Rules, 'off'>)
   }
 
   const denyRules = options.deny.includes('all')
-    ? rulesByX
-    : (options.deny as RuleType[]).reduce((acc, item) => {
+    ? Object.values(rulesByX).reduce((acc, item) => {
+      acc = { ...acc, ...item }
+      return acc
+    }, {} as Partial<Rules>)
+    : (options.deny as OXLintConfigsName[]).reduce((acc, item) => {
         const typeType = (item === 'recommended' ? 'correctnessRules' : `${item}Rules`) as keyof typeof rulesByX
         acc = { ...acc, ...rulesByX[typeType] }
         return acc
-      }, {} as typeof rulesByX)
+      }, {} as Partial<Rules>)
 
   return {
-    name: 'oxlint/rules',
-    // @ts-expect-error non-antfu's rules.
+    name: 'oxlint/disables/rules',
     rules: denyRules,
   }
 }

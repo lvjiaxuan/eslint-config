@@ -5,8 +5,8 @@
     "types": ["vitest/globals"]
   },
   "references": [{ "path": "./tsconfig.app.json" }],
-  "include": ["**/tests/**/*.test.ts"],
+  "include": ["**/test/**/*.test.ts", "test/tsconfigs.test.ts"],
   "exclude": [
-    "**/tests/fixtures/**"
+    "**/test/fixtures/**"
   ]
 }
