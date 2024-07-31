@@ -10,7 +10,7 @@
     "oxlint": "oxlint && eslint",
     "oxlintf": "oxlint --fix && eslint --fix",
     "build": "nr -C packages/eslint-config build",
-    "inspect": "pnpm dlx @eslint/config-inspector"
+    "dev": "nlx @eslint/config-inspector"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.24.0",
