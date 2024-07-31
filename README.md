@@ -29,10 +29,6 @@ export default lv({
 
 > [Check](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-config/src/types.ts) the `OXLintOptions` types.
 
-> [!Tip]
-> 1. [Categories](https://github.com/oxc-project/oxc/blob/main/crates/oxc_linter/src/rule.rs#L35) of OXLint.
-> 2. [Rules](https://github.com/oxc-project/oxc/tree/main/crates/oxc_linter/src/rules) supported by OXLint.
-
 Modify lint scritp:
 <!-- eslint-skip -->
 ```diff

@@ -2,17 +2,15 @@ import type { OptionsConfig, TypedFlatConfigItem, antfu } from '@antfu/eslint-co
 import type * as rulesCategory from 'eslint-plugin-oxlint/rules-by-category'
 import type * as rulesScope from 'eslint-plugin-oxlint/rules-by-scope'
 
-export type RuleType = 'recommended' | 'all' | ((keyof typeof rulesCategory | keyof typeof rulesScope) extends `${infer F extends string}Rules` ? F : never)
+export type OXLintConfigsName = 'recommended' | 'all' | ((keyof typeof rulesCategory | keyof typeof rulesScope) extends `${infer F extends string}Rules` ? F : never)
 
 /**
  * Reference to https://github.com/oxc-project/eslint-plugin-oxlint#all-configs
- * Set true equal to `{ deny: 'recommended' }`.
+ * Set `true` equal to `{ deny: 'recommended' }`.
  *
  * @default false
  */
-export type OXLintOptions = boolean | {
-  deny: RuleType | RuleType[]
-}
+export type OXLintOptions = boolean | { deny: OXLintConfigsName | OXLintConfigsName[] }
 
 export type Antfu = typeof antfu
 
