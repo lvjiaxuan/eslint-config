@@ -8,32 +8,9 @@ All rules inherit from [@antfu/eslint-config](https://github.com/antfu/eslint-co
 
 2. Add my [@lvjiaxuan/eslint-plugin-oxlint](https://github.com/lvjiaxuan/eslint-config/tree/main/packages/eslint-plugin-oxlint/src/index.ts) for reducing ESLint's burden.
 
-3. Auto-list referenced projects in `tsconfig.json` if "TypeScript" is enabled.
+3. ~~Auto-list referenced projects in `tsconfig.json` if "TypeScript" is enabled. (Deprecated since the feature of [v8-beta](https://typescript-eslint.io/blog/announcing-typescript-eslint-v8-beta/#project-service))~~
 
-## Why auto-list referenced projects?
-
-Because typescript-eslint supported project references as far as I know.
-
-The issue https://github.com/typescript-eslint/typescript-eslint/issues/2094 had occurred to me before.
-
-I saw a workaround that is to list all references explicitly in `parserOptions.project`, while the [typescript-eslint docs](https://typescript-eslint.io/packages/parser#project) is saying the same.
-
-Additionally, a flag `EXPERIMENTAL_useSourceOfProjectReferenceRedirect` introduced in https://github.com/typescript-eslint/typescript-eslint/pull/2669 also works.
-
-## Disable referenced projects auto-list
-
-```js
-// eslint.config.js
-import lv from '@lvjiaxuan/eslint-config'
-
-export default lv({
-  typescript: {
-    noReferencedProjects: true
-  }
-})
-```
-
-##  With [OXLint](https://github.com/oxc-project/oxc#-linter)
+## [OXLint](https://github.com/oxc-project/oxc#-linter)
 
 A number of rules will be taken care of by OXLint to reduce ESLint's burden.
 
