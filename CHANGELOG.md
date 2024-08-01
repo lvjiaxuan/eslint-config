@@ -1,6 +1,18 @@
 # Changelog
 
-Tag ranges `PinkEelsRelate...v1.11.0` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v1.7.0...v1.12.0` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v1.12.0 <sub>(2024-07-31)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.11.0...v1.12.0)
+
+### &nbsp;&nbsp;&nbsp;✨ Enhancements
+
+- remove projects auto-list &nbsp;-&nbsp; by @lvjiaxuan [<samp>(510fc)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/510fc17)
+- get renames from pipeline &nbsp;-&nbsp; by @lvjiaxuan [<samp>(e28fd)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e28fd38)
+
+### &nbsp;&nbsp;&nbsp;📝 Documentation
+
+- update &nbsp;-&nbsp; by @lvjiaxuan [<samp>(d94f3)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/d94f32b)
 
 ## v1.11.0 <sub>(2024-07-05)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.10.1...v1.11.0)
@@ -161,11 +173,3 @@ Tag ranges `PinkEelsRelate...v1.11.0` (10). [All GitHub Releases](https://github
 - **eslint-plugin**:
   - rules more docs &nbsp;-&nbsp; by @lvjiaxuan [<samp>(d3f71)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/d3f7163)
   - up title &nbsp;-&nbsp; by @lvjiaxuan [<samp>(5f7a6)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/5f7a680)
-
-## PinkEelsRelate <sub>(2023-09-22)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/NiceBottlesShop...PinkEelsRelate)
-
-### &nbsp;&nbsp;&nbsp;✨ Enhancements
-
-- deprecate `omit-arrow-curly` &nbsp;-&nbsp; by @lvjiaxuan [<samp>(e2796)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e279608)
-- update js/ts rules &nbsp;-&nbsp; by @lvjiaxuan [<samp>(a9071)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/a90711b)
