@@ -1,7 +1,7 @@
 {
   "name": "@lvjiaxuan/eslint-config",
   "type": "module",
-  "version": "1.12.0",
+  "version": "1.12.1",
   "private": false,
   "description": "My personal ESLint config preset.",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
