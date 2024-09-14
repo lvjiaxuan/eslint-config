@@ -1,6 +1,7 @@
 {
   "name": "@lvjiaxuan/eslint-config-monorepo",
   "type": "module",
+  "version": "1.12.1",
   "private": true,
   "packageManager": "pnpm@9.10.0",
   "scripts": {
