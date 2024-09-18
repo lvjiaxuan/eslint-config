@@ -1,6 +1,7 @@
+import type { OverrideAntfuParams } from '.'
 import antfu from '@antfu/eslint-config'
 import { lvPlugin } from '@lvjiaxuan/eslint-plugin'
-import { type OverrideAntfuParams, oxlint, respectJsRuleOptions } from '.'
+import { oxlint, respectJsRuleOptions } from '.'
 
 export default lv
 

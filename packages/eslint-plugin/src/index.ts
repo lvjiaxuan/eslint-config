@@ -1,5 +1,5 @@
-import type { TSESLint } from '@typescript-eslint/utils'
 import type { TypedFlatConfigItem } from '@antfu/eslint-config'
+import type { TSESLint } from '@typescript-eslint/utils'
 import { GLOB_SRC } from '@antfu/eslint-config'
 import preferGenericRestExtends from './prefer-generic-rest-extends'
 
