@@ -39,9 +39,9 @@
     "eslint": ">=9.5.0"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^3.6.0",
+    "@antfu/eslint-config": "catalog:",
     "@lvjiaxuan/eslint-plugin": "workspace:*",
-    "eslint-plugin-oxlint": "^0.9.5",
+    "eslint-plugin-oxlint": "^0.16.4",
     "fs-extra": "^11.2.0"
   },
   "devDependencies": {

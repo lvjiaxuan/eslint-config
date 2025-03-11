@@ -1,8 +1,8 @@
-import * as rulesCategory from 'eslint-plugin-oxlint/rules-by-category'
-import * as rulesScope from 'eslint-plugin-oxlint/rules-by-scope'
-import { defaultPluginRenaming } from '@antfu/eslint-config'
 import type { Rules, TypedFlatConfigItem } from '@antfu/eslint-config'
 import type { AntfuReturnType, OXLintConfigsName, OXLintOptions } from '.'
+import { defaultPluginRenaming } from '@antfu/eslint-config'
+import * as rulesCategory from 'eslint-plugin-oxlint/rules-by-category'
+import * as rulesScope from 'eslint-plugin-oxlint/rules-by-scope'
 
 export function oxlint(options: OXLintOptions | undefined, pipeline?: AntfuReturnType): TypedFlatConfigItem {
   if (!options)
@@ -40,9 +40,9 @@ export function oxlint(options: OXLintOptions | undefined, pipeline?: AntfuRetur
 
   const denyRules = options.deny.includes('all')
     ? Object.values(rulesByX).reduce((acc, item) => {
-      acc = { ...acc, ...item }
-      return acc
-    }, {} as Partial<Rules>)
+        acc = { ...acc, ...item }
+        return acc
+      }, {} as Partial<Rules>)
     : (options.deny as OXLintConfigsName[]).reduce((acc, item) => {
         const typeType = (item === 'recommended' ? 'correctnessRules' : `${item}Rules`) as keyof typeof rulesByX
         acc = { ...acc, ...rulesByX[typeType] }

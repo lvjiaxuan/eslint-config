@@ -16,4 +16,4 @@ Maybe `BarArr` is better to extends a constraint array type defaults to `unknown
 type Foo<BarArr extends unknown[] = []> = [ ...BarArr ] // ok.
 ```
 
-> Edit the `unknown` type.
+> And edit the `unknown` type.
