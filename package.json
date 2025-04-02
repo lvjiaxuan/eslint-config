@@ -9,7 +9,7 @@
     "lintf": "eslint --fix",
     "oxlint": "oxlint && eslint",
     "oxlintf": "oxlint --fix && eslint --fix",
-    "dev": "nlx @eslint/config-inspector@latest --config eslint.config.ts"
+    "dev": "nlx @eslint/config-inspector"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
