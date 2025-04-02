@@ -1,35 +1,37 @@
 [![npm](https://img.shields.io/npm/v/@lvjiaxuan/eslint-config)](https://www.npmjs.com/package/@lvjiaxuan/eslint-config)
 [![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config)
 
-All rules inherit from [@antfu/eslint-config](https://github.com/antfu/eslint-config). The same as the usage.
+All rules are inherited from [@antfu/eslint-config](https://github.com/antfu/eslint-config). The usage is the same.
 
 # Features
-1. Add my [@lvjiaxuan/eslint-plugin](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin/src/index.ts) with some rules.
+1. Includes my [@lvjiaxuan/eslint-plugin](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin/src/index.ts) with some rules.
 
-2. Add [OXLint](https://github.com/oxc-project/oxc#-linter) as an config to reduce ESLint's burden.
+2. Integrates [OXLint](https://github.com/oxc-project/oxc#-linter) as a config option to reduce ESLint's burden.
 
-3. ~~Auto-list referenced projects in `tsconfig.json` if "TypeScript" is enabled. (Deprecated since the feature of [v8-beta](https://typescript-eslint.io/blog/announcing-typescript-eslint-v8-beta/#project-service))~~
+3. ~~**Deprecated**: Auto-list referenced projects in `tsconfig.json` if "TypeScript" is enabled. (Deprecated since the feature of [v8-beta](https://typescript-eslint.io/blog/announcing-typescript-eslint-v8-beta/#project-service))~~
 
 ## [OXLint](https://github.com/oxc-project/oxc#-linter)
 
-A number of rules will be taken care of by OXLint to reduce ESLint's burden.
+The OXLint will take care of several rules to reduce ESLint's burden.
 
 > [!WARNING]
-> 1. The rules settings of antfu's will be overwritten.
-> 2. Maybe some miss-handled rules will conflict with ESLint.
+> 1. Serveral rules settings of antfu's will be overwritten.
+> 2. Maybe some mishandled rules will conflict with ESLint.
 
 ```js
 // eslint.config.js
 import lv from '@lvjiaxuan/eslint-config'
 
 export default lv({
-  oxlint: true // equals to `{ deny: 'correctness' }`.
+  // equals to `{ deny: 'correctness' }`.
+  // Reference to https://oxc.rs/docs/guide/usage/linter/rules.html#correctness-173 .
+  oxlint: true
 })
 ```
 
 > [Check](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-config/src/types.ts) the `OXLintOptions` types.
 
-Modify lint scritp:
+Modify lint scripts:
 <!-- eslint-skip -->
 ```diff
 // package.json
