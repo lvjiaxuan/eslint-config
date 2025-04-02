@@ -6,7 +6,7 @@ All rules are inherited from [@antfu/eslint-config](https://github.com/antfu/esl
 # Features
 1. Includes my [@lvjiaxuan/eslint-plugin](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin/src/index.ts) with some rules.
 
-2. Integrates [OXLint](https://github.com/oxc-project/oxc#-linter) as a config option to reduce ESLint's burden.
+2. Integrates [OXLint](https://github.com/oxc-project/oxc#-linter) as a config options to reduce ESLint's burden.
 
 3. ~~**Deprecated**: Auto-list referenced projects in `tsconfig.json` if "TypeScript" is enabled. (Deprecated since the feature of [v8-beta](https://typescript-eslint.io/blog/announcing-typescript-eslint-v8-beta/#project-service))~~
 
