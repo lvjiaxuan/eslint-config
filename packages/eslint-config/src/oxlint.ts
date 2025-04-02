@@ -10,19 +10,20 @@ export function oxlint(options: OXLintOptions | undefined, pipeline?: AntfuRetur
 
   if (options === true)
     options = { deny: options ? ['recommended'] : [] }
-  else
-    options = { deny: Array.isArray(options.deny) ? options.deny : options.deny }
+  else if (typeof options.deny === 'string')
+    options = { deny: [options.deny] }
 
-  type rulesByXType<R extends (typeof rulesCategory & typeof rulesScope) = (typeof rulesCategory & typeof rulesScope)> = { [K in keyof R]: Partial<Rules> }
+  type rulesByXType = { [K in keyof (typeof rulesCategory & typeof rulesScope) ]: Partial<Rules> }
   const rulesByX = { ...rulesCategory, ...rulesScope } as rulesByXType
 
   // @ts-expect-error Property '_renames' is private and only accessible within class 'FlatConfigComposer<T, ConfigNames>'.ts(2341)
   const renames = pipeline._renames ?? defaultPluginRenaming as Record<string, string>
 
-  for (const xKey in rulesByX) {
-    const typeXKey = xKey as keyof typeof rulesByX
-    const xRules = rulesByX[typeXKey]
+  for (const key in rulesByX) {
+    const typeKey = key as keyof typeof rulesByX
+    const xRules = rulesByX[typeKey]
 
+    // Respect antfu's plugin renames.
     const rulesRenamed = Object.keys(xRules).map((i) => {
       return i.replace(/(.+?)\/(.+)/g, (_match, pluginPrefix: string, ruleName: string) => {
         if (pluginPrefix in renames)
@@ -32,7 +33,7 @@ export function oxlint(options: OXLintOptions | undefined, pipeline?: AntfuRetur
       })
     }) as (keyof Rules)[]
 
-    rulesByX[typeXKey] = rulesRenamed.reduce((acc, item) => {
+    rulesByX[typeKey] = rulesRenamed.reduce((acc, item) => {
       acc[item] = 'off'
       return acc
     }, {} as Record<keyof Rules, 'off'>)
