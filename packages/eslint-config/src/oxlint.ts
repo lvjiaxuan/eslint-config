@@ -8,10 +8,10 @@ export function oxlint(options: OXLintOptions | undefined, pipeline?: AntfuRetur
   if (!options)
     return {}
 
-  if (typeof options === 'boolean')
+  if (options === true)
     options = { deny: options ? ['recommended'] : [] }
-  else if (!Array.isArray(options.deny))
-    options = { deny: [options.deny] }
+  else
+    options = { deny: Array.isArray(options.deny) ? options.deny : options.deny }
 
   type rulesByXType<R extends (typeof rulesCategory & typeof rulesScope) = (typeof rulesCategory & typeof rulesScope)> = { [K in keyof R]: Partial<Rules> }
   const rulesByX = { ...rulesCategory, ...rulesScope } as rulesByXType
