@@ -1,7 +1,7 @@
 [![npm](https://img.shields.io/npm/v/@lvjiaxuan/eslint-config)](https://www.npmjs.com/package/@lvjiaxuan/eslint-config)
 [![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config)
 
-All rules are inherited from [@antfu/eslint-config](https://github.com/antfu/eslint-config). The usage is the same.
+Extends from [@antfu/eslint-config](https://github.com/antfu/eslint-config). The usage is the same.
 
 # Features
 1. Includes my [@lvjiaxuan/eslint-plugin](https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin/src/index.ts) with some rules.
@@ -15,7 +15,7 @@ All rules are inherited from [@antfu/eslint-config](https://github.com/antfu/esl
 The OXLint will take care of several rules to reduce ESLint's burden.
 
 > [!WARNING]
-> 1. Serveral rules settings of antfu's will be overwritten.
+> 1. Several rules settings of antfu's will be overwritten.
 > 2. Maybe some mishandled rules will conflict with ESLint.
 
 ```js

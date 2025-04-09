@@ -11,9 +11,23 @@
     "oxlintf": "oxlint --fix && eslint --fix",
     "dev": "nlx @eslint/config-inspector"
   },
-  "devDependencies": {
+  "peerDependencies": {
     "@antfu/eslint-config": "catalog:",
-    "@lvjiaxuan/eslint-config": "workspace:*",
+    "@lvjiaxuan/eslint-plugin": "workspace:*",
+    "eslint-plugin-oxlint": "catalog:"
+  },
+  "peerDependenciesMeta": {
+    "@antfu/eslint-config": {
+      "optional": true
+    },
+    "@lvjiaxuan/eslint-plugin": {
+      "optional": true
+    },
+    "eslint-plugin-oxlint": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.8.7",
     "eslint": "9.22.0",
