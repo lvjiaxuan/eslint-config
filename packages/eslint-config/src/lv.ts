@@ -7,13 +7,10 @@ export default lv
 
 export async function lv(...args: OverrideAntfuParams) {
   const [afOptionsConfig] = args
-  let pipeline = antfu(...args)
-
-  pipeline = pipeline.append(lvPlugin())
-
-  pipeline = pipeline.append(oxlint(afOptionsConfig?.oxlint, pipeline))
-
-  pipeline.onResolved(respectJsRuleOptions)
+  const pipeline = antfu(...args)
 
   return pipeline
+    .append(lvPlugin())
+    .append(oxlint(afOptionsConfig?.oxlint, pipeline))
+    .append(respectJsRuleOptions(await pipeline.toConfigs()))
 }

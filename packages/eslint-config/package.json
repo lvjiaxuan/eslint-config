@@ -29,7 +29,6 @@
   ],
   "scripts": {
     "dev": "pnpm run build --watch",
-    "view": "pnpm run dev & pnpm dlx @eslint/config-inspector",
     "build": "tsup src/index.ts --format=esm,cjs --dts",
     "test": "vitest --globals",
     "prepare": "pnpm run build",
@@ -41,7 +40,7 @@
   "dependencies": {
     "@antfu/eslint-config": "catalog:",
     "@lvjiaxuan/eslint-plugin": "workspace:*",
-    "eslint-plugin-oxlint": "^0.16.4",
+    "eslint-plugin-oxlint": "catalog:",
     "fs-extra": "^11.2.0"
   },
   "devDependencies": {

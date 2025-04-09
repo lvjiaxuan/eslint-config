@@ -3,3 +3,4 @@ packages:
 
 catalog:
   '@antfu/eslint-config': ^4.11.0
+  eslint-plugin-oxlint: ^0.16.4
