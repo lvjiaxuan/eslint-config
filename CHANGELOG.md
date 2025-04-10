@@ -1,6 +1,23 @@
 # Changelog
 
-Tag ranges `v1.8.0...v1.12.1` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+Tag ranges `v1.8.1...v1.13.0` (10). [All GitHub Releases](https://github.com/lvjiaxuan/eslint-config/releases).
+
+## v1.13.0 <sub>(2025-04-09)</sub>
+[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.12.1...v1.13.0)
+
+### &nbsp;&nbsp;&nbsp;✨ Enhancements
+
+- lvjiaxuan/respectjs4ts/rules &nbsp;-&nbsp; by @lvjiaxuan [<samp>(9ee33)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/9ee336f)
+
+### &nbsp;&nbsp;&nbsp;🐛 Fixes
+
+- oxlint deny options &nbsp;-&nbsp; by @lvjiaxuan [<samp>(1d96d)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/1d96d4d)
+
+### &nbsp;&nbsp;&nbsp;📝 Documentation
+
+- update &nbsp;-&nbsp; by @lvjiaxuan [<samp>(60823)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/6082381)
+- update &nbsp;-&nbsp; by @lvjiaxuan [<samp>(caf73)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/caf73ee)
+- update &nbsp;-&nbsp; by @lvjiaxuan [<samp>(e832a)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/e832a91)
 
 ## v1.12.1 <sub>(2024-09-14)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.12.0...v1.12.1)
@@ -85,12 +102,3 @@ Tag ranges `v1.8.0...v1.12.1` (10). [All GitHub Releases](https://github.com/lvj
 
 ## v1.8.1 <sub>(2024-02-01)</sub>
 [Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.8.0...v1.8.1)
-
-## v1.8.0 <sub>(2024-02-01)</sub>
-[Compare changes](https://github.com/lvjiaxuan/eslint-config/compare/v1.7.0...v1.8.0)
-
-### &nbsp;&nbsp;&nbsp;✨ Enhancements
-
-- add OXLint &nbsp;-&nbsp; by @lvjiaxuan in [#11](https://github.com/lvjiaxuan/eslint-config/issues/11) [<samp>(92181)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/921816e)
-- **lvPlugin**: split legacy and flat configs export. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(c8791)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/c8791b9)
-- **oxlin-plugin**: respect legacy config. &nbsp;-&nbsp; by @lvjiaxuan [<samp>(4e3ec)</samp>](https://github.com/lvjiaxuan/eslint-config/commit/4e3ec4e)
