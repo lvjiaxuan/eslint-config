@@ -2,5 +2,5 @@ packages:
   - packages/*
 
 catalog:
-  '@antfu/eslint-config': ^4.11.0
-  eslint-plugin-oxlint: ^0.16.4
+  '@antfu/eslint-config': ^6.2.0
+  eslint-plugin-oxlint: ^1.28.0
