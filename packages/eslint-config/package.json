@@ -41,7 +41,7 @@
     "@antfu/eslint-config": "catalog:",
     "@lvjiaxuan/eslint-plugin": "workspace:*",
     "eslint-plugin-oxlint": "catalog:",
-    "fs-extra": "^11.2.0"
+    "fs-extra": "^11.3.2"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4"
