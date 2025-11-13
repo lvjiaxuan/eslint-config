@@ -15,39 +15,33 @@
     "oxlint"
   ],
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "dev": "pnpm run build --watch",
-    "build": "tsup src/index.ts --format=esm,cjs --dts",
-    "test": "vitest --globals",
-    "prepare": "pnpm run build",
-    "prepublishOnly": "pnpm run build"
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "test": "vitest"
   },
   "peerDependencies": {
-    "eslint": ">=9.5.0"
+    "eslint": "catalog:",
+    "eslint-plugin-oxlint": "catalog:",
+    "oxlint": "catalog:"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-oxlint": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@antfu/eslint-config": "catalog:",
-    "@lvjiaxuan/eslint-plugin": "workspace:*",
-    "eslint-plugin-oxlint": "catalog:",
-    "fs-extra": "^11.3.2"
+    "@lvjiaxuan/eslint-plugin": "workspace:*"
   },
   "devDependencies": {
-    "@types/fs-extra": "^11.0.4"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "eslint-plugin-oxlint": "catalog:"
   }
 }

@@ -85,4 +85,11 @@ _fixtures
 
 *.local
 
-packages/eslint-plugin-oxlint/category-rules.json
+
+# Agent skills from npm packages (managed by skills-npm)
+**/skills/npm-*
+
+# Ignore superpowers-zh md files which should be installed globally.
+.qoder/**
+
+packages/eslint-plugin/src/typegen.d.ts

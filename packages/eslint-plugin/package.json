@@ -2,42 +2,36 @@
   "name": "@lvjiaxuan/eslint-plugin",
   "type": "module",
   "version": "1.13.0",
-  "description": "",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "keywords": [
     "eslint-plugin"
   ],
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
   },
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "test": "vitest --globals",
-    "build": "tsup src/index.ts --format=esm,cjs --dts",
-    "prepare": "pnpm run build",
-    "prepublishOnly": "pnpm run build"
+    "dev": "tsdown --watch",
+    "build": "tsdown && nr typegen",
+    "test": "vitest",
+    "typegen": "npx tsx@latest scripts/typegen.ts",
+    "prepare": "nr typegen",
+    "prepublishOnly": "nr build"
   },
   "peerDependencies": {
-    "eslint": ">=9.5.0"
+    "eslint": "catalog:",
+    "typescript": "catalog:"
   },
   "dependencies": {
     "@antfu/eslint-config": "catalog:",
-    "@typescript-eslint/utils": "^8.46.4"
+    "@typescript-eslint/utils": "catalog:"
   },
   "devDependencies": {
-    "@typescript-eslint/rule-tester": "^8.46.4"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "eslint-typegen": "catalog:",
+    "eslint-vitest-rule-tester": "catalog:"
   }
 }

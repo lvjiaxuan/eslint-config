@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`prefer-generic-rest-extends > invalid > Invalid #0: const foo = 123
+
+type ArrayType<T = []> = [...T] 1`] = `
+"const foo = 123
+
+type ArrayType<T extends unknown[] = []> = [...T]"
+`;
+
+exports[`prefer-generic-rest-extends > invalid > Invalid #1: const foo = 123
+
+type ArrayType<TestArr = []> = [...TestArr] 1`] = `
+"const foo = 123
+
+type ArrayType<TestArr extends unknown[] = []> = [...TestArr]"
+`;
+
+exports[`prefer-generic-rest-extends > invalid > Invalid #2: const foo = 123
+
+function fun<T = []>() {
+  // ...
+} 1`] = `
+"const foo = 123
+
+function fun<T extends unknown[] = []>() {
+  // ...
+}"
+`;

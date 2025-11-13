@@ -1,24 +1,18 @@
 {
   "compilerOptions": {
-    // Reference to https://bun.sh/docs/typescript#suggested-compileroptions
     "target": "ESNext",
-    "jsx": "react-jsx",
     "lib": ["ESNext"],
     "moduleDetection": "force",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "allowJs": true,
+    "module": "preserve",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "types": ["node"],
     "strict": true,
-    "noFallthroughCasesInSwitch": true,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
     "noEmit": true,
+    "esModuleInterop": true,
+    "isolatedDeclarations": false,
+    "isolatedModules": true,
     "verbatimModuleSyntax": true,
     "skipLibCheck": true
-  },
-  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.test.json" }],
-  "files": []
+  }
 }

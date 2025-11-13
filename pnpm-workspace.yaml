@@ -1,6 +1,41 @@
+# 允许在安装依赖时运行指定包的构建脚本（postinstall 等）
+allowBuilds:
+  esbuild: true
+  simple-git-hooks: true
+
+# catalog 模式：优先使用 workspace catalog 中定义的依赖版本
+catalogMode: prefer
+
+# 忽略工作区根目录的校验，允许在根目录安装依赖
+ignoreWorkspaceRootCheck: true
+# 将嵌套依赖扁平化提升到根目录 node_modules，解决部分包的兼容性问题
+shamefullyHoist: true
+# 启用 Shell 模拟器，使跨平台脚本（如 &&、||）在 Windows 上也能正常运行
+shellEmulator: true
+
+# 信任策略：不允许依赖版本降级，增强安全性
+trustPolicy: no-downgrade
+
+# 关闭严格 peer dependencies 检查，当 peer dependencies 未满足时不会报错
+strictPeerDependencies: false
+
 packages:
   - packages/*
 
 catalog:
-  '@antfu/eslint-config': ^6.2.0
-  eslint-plugin-oxlint: ^1.28.0
+  '@antfu/eslint-config': ^8.2.0
+  '@typescript-eslint/utils': ^8.59.1
+  eslint: ^10.2.1
+  eslint-plugin-oxlint: ^1.64.0
+  eslint-typegen: ^2.3.1
+  eslint-vitest-rule-tester: ^3.1.0
+  oxlint: ^1.71.0
+  simple-git-hooks: ^2.13.1
+  tsdown: ^0.21.10
+  typescript: ^6.0.2
+  vitest: ^4.1.5
+catalogs:
+  ai-using:
+    skills-npm: ^1.1.1
+  types:
+    '@types/node': ^24.0.0
