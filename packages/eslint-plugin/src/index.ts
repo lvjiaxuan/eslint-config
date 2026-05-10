@@ -7,11 +7,11 @@ import { version } from '../package.json'
 
 const pluginName = 'lvjiaxuan'
 
-// const rules = {
-//   [`${pluginName}/prefer-generic-rest-extends`]: preferGenericRestExtends,
-// }
+const pluginRules = {
+  'prefer-generic-rest-extends': preferGenericRestExtends,
+}
 
-const rulesSettings: TSESLint.Linter.RulesRecord = {
+const rulesConfigs: TSESLint.Linter.RulesRecord = {
   [`${pluginName}/prefer-generic-rest-extends`]: 'warn',
 }
 
@@ -20,25 +20,28 @@ const plugin = {
     name: '@lvjiaxuan/eslint-plugin',
     version,
   },
-  rules: {
-    'prefer-generic-rest-extends': preferGenericRestExtends,
-  },
+  rules: pluginRules,
   configs: {
     'recommended': {
       plugins: [pluginName],
-      rules: rulesSettings,
+      rules: rulesConfigs,
     },
   },
-} satisfies TSESLint.Linter.Plugin // ESLint.Plugin
+} satisfies TSESLint.Linter.Plugin
+// } satisfies ESLint.Plugin
 
 const flatConfig: TypedFlatConfigItem = {
-  name: 'lvjiaxuan/plugin/do-all',
+  name: 'lvjiaxuan/plugin',
 
   plugins: {
     [pluginName]: plugin
   },
 
-  rules: rulesSettings,
+  rules: rulesConfigs,
 }
+
+Object.assign(plugin.configs, {
+  flatConfig,
+})
 
 export default plugin

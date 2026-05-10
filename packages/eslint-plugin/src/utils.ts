@@ -1,9 +1,12 @@
 import { ESLintUtils } from '@typescript-eslint/utils'
-import type { Rule } from 'eslint'
 
+/** https://typescript-eslint.io/developers/eslint-plugins#rulecreator-usage */
+export interface MorePluginDocs {
+  recommended?: boolean;
+  requiresTypeChecking?: boolean;
+}
 
-
-const RuleCreator = ESLintUtils.RuleCreator(
+const RuleCreator = ESLintUtils.RuleCreator<MorePluginDocs>(
   ruleName => `https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin/src/${ruleName}.md`,
 )
 

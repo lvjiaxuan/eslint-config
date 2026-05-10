@@ -4,21 +4,21 @@
   "private": true,
   "packageManager": "pnpm@10.33.0",
   "scripts": {
-    "dev": "nlx @eslint/config-inspector"
+    "inspect": "nlx @eslint/config-inspector",
+    "prepare": "skills-npm -r"
   },
   "devDependencies": {
     "@lvjiaxuan/eslint-config": "workspace:*",
     "@types/node": "catalog:types",
     "eslint": "catalog:",
     "simple-git-hooks": "catalog:",
+    "skills-npm": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
   },
   "simple-git-hooks": {
-    "pre-commit": [
-      "npx lint-staged"
-    ]
+    "pre-commit": []
   },
   "lint-staged": {
     "*": "pnpm run oxlintf"

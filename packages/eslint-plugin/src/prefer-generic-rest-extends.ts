@@ -9,6 +9,8 @@ export default createRule({
     type: 'suggestion',
     docs: {
       description: 'Generic type parameter with tuple default should extend an array type to support rest elements.',
+      recommended: true,
+      requiresTypeChecking: true,
     },
     schema: [],
     fixable: 'code',
@@ -20,8 +22,6 @@ export default createRule({
   defaultOptions: [],
 
   create(context) {
-
-    context.physicalFilename
 
     return {
       TSTypeParameter(node) {

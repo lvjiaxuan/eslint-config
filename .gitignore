@@ -86,3 +86,6 @@ _fixtures
 *.local
 
 packages/eslint-plugin-oxlint/category-rules.json
+
+# Agent skills from npm packages (managed by skills-npm)
+**/skills/npm-*
