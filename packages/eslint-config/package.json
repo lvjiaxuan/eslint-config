@@ -31,23 +31,12 @@
     "dev": "pnpm run build --watch",
     "build": "tsup src/index.ts --format=esm,cjs --dts",
     "test": "vitest --globals",
-    "prepare": "pnpm run build",
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
-    "eslint": ">=9.5.0"
+    "eslint": "catalog:"
   },
   "dependencies": {
-    "@antfu/eslint-config": "catalog:",
-    "@lvjiaxuan/eslint-plugin": "workspace:*",
-    "eslint-plugin-oxlint": "catalog:",
-    "fs-extra": "^11.3.2"
-  },
-  "devDependencies": {
-    "@types/fs-extra": "^11.0.4"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "@antfu/eslint-config": "catalog:"
   }
 }

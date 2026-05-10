@@ -1,28 +1,28 @@
-import { ESLintUtils, TSESTree } from '@typescript-eslint/utils'
+import { TSESTree } from '@typescript-eslint/utils'
+import { createRule } from './utils'
 
-const createRule = ESLintUtils.RuleCreator(
-  ruleName => `https://github.com/lvjiaxuan/eslint-config/blob/main/packages/eslint-plugin/src/${ruleName}.md`,
-)
+export default createRule({
 
-export const RULE_NAME = 'prefer-generic-rest-extends'
-
-export default createRule<[], 'preferConstraint'>({
-  name: RULE_NAME,
+  name: 'prefer-generic-rest-extends',
 
   meta: {
     type: 'suggestion',
     docs: {
-      description: 'Enforce the rest element type extends a array type.',
+      description: 'Generic type parameter with tuple default should extend an array type to support rest elements.',
     },
     schema: [],
     fixable: 'code',
     hasSuggestions: true,
-    messages: { preferConstraint: 'Enforce the rest element type extends a array type.' },
+    messages: { preferConstraint: 'Generic type parameter with tuple default should extend an array type to support rest elements.' },
+    // deprecated
   },
 
   defaultOptions: [],
 
   create(context) {
+
+    context.physicalFilename
+
     return {
       TSTypeParameter(node) {
         if (node.default?.type === TSESTree.AST_NODE_TYPES.TSTupleType && !node.constraint) {

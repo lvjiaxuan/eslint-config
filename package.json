@@ -1,46 +1,19 @@
 {
   "name": "@lvjiaxuan/eslint-config-monorepo",
   "type": "module",
-  "version": "1.13.0",
   "private": true,
-  "packageManager": "pnpm@10.22.0",
+  "packageManager": "pnpm@10.33.0",
   "scripts": {
-    "lint": "eslint",
-    "lintf": "eslint --fix",
-    "oxlint": "oxlint && eslint",
-    "oxlintf": "oxlint --fix && eslint --fix",
     "dev": "nlx @eslint/config-inspector"
   },
-  "peerDependencies": {
-    "@antfu/eslint-config": "catalog:",
-    "@lvjiaxuan/eslint-plugin": "workspace:*",
-    "eslint-plugin-oxlint": "catalog:"
-  },
-  "peerDependenciesMeta": {
-    "@antfu/eslint-config": {
-      "optional": true
-    },
-    "@lvjiaxuan/eslint-plugin": {
-      "optional": true
-    },
-    "eslint-plugin-oxlint": {
-      "optional": true
-    }
-  },
   "devDependencies": {
-    "@types/eslint": "^9.6.1",
-    "@types/node": "^22.19.1",
-    "eslint": "9.22.0",
-    "jiti": "^2.6.1",
-    "oxlint": "^1.28.0",
-    "simple-git-hooks": "^2.13.1",
-    "tsup": "^8.5.1",
-    "typescript": "^5.9.3",
-    "vitest": "^4.0.8"
-  },
-  "lvr": {
-    "all": true,
-    "tag": 10
+    "@lvjiaxuan/eslint-config": "workspace:*",
+    "@types/node": "catalog:types",
+    "eslint": "catalog:",
+    "simple-git-hooks": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   },
   "simple-git-hooks": {
     "pre-commit": [

@@ -2,7 +2,6 @@
   "name": "@lvjiaxuan/eslint-plugin",
   "type": "module",
   "version": "1.13.0",
-  "description": "",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
   "keywords": [
     "eslint-plugin"
@@ -21,23 +20,19 @@
     "dist"
   ],
   "scripts": {
-    "test": "vitest --globals",
-    "build": "tsup src/index.ts --format=esm,cjs --dts",
-    "prepare": "pnpm run build",
+    "test": "vitest",
+    "build": "tsdown",
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
-    "eslint": ">=9.5.0"
+    "eslint": "catalog:",
+    "typescript": "catalog:"
   },
   "dependencies": {
     "@antfu/eslint-config": "catalog:",
-    "@typescript-eslint/utils": "^8.46.4"
+    "@typescript-eslint/utils": "^8.59.1"
   },
   "devDependencies": {
-    "@typescript-eslint/rule-tester": "^8.46.4"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "eslint-vitest-rule-tester": "^3.1.0"
   }
 }

@@ -1,37 +1,44 @@
 import type { TypedFlatConfigItem } from '@antfu/eslint-config'
-import type { TSESLint } from '@typescript-eslint/utils'
-import { GLOB_SRC } from '@antfu/eslint-config'
+import { TSESLint } from '@typescript-eslint/utils'
+import type { ESLint, Rule, Linter } from 'eslint'
+import { GLOB_TS, GLOB_TSX } from '@antfu/eslint-config'
 import preferGenericRestExtends from './prefer-generic-rest-extends'
+import { version } from '../package.json'
 
-const rulesSetup = {
-  'prefer-generic-rest-extends': preferGenericRestExtends,
+const pluginName = 'lvjiaxuan'
+
+// const rules = {
+//   [`${pluginName}/prefer-generic-rest-extends`]: preferGenericRestExtends,
+// }
+
+const rulesSettings: TSESLint.Linter.RulesRecord = {
+  [`${pluginName}/prefer-generic-rest-extends`]: 'warn',
 }
 
-const rulesSettings = {
-  '@lvjiaxuan/prefer-generic-rest-extends': 'warn',
-} as const // TODO type hints
-
-const pluginName = '@lvjiaxuan'
-
-// For flat config.
-export function lvPlugin(): TypedFlatConfigItem {
-  return {
-    files: [GLOB_SRC],
-    name: 'lvjiaxuan/plugins/rules',
-    plugins: {
-      [pluginName]: { rules: rulesSetup },
-    },
-    rules: rulesSettings,
-  }
-}
-
-// For legacy config.
-export default {
-  rules: rulesSetup,
+const plugin = {
+  meta: {
+    name: '@lvjiaxuan/eslint-plugin',
+    version,
+  },
+  rules: {
+    'prefer-generic-rest-extends': preferGenericRestExtends,
+  },
   configs: {
-    recommended: {
+    'recommended': {
       plugins: [pluginName],
       rules: rulesSettings,
     },
   },
-} satisfies TSESLint.Linter.Plugin
+} satisfies TSESLint.Linter.Plugin // ESLint.Plugin
+
+const flatConfig: TypedFlatConfigItem = {
+  name: 'lvjiaxuan/plugin/do-all',
+
+  plugins: {
+    [pluginName]: plugin
+  },
+
+  rules: rulesSettings,
+}
+
+export default plugin
