@@ -1,3 +1,4 @@
+import type { RuleContext } from '@typescript-eslint/utils/ts-eslint'
 import { TSESTree } from '@typescript-eslint/utils'
 import { createRule } from './utils'
 
@@ -16,11 +17,9 @@ export default createRule({
     fixable: 'code',
     hasSuggestions: true,
     messages: { preferConstraint: 'Generic type parameter with tuple default should extend an array type to support rest elements.' },
-    // deprecated
+    defaultOptions: [],
   },
-
-  defaultOptions: [],
-
+  
   create(context) {
 
     return {

@@ -15,28 +15,44 @@
     "oxlint"
   ],
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "dev": "pnpm run build --watch",
-    "build": "tsup src/index.ts --format=esm,cjs --dts",
-    "test": "vitest --globals",
-    "prepublishOnly": "pnpm run build"
+    "dev": "tsdown --watch",
+    "typegen": "pnpm exec tsx ./scripts/typegen.ts",
+    "build": "pnpm run typegen && tsdown"
   },
   "peerDependencies": {
-    "eslint": "catalog:"
+    "eslint": "catalog:",
+    "eslint-plugin-oxlint": "catalog:"
+  },
+  "peerDependenciesMeta": {
+    "@unocss/eslint-plugin": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@antfu/eslint-config": "catalog:"
+  },
+  "inlinedDependencies": {
+    "@eslint-community/eslint-utils": "4.9.1",
+    "@typescript-eslint/scope-manager": "8.59.1",
+    "@typescript-eslint/types": "8.59.1",
+    "@typescript-eslint/utils": "8.59.1",
+    "@typescript-eslint/visitor-keys": "8.59.1",
+    "eslint-visitor-keys": [
+      "3.4.3",
+      "5.0.1"
+    ]
+  },
+  "devDependencies": {
+    "eslint-plugin-oxlint": "catalog:",
+    "eslint-typegen": "^2.3.1",
+    "tsx": "^4.21.0"
   }
 }

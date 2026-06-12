@@ -1,5 +1,5 @@
-import { createRuleTester } from 'eslint-vitest-rule-tester'
 import parser from '@typescript-eslint/parser'
+import { createRuleTester } from 'eslint-vitest-rule-tester'
 import rule from './prefer-generic-rest-extends'
 
 const ruleTester = createRuleTester({
@@ -11,9 +11,9 @@ const ruleTester = createRuleTester({
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
-      }
-    }
-  }
+      },
+    },
+  },
 })
 
 ruleTester.run({

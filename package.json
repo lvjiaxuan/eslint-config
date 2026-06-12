@@ -2,9 +2,10 @@
   "name": "@lvjiaxuan/eslint-config-monorepo",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@11.0.9",
   "scripts": {
-    "inspect": "nlx @eslint/config-inspector",
+    "dev": "pnpm -r --parallel run dev",
+    "inspect": "npx @eslint/config-inspector",
     "prepare": "skills-npm -r"
   },
   "devDependencies": {

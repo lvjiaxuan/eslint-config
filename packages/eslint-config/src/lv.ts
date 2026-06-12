@@ -1,16 +1,25 @@
-import type { LvParams } from '.'
-import antfu from '@antfu/eslint-config'
-import { lvPlugin } from '@lvjiaxuan/eslint-plugin'
-import { oxlint, respectJsRuleOptions } from '.'
+import antfu, { ensurePackages, interopDefault } from '@antfu/eslint-config'
+import lvPlugin from '@lvjiaxuan/eslint-plugin'
+
+export type LvOptions = Parameters<typeof antfu>[0] & {
+  oxlint?: boolean
+}
 
 export default lv
 
-export async function lv(...args: LvParams) {
-  const [afOptionsConfig] = args
-  const pipeline = antfu(...args)
+export function lv(options?: LvOptions): ReturnType<typeof antfu> {
+  const pipeline = antfu(options)
+
+  pipeline.append(lvPlugin.configs['flat/recommended'])
+
+  if (options?.oxlint) {
+    pipeline.append((async () => {
+      await ensurePackages(['eslint-plugin-oxlint'])
+      const oxlintPlugin = await interopDefault(import('eslint-plugin-oxlint'))
+
+      return oxlintPlugin.configs['flat/recommended']
+    })())
+  }
 
   return pipeline
-    .append(lvPlugin())
-    .append(oxlint(afOptionsConfig?.oxlint, pipeline))
-    .append(respectJsRuleOptions(await pipeline.toConfigs()))
 }
