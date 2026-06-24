@@ -31,6 +31,7 @@
     "@typescript-eslint/utils": "catalog:"
   },
   "devDependencies": {
+    "eslint-doc-generator": "catalog:",
     "eslint-typegen": "catalog:",
     "eslint-vitest-rule-tester": "catalog:"
   }
